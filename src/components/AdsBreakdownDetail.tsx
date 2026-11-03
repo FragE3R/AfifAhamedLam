@@ -83,19 +83,19 @@ export const AdsBreakdownDetail: React.FC<AdsBreakdownDetailProps> = ({
           {(() => {
             const mediaMap: Record<string, { src: string; caption: string }> = {
               'ab-1': {
-                src: '/src/assets/images/ag1_habit_ad_1793632479207.jpg',
+                src: './images/ag1_habit_ad_1793632479207.jpg',
                 caption: 'AG1 Morning Routine Hook: Habit-Stacking Shaker Demonstration'
               },
               'ab-2': {
-                src: '/src/assets/images/ridge_wallet_ad_1793632478447.jpg',
+                src: './images/ridge_wallet_ad_1793632478447.jpg',
                 caption: 'The Ridge Visual Agitation: Slim Carry vs Bulky Back-Pocket Brick'
               },
               'ab-3': {
-                src: '/src/assets/images/hexclad_cookware_ad_1793632480720.jpg',
+                src: './images/hexclad_cookware_ad_1793632480720.jpg',
                 caption: 'HexClad Metal Utensil Scratch Demonstration on Sizzling Hybrid Pan'
               },
               'ab-4': {
-                src: '/src/assets/images/duolingo_social_ad_1793632480822.jpg',
+                src: './images/duolingo_social_ad_1793632480822.jpg',
                 caption: 'Duolingo Viral Meme Creative: Mascot Doorway Notification Hook'
               }
             };
