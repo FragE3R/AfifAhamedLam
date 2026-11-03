@@ -85,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               {/* Strategist Photo */}
               <div className="relative rounded-lg overflow-hidden border border-slate-200 bg-slate-100 aspect-square mb-5">
                 <img
-                  src="/public/assets/aistudio/IMG-20250310-WA0036_a86a6720.jpg"
+                  src="./assets/aistudio/IMG-20250310-WA0036_a86a6720.jpg"
                   alt="Afif Ahamed"
                   className="w-full h-full object-cover object-[50%_28%]"
                   referrerPolicy="no-referrer"
