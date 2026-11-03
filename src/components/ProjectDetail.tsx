@@ -63,19 +63,19 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId, onNavig
           {(() => {
             const projectMediaMap: Record<string, { src: string; caption: string }> = {
               'proj-rangpur-steel': {
-                src: '/src/assets/images/cnc_laser_steel_1793631154504.jpg',
+                src: './images/cnc_laser_steel_1793631154504.jpg',
                 caption: 'CNC Laser-Cutting & Industrial Powder-Coating Metal Manufacturing at Rangpur Steel'
               },
               'proj-2': {
-                src: '/src/assets/images/strategist_desk_office_1793631153324.jpg',
+                src: './images/strategist_desk_office_1793631153324.jpg',
                 caption: 'Performance Ads Testing & Creative Retention Workspace'
               },
               'proj-3': {
-                src: '/src/assets/images/amazon_product_research_1793631154918.jpg',
+                src: './images/amazon_product_research_1793631154918.jpg',
                 caption: 'Full-Funnel Acquisition Architecture & Amazon FBA Market Intelligence'
               },
               'proj-4': {
-                src: '/src/assets/images/d2c_apparel_brand_1793631154743.jpg',
+                src: './images/d2c_apparel_brand_1793631154743.jpg',
                 caption: 'Direct-Response Copy & D2C Apparel Brand Merchandising Studio'
               }
             };
