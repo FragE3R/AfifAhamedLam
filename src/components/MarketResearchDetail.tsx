@@ -2,7 +2,8 @@ import React from 'react';
 import { PageView } from '../types';
 import { MARKET_RESEARCH_ARTICLES } from '../data/marketResearch';
 import { ArticleCta } from './ArticleCta';
-import { ArrowLeft, Clock, Calendar, Bookmark, Share2, AlertCircle, TrendingUp, ShieldAlert, CheckCircle2 } from 'lucide-react';
+import { ResearchDataGraph } from './ResearchDataGraph';
+import { ArrowLeft, Clock, Calendar, AlertCircle, TrendingUp, ShieldAlert, CheckCircle2, Image as ImageIcon } from 'lucide-react';
 
 interface MarketResearchDetailProps {
   articleId?: string;
@@ -34,7 +35,7 @@ export const MarketResearchDetail: React.FC<MarketResearchDetailProps> = ({
         </div>
 
         {/* Article Header */}
-        <header className="pb-10 border-b border-slate-200 mb-12">
+        <header className="pb-10 border-b border-slate-200 mb-10">
           <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-4">
             <span className="font-semibold text-slate-900 px-3 py-1 rounded bg-slate-100 border border-slate-200">
               {article.category}
@@ -77,7 +78,7 @@ export const MarketResearchDetail: React.FC<MarketResearchDetailProps> = ({
         </header>
 
         {/* Abstract / Executive Summary Box */}
-        <div className="p-6 rounded-lg bg-slate-50 border border-slate-200 mb-12">
+        <div className="p-6 rounded-lg bg-slate-50 border border-slate-200 mb-10">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-900 block mb-2">
             Executive Summary
           </span>
@@ -85,6 +86,24 @@ export const MarketResearchDetail: React.FC<MarketResearchDetailProps> = ({
             {article.excerpt}
           </p>
         </div>
+
+        {/* Topic-Related Hero Visual */}
+        {article.imageUrl && (
+          <div className="mb-12 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-xs">
+            <img
+              src={article.imageUrl}
+              alt={article.imageCaption || article.title}
+              className="w-full h-72 sm:h-96 object-cover"
+              referrerPolicy="no-referrer"
+            />
+            {article.imageCaption && (
+              <div className="p-3 bg-slate-50 border-t border-slate-200 flex items-center gap-2 text-xs text-slate-600">
+                <ImageIcon className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                <span>{article.imageCaption}</span>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Core Article Body Sections */}
         <div className="space-y-12 text-slate-800 text-base leading-relaxed">
@@ -149,6 +168,13 @@ export const MarketResearchDetail: React.FC<MarketResearchDetailProps> = ({
               </p>
             </div>
           </section>
+
+          {/* Topic-Related Quantitative Graph & Data Model */}
+          {article.graphData && (
+            <section>
+              <ResearchDataGraph graphData={article.graphData} />
+            </section>
+          )}
 
           {/* 7. Advertising Landscape */}
           <section>

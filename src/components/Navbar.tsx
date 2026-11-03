@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageView } from '../types';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Logo } from './Logo';
 
 interface NavbarProps {
   currentPage: PageView;
@@ -42,15 +43,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             id="nav-logo-btn"
             onClick={() => handleNavClick('home')}
             className="text-left group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm"
+            aria-label="Afif Ahamed - Home"
           >
-            <div className="flex flex-col">
-              <span className="font-editorial text-2xl font-bold tracking-tight text-slate-950 group-hover:text-slate-700 transition-colors">
-                Afif Ahamed
-              </span>
-              <span className="text-[11px] font-medium tracking-wider uppercase text-slate-500">
-                Media Buyer & Marketing Strategist
-              </span>
-            </div>
+            <Logo size="md" />
           </button>
 
           {/* Desktop Nav */}

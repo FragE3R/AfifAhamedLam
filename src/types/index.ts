@@ -9,6 +9,27 @@ export type PageView =
   | 'ads-breakdown-detail'
   | 'project-detail';
 
+export interface ResearchGraphData {
+  chartTitle: string;
+  chartSubtitle: string;
+  type: 'funnel' | 'comparison' | 'matrix' | 'waterfall';
+  metricHighlight: {
+    label: string;
+    value: string;
+    subtext: string;
+  };
+  dataPoints: Array<{
+    label: string;
+    value: number | string;
+    secondaryValue?: string;
+    percentage?: number;
+    benchmark?: string;
+    color?: string;
+    note?: string;
+  }>;
+  takeaway: string;
+}
+
 export interface MarketResearchArticle {
   id: string;
   slug: string;
@@ -18,6 +39,9 @@ export interface MarketResearchArticle {
   category: string;
   readingTime: string;
   excerpt: string;
+  imageUrl?: string;
+  imageCaption?: string;
+  graphData?: ResearchGraphData;
   introduction: string;
   marketOverview: string;
   audienceDemand: string;

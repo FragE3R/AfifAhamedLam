@@ -450,19 +450,16 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate }) => {
                 </div>
 
                 {/* Topic Image */}
-                <div className="mb-4 rounded-lg overflow-hidden border border-slate-200 bg-slate-900 relative">
-                  <div className="w-full h-48 overflow-hidden">
-                    <img
-                      src="./assets/aistudio/IMG-20250401-WA0037_9c6b792c.jpg"
-                      alt="Father's Hotel hospitality and operations - Afif on site"
-                      className="w-full h-full object-cover scale-[1.7] origin-[42%_62%] transition-transform duration-300"
-                      style={{ objectPosition: '42% 62%' }}
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
+                <div className="mb-4 rounded-lg overflow-hidden border border-slate-200 bg-white">
+                  <img
+                    src="./images/fathers_hotel_hospitality_1793702727644.jpg"
+                    alt="Boutique hotel reception, guest dining lounge and hospitality operations"
+                    className="w-full h-48 object-cover"
+                    referrerPolicy="no-referrer"
+                  />
                   <div className="p-2.5 bg-slate-50 border-t border-slate-200">
                     <span className="text-[11px] font-semibold text-slate-800 block">Hospitality Operations</span>
-                    <span className="text-[10px] text-slate-500 block">In-person customer service, online booking &amp; facility management</span>
+                    <span className="text-[10px] text-slate-500 block">In-person guest service, digital reservations &amp; facility management</span>
                   </div>
                 </div>
 
@@ -527,14 +524,14 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate }) => {
                 <div className="md:col-span-4">
                   <div className="rounded-lg overflow-hidden border border-slate-200 bg-white">
                     <img
-                      src="./assets/aistudio/PXL_20250915_093220299_6be5dff9.jpg"
-                      alt="Social media manager community management"
-                      className="w-full h-44 object-cover object-top"
+                      src="./images/adorable_cats_community_1793702730400.jpg"
+                      alt="Adorable domestic cats in natural warm sunlight for pet community social media"
+                      className="w-full h-44 object-cover"
                       referrerPolicy="no-referrer"
                     />
                     <div className="p-2.5 bg-slate-50 border-t border-slate-200">
-                      <span className="text-[11px] font-semibold text-slate-800 block">Community Management</span>
-                      <span className="text-[10px] text-slate-500 block">Audience communication, organic content &amp; engagement</span>
+                      <span className="text-[11px] font-semibold text-slate-800 block">Pet Community Engagement</span>
+                      <span className="text-[10px] text-slate-500 block">Audience conversation, viral storytelling &amp; content curation</span>
                     </div>
                   </div>
                 </div>

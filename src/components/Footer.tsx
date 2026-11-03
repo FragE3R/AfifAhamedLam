@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageView } from '../types';
 import { ArrowUpRight, Mail, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Logo } from './Logo';
 
 interface FooterProps {
   onNavigate: (page: PageView, id?: string) => void;
@@ -18,14 +19,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-slate-200">
           {/* Col 1 & 2: Name & Positioning */}
           <div className="lg:col-span-2 space-y-4">
-            <div>
-              <span className="font-editorial text-2xl font-bold tracking-tight text-slate-950 block">
-                Afif Ahamed
-              </span>
-              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mt-0.5">
-                Media Buyer & Digital Marketing Strategist
-              </p>
-            </div>
+            <button
+              onClick={() => handleNav('home')}
+              className="text-left group cursor-pointer focus:outline-none"
+              aria-label="Afif Ahamed - Home"
+            >
+              <Logo size="lg" />
+            </button>
             <p className="text-sm text-slate-600 leading-relaxed max-w-md">
               I analyze markets, study winning advertising strategies, and help businesses turn opportunities into measurable growth. My work sits at the intersection of markets, creative, media buying, and data.
             </p>

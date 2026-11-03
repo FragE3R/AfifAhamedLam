@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { PageView } from '../types';
 import { MARKET_RESEARCH_ARTICLES } from '../data/marketResearch';
-import { Search, Clock, Calendar, ArrowUpRight, BookOpen, Filter } from 'lucide-react';
+import { Search, Clock, Calendar, ArrowUpRight, BookOpen, Filter, BarChart2 } from 'lucide-react';
 
 interface MarketResearchPageProps {
   onNavigate: (page: PageView, id?: string) => void;
@@ -85,7 +85,7 @@ export const MarketResearchPage: React.FC<MarketResearchPageProps> = ({ onNaviga
                 setSelectedCategory('All');
                 setSearchQuery('');
               }}
-              className="mt-3 text-xs font-semibold text-slate-950 underline"
+              className="mt-3 text-xs font-semibold text-slate-950 underline cursor-pointer"
             >
               Reset filters
             </button>
@@ -95,38 +95,59 @@ export const MarketResearchPage: React.FC<MarketResearchPageProps> = ({ onNaviga
             {filteredArticles.map((article) => (
               <article
                 key={article.id}
-                className="bg-white rounded-lg border border-slate-200 p-8 flex flex-col justify-between hover:border-slate-400 hover:shadow-xs transition-all group"
+                className="bg-white rounded-lg border border-slate-200 p-6 sm:p-7 flex flex-col justify-between hover:border-slate-400 hover:shadow-xs transition-all group"
               >
                 <div>
+                  {/* Category & Read Time */}
                   <div className="flex items-center justify-between text-xs text-slate-500 mb-4">
                     <span className="font-semibold text-slate-800 px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200">
                       {article.category}
                     </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" />
-                      {article.readingTime}
-                    </span>
+                    <div className="flex items-center gap-3">
+                      {article.graphData && (
+                        <span className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-700 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">
+                          <BarChart2 className="w-3 h-3 text-slate-900" />
+                          <span>Graph Model</span>
+                        </span>
+                      )}
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5" />
+                        {article.readingTime}
+                      </span>
+                    </div>
                   </div>
+
+                  {/* Topic Image */}
+                  {article.imageUrl && (
+                    <div className="mb-5 rounded-lg overflow-hidden border border-slate-200 bg-slate-50">
+                      <img
+                        src={article.imageUrl}
+                        alt={article.title}
+                        className="w-full h-48 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  )}
 
                   <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 group-hover:text-slate-700 transition-colors mb-3 leading-snug">
                     {article.title}
                   </h2>
 
-                  <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                  <p className="text-sm text-slate-600 leading-relaxed mb-5 font-normal">
                     {article.excerpt}
                   </p>
 
-                  <div className="p-4 rounded-md bg-slate-50 border border-slate-100 mb-6">
+                  <div className="p-3.5 rounded-md bg-slate-50 border border-slate-100 mb-6">
                     <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 block mb-1">
                       Core Strategic Angle
                     </span>
                     <p className="text-xs text-slate-700 italic">
-                      "{article.subtitle}"
+                      &quot;{article.subtitle}&quot;
                     </p>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
+                <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs text-slate-500">
                     <Calendar className="w-3.5 h-3.5" />
                     <span>{article.date}</span>
