@@ -265,7 +265,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate }) => {
                 <div className="lg:col-span-4 mt-4 lg:mt-0">
                   <div className="rounded-lg overflow-hidden border border-slate-200 bg-white shadow-xs">
                     <img
-                      src="/src/assets/images/cnc_laser_steel_1793631154504.jpg"
+                      src="./images/cnc_laser_steel_1793631154504.jpg"
                       alt="CNC laser cutting precision steel manufacturing at Rangpur Steel"
                       className="w-full h-52 sm:h-64 object-cover"
                       referrerPolicy="no-referrer"
@@ -358,7 +358,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate }) => {
                 <div className="lg:col-span-5 mt-4 lg:mt-0">
                   <div className="rounded-lg overflow-hidden border border-slate-200 bg-white shadow-xs">
                     <img
-                      src="/src/assets/images/amazon_product_research_1793631154918.jpg"
+                      src="./images/amazon_product_research_1793631154918.jpg"
                       alt="Amazon FBA product research and market intelligence dashboard"
                       className="w-full h-52 sm:h-56 object-cover"
                       referrerPolicy="no-referrer"
@@ -397,7 +397,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate }) => {
                 {/* Topic Image */}
                 <div className="mb-4 rounded-lg overflow-hidden border border-slate-200 bg-white">
                   <img
-                    src="/src/assets/images/d2c_apparel_brand_1793631154743.jpg"
+                    src="./images/d2c_apparel_brand_1793631154743.jpg"
                     alt="Rangpur T Shirt Zone streetwear apparel studio and e-commerce operation"
                     className="w-full h-44 object-cover"
                     referrerPolicy="no-referrer"
