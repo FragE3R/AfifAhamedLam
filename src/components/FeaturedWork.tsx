@@ -45,15 +45,15 @@ export const FeaturedWork: React.FC<FeaturedWorkProps> = ({ onNavigate }) => {
             const isExpanded = expandedId === project.id;
             const projectMediaMap: Record<string, { src: string; caption: string }> = {
               'proj-rangpur-steel': {
-                src: '/src/assets/images/cnc_laser_steel_1793631154504.jpg',
+                src: './images/cnc_laser_steel_1793631154504.jpg',
                 caption: 'CNC Laser-Cut & Powder-Coated Metal Manufacturing'
               },
               'proj-2': {
-                src: '/src/assets/images/strategist_desk_office_1793631153324.jpg',
+                src: './images/strategist_desk_office_1793631153324.jpg',
                 caption: 'Performance Ads Testing & Creative Retention Desk'
               },
               'proj-3': {
-                src: '/src/assets/images/amazon_product_research_1793631154918.jpg',
+                src: './images/amazon_product_research_1793631154918.jpg',
                 caption: 'Full-Funnel Acquisition & Amazon Market Intelligence'
               }
             };
