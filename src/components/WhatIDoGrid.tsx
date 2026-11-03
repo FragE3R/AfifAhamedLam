@@ -14,7 +14,7 @@ export const WhatIDoGrid: React.FC<WhatIDoGridProps> = ({ onNavigate }) => {
       title: 'Media Buying',
       description: 'Meta Ads, paid advertising, campaign structure, audience testing, creative testing, retargeting and optimization.',
       highlights: ['Meta Ads Manager', 'Cold Prospecting', 'Creative Angle Testing', 'Retargeting Architecture'],
-      image: '/src/assets/images/strategist_desk_office_1793631153324.jpg',
+      image: './images/strategist_desk_office_1793631153324.jpg',
       caption: 'Paid Media & Creative Testing Workspace'
     },
     {
@@ -23,7 +23,7 @@ export const WhatIDoGrid: React.FC<WhatIDoGridProps> = ({ onNavigate }) => {
       title: 'Performance Marketing',
       description: 'Data-driven campaign decisions using metrics such as CTR, CPC, CPM, CPA and ROAS.',
       highlights: ['Metric Diagnosis', 'Funnel Economics', 'Ad Fatigue Auditing', 'Budget Calibration'],
-      image: '/src/assets/images/cnc_laser_steel_1793631154504.jpg',
+      image: './images/cnc_laser_steel_1793631154504.jpg',
       caption: 'Attributed Revenue & ROAS Optimization'
     },
     {
@@ -32,7 +32,7 @@ export const WhatIDoGrid: React.FC<WhatIDoGridProps> = ({ onNavigate }) => {
       title: 'Market Research',
       description: 'Market opportunities, customer demand, competitors, product categories and advertising landscapes.',
       highlights: ['Competitor Intelligence', 'Audience Hesitation Mapping', 'Pricing Benchmarking', 'Category Analysis'],
-      image: '/src/assets/images/amazon_product_research_1793631154918.jpg',
+      image: './images/amazon_product_research_1793631154918.jpg',
       caption: 'Amazon FBA & Commercial Demand Intelligence'
     },
     {
@@ -41,7 +41,7 @@ export const WhatIDoGrid: React.FC<WhatIDoGridProps> = ({ onNavigate }) => {
       title: 'Content & Copywriting',
       description: 'Marketing copy, advertising copy, social media content, website content and persuasive messaging.',
       highlights: ['Direct-Response Ad Copy', 'High-Retention Hooks', 'Landing Page Flows', 'Objection-Demolishing Copy'],
-      image: '/src/assets/images/d2c_apparel_brand_1793631154743.jpg',
+      image: './images/d2c_apparel_brand_1793631154743.jpg',
       caption: 'Direct-to-Consumer Brand Messaging Studio'
     }
   ];
