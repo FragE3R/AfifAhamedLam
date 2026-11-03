@@ -136,19 +136,19 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ onNavigate }) 
             {latestAdsBreakdown.map((item) => {
               const adsMediaMap: Record<string, { src: string; caption: string }> = {
                 'ab-1': {
-                  src: '/src/assets/images/ag1_habit_ad_1793632479207.jpg',
+                  src: './images/ag1_habit_ad_1793632479207.jpg',
                   caption: 'AG1 Morning Routine Hook'
                 },
                 'ab-2': {
-                  src: '/src/assets/images/ridge_wallet_ad_1793632478447.jpg',
+                  src: './images/ridge_wallet_ad_1793632478447.jpg',
                   caption: 'Ridge Wallet Visual Agitation'
                 },
                 'ab-3': {
-                  src: '/src/assets/images/hexclad_cookware_ad_1793632480720.jpg',
+                  src: './images/hexclad_cookware_ad_1793632480720.jpg',
                   caption: 'HexClad Metal Utensil Demonstration'
                 },
                 'ab-4': {
-                  src: '/src/assets/images/duolingo_social_ad_1793632480822.jpg',
+                  src: './images/duolingo_social_ad_1793632480822.jpg',
                   caption: 'Duolingo Viral Meme Hook'
                 }
               };
