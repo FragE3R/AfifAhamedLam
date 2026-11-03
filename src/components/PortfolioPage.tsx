@@ -453,7 +453,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate }) => {
                 <div className="mb-4 rounded-lg overflow-hidden border border-slate-200 bg-slate-900 relative">
                   <div className="w-full h-48 overflow-hidden">
                     <img
-                      src="/public/assets/aistudio/IMG-20250401-WA0037_9c6b792c.jpg"
+                      src="./assets/aistudio/IMG-20250401-WA0037_9c6b792c.jpg"
                       alt="Father's Hotel hospitality and operations - Afif on site"
                       className="w-full h-full object-cover scale-[1.7] origin-[42%_62%] transition-transform duration-300"
                       style={{ objectPosition: '42% 62%' }}
@@ -527,7 +527,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate }) => {
                 <div className="md:col-span-4">
                   <div className="rounded-lg overflow-hidden border border-slate-200 bg-white">
                     <img
-                      src="/public/assets/aistudio/PXL_20250915_093220299_6be5dff9.jpg"
+                      src="./assets/aistudio/PXL_20250915_093220299_6be5dff9.jpg"
                       alt="Social media manager community management"
                       className="w-full h-44 object-cover object-top"
                       referrerPolicy="no-referrer"
