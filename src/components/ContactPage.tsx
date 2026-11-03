@@ -179,7 +179,7 @@ export const ContactPage: React.FC = () => {
             {/* Strategist Profile Card */}
             <div className="p-6 rounded-lg bg-white border border-slate-200 flex items-center gap-4 shadow-2xs">
               <img
-                src="/public/assets/aistudio/IMG-20250310-WA0036_a86a6720.jpg"
+                src="./assets/aistudio/IMG-20250310-WA0036_a86a6720.jpg"
                 alt="Afif Ahamed"
                 className="w-20 h-20 rounded-full object-cover object-[50%_25%] border-2 border-slate-100 shadow-xs shrink-0"
                 referrerPolicy="no-referrer"
