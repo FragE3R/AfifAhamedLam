@@ -3,6 +3,7 @@ import { PageView } from '../types';
 import { ADS_BREAKDOWN_ARTICLES } from '../data/adsBreakdowns';
 import { ArticleCta } from './ArticleCta';
 import { ArrowLeft, Clock, Calendar, Eye, Lightbulb, HelpCircle, CheckCircle2, Award, Zap, Layers } from 'lucide-react';
+import { WinningVsLosingBreakdown } from './WinningVsLosingBreakdown';
 
 interface AdsBreakdownDetailProps {
   articleId?: string;
@@ -13,8 +14,18 @@ export const AdsBreakdownDetail: React.FC<AdsBreakdownDetailProps> = ({
   articleId,
   onNavigate
 }) => {
-  const item = ADS_BREAKDOWN_ARTICLES.find((a) => a.id === articleId) || ADS_BREAKDOWN_ARTICLES[0];
+  const item = ADS_BREAKDOWN_ARTICLES.find((a) => a.id === articleId || a.slug === articleId) || ADS_BREAKDOWN_ARTICLES[0];
   const related = ADS_BREAKDOWN_ARTICLES.filter((a) => a.id !== item.id).slice(0, 2);
+
+  if (item.isWinningVsLosing) {
+    return (
+      <WinningVsLosingBreakdown
+        article={item}
+        onNavigate={onNavigate}
+        isStandalonePage={true}
+      />
+    );
+  }
 
   return (
     <article className="py-16 bg-white min-h-screen">
@@ -85,10 +96,6 @@ export const AdsBreakdownDetail: React.FC<AdsBreakdownDetailProps> = ({
               'ab-1': {
                 src: './images/ag1_habit_ad_1793632479207.jpg',
                 caption: 'AG1 Morning Routine Hook: Habit-Stacking Shaker Demonstration'
-              },
-              'ab-2': {
-                src: './images/ridge_wallet_ad_1793632478447.jpg',
-                caption: 'The Ridge Visual Agitation: Slim Carry vs Bulky Back-Pocket Brick'
               },
               'ab-3': {
                 src: './images/hexclad_cookware_ad_1793632480720.jpg',

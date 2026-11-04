@@ -2,6 +2,157 @@ import { AdsBreakdownArticle } from '../types';
 
 export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
   {
+    id: 'ab-5',
+    slug: 'winning-vs-losing-wallet-brick-vs-premium-2026',
+    brandName: 'Everyday Carry Wallets (Winning vs Losing)',
+    industry: 'Everyday Carry (EDC) / Accessories',
+    title: 'Stop Sitting On This Brick vs Premium Quality 20% OFF',
+    shortDescription: 'Winning problem-aware hook video vs polished static - full comparison + 48-hour fix',
+    date: 'November 04, 2026',
+    readingTime: '7 min read',
+    targetAudience: 'Men and everyday carry shoppers carrying thick bi-fold wallets stuffed with cards and receipts, scrolling Meta/TikTok feeds.',
+    isWinningVsLosing: true,
+    dayNumber: 1,
+    theHook: {
+      observable: "Man in jeans sits, winces, pulls absurdly swollen 3-inch leather wallet with receipts. Text: 'Stop sitting on this brick.' Natural chair-creak + wallet slap.",
+      analysis: 'WHY IT WINS: self-identifies in 2s, visual not verbal, pattern interrupt like skit not ad.',
+      hypothesis: 'Hypothesis: 30%+ thumb-stop (vs <18% for static loser).'
+    },
+    theCreative: {
+      format: 'Winning: Native 9:16 vertical problem-agitation video. Loser: 1:1 studio static on gradient.',
+      visualStyle: 'Handheld warm light, slightly imperfect = trust. No lifestyle padding - every second shows product doing something.',
+      breakdown: 'WINNER CREATIVE (3 beats): 0-4s agitation (sitting pain), 4-12s contrast (dump 12 cards vs 2-card slim), 12-22s proof (front-pocket slide + clean sit + RFID tap). Handheld warm light, slightly imperfect = trust. No lifestyle padding - every second shows product doing something.'
+    },
+    theOffer: '30-day test + free returns vs 20% off',
+    theCopy: {
+      headline: 'Carry 12 cards. Ditch the brick. vs Premium Quality Craftsmanship',
+      body: 'Slim RFID-blocking. 30-day test drive. Free returns. vs Genuine Leather. RFID. Free Shipping.',
+      breakdown: 'Headline "Carry 12 cards. Ditch the brick." Body "Slim RFID-blocking. 30-day test drive. Free returns." CTA Shop Now -> dedicated PDP with comparison + review count. Psychology: identity (minimalist), replacement (replace pain not buy wallet), risk reversal for $75+ price. LOSER COPY/CTA: "Genuine Leather. RFID. Free Shipping. Learn More" -> homepage. WHY IT LOSES: 4 features not 1 outcome, zero proof (no demo, no numbers), funnel leak forces hunt, studio polish signals ad not solution.'
+    },
+    theCta: 'Shop Now -> PDP vs Learn More -> homepage',
+    thePsychology: [
+      'Identity framing: Minimalist carry vs hoarding clutter.',
+      'Replacement psychology: Replace everyday back-pocket pain rather than buying another generic accessory.',
+      'Risk reversal: 30-day test drive + free returns removes price hesitation for a $75+ wallet.',
+      'Proof over polish: A live dump and physical pocket slide beats dry adjectives.'
+    ],
+    theFunnel: 'Cold Meta Broad -> PDP (same promise) -> retargeting testimonial static ("Lost the bulk, kept everything - 11,400+ reviews"). Longevity 60+ days = profitability proxy.',
+    whyIThinkItWorks:
+      'TL;DR: Winning opens with painful visual problem you feel in 2s. One claim. One proof. One CTA for cold traffic. Losing opens with product + discount. No problem. No proof. Built like a flyer, not a feed interrupt. In Andromeda-era Meta, creative IS targeting.',
+    whatGrowingBusinessesCanLearn: [
+      'Re-cut the first 3 seconds: Pull the physical problem into the frame immediately. An iPhone top-down or back-pocket pull slaps attention into place.',
+      'Kill feature overload: Focus on 1 tangible proof (e.g., RFID tap or front-pocket slide) rather than listing 4 bullet points.',
+      'Replace discount hooks with risk reversal: A 30-day test drive beats 20% off an unvalidated product.',
+      'Never dump cold traffic onto a generic homepage: Match ad promise directly with a focused PDP with comparison and social proof.'
+    ],
+    myVerdict:
+      'In Andromeda-era paid social, creative is the targeting mechanism. The winning ad scales because it forces self-identification in under two seconds through visceral agitation, backs it with a single undeniable demonstration, and drives to a congruent landing page. The losing static fails because it behaves like an offline brochure.',
+    comparisonData: {
+      winnerBrand: 'The Ridge (Ridge Wallet)',
+      winnerTagline: 'Real long-runner, 5,689 active Meta ads as of Nov 2026. Minimalist RFID wallet. This is your proof of what good looks like.',
+      loserBrand: 'Composite DTC Brand',
+      loserTagline: 'Pattern of losing: studio static + discount + Learn More -> homepage. Killed in <7 days.',
+      winnerLinks: {
+        store: 'https://ridge.com/',
+        adLibraryAll: 'https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=176366735873065',
+        adLibraryActive: 'https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=176366735873065',
+        igHookReel: 'https://www.instagram.com/reel/DfHhaOJjQAp/',
+        teardownRef: 'https://www.sparkugc.com/resources/ridge-wallet-ads-creative-teardown',
+        brandData: 'https://adlibrary.com/brands/ridge'
+      },
+      loserLinks: {
+        findLoserUrl: 'https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=US&q=leather%20wallet',
+        selectionTip: 'Filter Media Type = Image, look for 1:1 studio wallet on gradient, text "Premium Quality / Genuine Leather / 20% OFF", running <7 days. That is your losing screenshot.'
+      },
+      screenshots: [
+        {
+          id: 'win-1',
+          title: 'WIN-1 Hook (0-3s)',
+          role: 'winner',
+          caption: 'Hook you feel in 2s - no sound needed.',
+          src: './images/win1_hook_brick_wallet.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Ad Library > Ridge > Video > longest-running > 0:01'
+        },
+        {
+          id: 'win-2',
+          title: 'WIN-2 Contrast (4-12s)',
+          role: 'winner',
+          caption: 'Visual agitation: brick vs slim.',
+          src: './images/win2_contrast_dump.jpg',
+          aspectRatio: '16:9',
+          sourcePath: 'Same video at 0:07'
+        },
+        {
+          id: 'win-3',
+          title: 'WIN-3 Proof + Offer (12-22s)',
+          role: 'winner',
+          caption: 'One proof + risk reversal.',
+          src: './images/win3_proof_offer.jpg',
+          aspectRatio: '16:9',
+          sourcePath: 'ridge.com PDP'
+        },
+        {
+          id: 'lose-1',
+          title: 'LOSE-1 Hook fail',
+          role: 'loser',
+          caption: 'No problem, no thumb-stop.',
+          src: './images/lose1_studio_static.jpg',
+          aspectRatio: '1:1',
+          sourcePath: "Ad Library search 'leather wallet' > Image > <7 days"
+        },
+        {
+          id: 'lose-2',
+          title: 'LOSE-2 Funnel leak',
+          role: 'loser',
+          caption: 'Message mismatch kills conversion.',
+          src: './images/lose2_funnel_leak.jpg',
+          aspectRatio: '16:9',
+          sourcePath: 'Loser landing homepage (not PDP)'
+        }
+      ],
+      scores: [
+        { category: 'Hook (first 3s)', winnerScore: 9, loserScore: 3 },
+        { category: 'Proof / Demo', winnerScore: 9, loserScore: 2 },
+        { category: 'Offer + Risk reversal', winnerScore: 8, loserScore: 3 },
+        { category: 'CTA + Landing match', winnerScore: 9, loserScore: 2 }
+      ],
+      sideBySideTable: [
+        { element: 'Element', winner: 'Winner: Brick', loser: 'Loser: Premium 20% OFF' },
+        { element: 'First 3s', winner: 'Pain + visual agitation', loser: 'Product + discount' },
+        { element: 'Trigger', winner: 'Wince + brick + bold text, sound-off readable', loser: 'Floating product on gradient' },
+        { element: 'Claims', winner: '1: slim carry, no bulk', loser: '4: leather + RFID + shipping + premium' },
+        { element: 'Proof', winner: 'Live dump + pocket slide + sit test', loser: 'None' },
+        { element: 'Specificity', winner: '3-inch brick, 12 cards -> 2-card slim', loser: 'Premium, Quality' },
+        { element: 'Offer', winner: '30-day test + free returns', loser: '20% off, no risk reversal' },
+        { element: 'CTA/Landing', winner: 'Shop Now -> matching PDP', loser: 'Learn More -> homepage' },
+        { element: 'Algorithm', winner: 'Strong watch + comments, finds audience', loser: 'Quick scroll, finds wrong people' },
+        { element: 'Lifespan', winner: '60+ day runner', loser: 'Killed <7 days' }
+      ],
+      fixPlan: {
+        title: '48-hour fix plan (high-value for clients)',
+        points: [
+          'Keep wallet. Re-cut first 3s: iPhone top-down, pull brick from back pocket, slap table. Text: "Still sitting on this?"',
+          'Kill 3 features. Keep 1 proof: only RFID tap OR front-pocket slide. One 6s demo.',
+          'Swap copy: Headline "Ditch the back-pocket brick." Body "Holds 8 cards. Fits front pocket. 30-day test." CTA Shop Now -> PDP.',
+          'Add specificity: overlay "2,347 reviews" or "12,000+ pockets fixed" - numbers beat adjectives.',
+          'Test 3 hooks same body: (a) Stop sitting on this brick (b) POV: wallet thicker than phone (c) Back pain? Check back pocket. Winner reveals audience language.'
+        ],
+        hypothesis: 'same product + budget, hook + proof + match lifts CTR 0.7% -> 1.4-1.8% cold, CPA -30-40% in 2 weeks.'
+      },
+      linkedInHook: {
+        postText: 'Same wallet. Same feed. One scales, one dies in 7 days. I broke down 2 DTC wallet ads: WINNER "Stop sitting on this brick" - hook in 2s you FEEL, 1 claim, live demo, 30-day risk reversal. LOSER "Premium Quality - 20% OFF" - studio gradient, 4 features, no proof. Full side-by-side + 48h fix in blog: https://frage3r.github.io/AfifAhamedLam/#ads-breakdown Day 1 of daily Winning vs Losing. #DTC #MetaAds #MediaBuying #Ecommerce',
+        firstComment: 'Full breakdown for founders: comparison table + test plan in blog above. Tomorrow: supplement UGC vs founder story.'
+      },
+      clientCta: {
+        pitch: 'I break down winning ads + audit losers into test plans for DTC, ecom, info and local brands (Meta & Google). If your creative dies in 7 days, I will tell you why in one audit.',
+        email: 'AhamedAfif87@gmail.com',
+        contactUrl: 'https://frage3r.github.io/AfifAhamedLam/#contact',
+        nextBreakdown: 'Transformation UGC vs Founder-story for $79/mo supplements.'
+      }
+    }
+  },
+  {
     id: 'ab-1',
     slug: 'athletic-greens-ag1-habit-stacking-meta-ad',
     brandName: 'Athletic Greens (AG1)',
@@ -43,49 +194,6 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
     ],
     myVerdict:
       'An exceptional benchmark in high-ticket consumable advertising. Demonstrates that customer empathy and cognitive framing outperform dry technical data sheets in paid social feeds.'
-  },
-  {
-    id: 'ab-2',
-    slug: 'ridge-wallet-objection-demolition-video-ad',
-    brandName: 'The Ridge',
-    industry: 'Everyday Carry (EDC) / Accessories',
-    title: 'The "Bulky Leather Back-Pocket" Tear-Down: Ridge’s Masterclass in Visual Problem Agitation',
-    shortDescription: 'Analyzing public Meta and YouTube ads that turn a mundane accessory purchase into an urgent posture, security, and minimalism decision.',
-    date: 'January 14, 2026',
-    readingTime: '5 min read',
-    targetAudience: 'Men and minimalist professionals aged 22–50 carrying thick, bent bi-fold wallets stuffed with expired receipts and unused loyalty cards.',
-    theHook: {
-      observable: 'A man in jeans sits down on a wooden chair, immediately winces in discomfort, shifts his posture, and pulls out an absurdly swollen 3-inch leather wallet containing crumbled receipts. Bold text overlay: "Stop sitting on this brick."',
-      analysis: 'Visually depicts an immediate, relatable physical annoyance that almost every back-pocket wallet owner has felt but ignored. It makes the problem instantly tangible in less than two seconds.',
-      hypothesis: 'The exaggerated physical wince provokes instant recognition, causing the viewer to subconsciously check their own back pocket before scrolling past.'
-    },
-    theCreative: {
-      format: 'High-energy fast-cut video ad (1:1 and 9:16 formats).',
-      visualStyle: 'Side-by-side comparison shots, split-screens, scale weigh-ins, and high-impact drops tests on concrete.',
-      breakdown: 'Begins with the visceral discomfort of the bulky wallet, shifts to a digital scale weighing both items, demonstrates the push-card access mechanism, and concludes with a lifetime guarantee callout.'
-    },
-    theOffer: 'Tiered cart incentives (e.g., 10% off single item, 20% off bundles with matching key case or coin tray) backed by a 99-day risk-free trial and lifetime warranty.',
-    theCopy: {
-      headline: 'Ditch the bulk. Built to last a lifetime.',
-      body: 'Holds 1–12 cards without stretching out. Blocks RFID scanning to protect against wireless card skimming. Backed by our lifetime guarantee.',
-      breakdown: 'Short, declarative, punchy statements. Addresses the card capacity objection immediately ("does it hold enough?"), adds a functional security anchor (RFID), and eliminates purchase risk (lifetime guarantee).'
-    },
-    theCta: '"Shop The Ridge" / "Upgrade Your Carry"',
-    thePsychology: [
-      'Problem agitation: Elevates a passive everyday habit into an active posture and aesthetic flaw.',
-      'Loss aversion mitigation: A lifetime guarantee and 99-day trial eliminates the mental cost of abandoning familiar leather wallets.',
-      'Tactile premiumization: Emphasizes aircraft-grade aluminum, titanium, and carbon fiber materials.'
-    ],
-    theFunnel: 'Cold Meta prospecting video ads -> Side-by-side comparison landing page showcasing physical dimensions -> Bundle builder at checkout -> Post-purchase retargeting offering matching key clips and accessories.',
-    whyIThinkItWorks:
-      'The ad never assumes the customer is actively shopping for a wallet. Instead, it interrupts passive scrolling by demonstrating that their current, familiar solution is flawed, inefficient, and physically uncomfortable.',
-    whatGrowingBusinessesCanLearn: [
-      'Compare your product directly against the default legacy habit, not just direct competitors.',
-      'Use physical scale, sound, and weight comparisons to communicate quality without words.',
-      'A rock-solid guarantee is an active conversion tool, not just fine print.'
-    ],
-    myVerdict:
-      'A textbook demonstration of cold-traffic problem agitation. It proves that even saturated utility categories can generate immense demand through sharp visual contrast.'
   },
   {
     id: 'ab-3',

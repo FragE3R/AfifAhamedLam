@@ -135,13 +135,13 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ onNavigate }) 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {latestAdsBreakdown.map((item) => {
               const adsMediaMap: Record<string, { src: string; caption: string }> = {
+                'ab-5': {
+                  src: './images/win1_hook_brick_wallet.jpg',
+                  caption: 'WIN-1: Stop Sitting On This Brick'
+                },
                 'ab-1': {
                   src: './images/ag1_habit_ad_1793632479207.jpg',
                   caption: 'AG1 Morning Routine Hook'
-                },
-                'ab-2': {
-                  src: './images/ridge_wallet_ad_1793632478447.jpg',
-                  caption: 'Ridge Wallet Visual Agitation'
                 },
                 'ab-3': {
                   src: './images/hexclad_cookware_ad_1793632480720.jpg',

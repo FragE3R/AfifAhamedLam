@@ -87,6 +87,60 @@ export interface AdsBreakdownArticle {
   whyIThinkItWorks: string;
   whatGrowingBusinessesCanLearn: string[];
   myVerdict: string;
+  isWinningVsLosing?: boolean;
+  dayNumber?: number;
+  comparisonData?: {
+    winnerBrand: string;
+    winnerTagline: string;
+    loserBrand: string;
+    loserTagline: string;
+    winnerLinks: {
+      store?: string;
+      adLibraryAll?: string;
+      adLibraryActive?: string;
+      igHookReel?: string;
+      teardownRef?: string;
+      brandData?: string;
+    };
+    loserLinks: {
+      findLoserUrl?: string;
+      selectionTip?: string;
+    };
+    screenshots: Array<{
+      id: string;
+      title: string;
+      role: 'winner' | 'loser';
+      caption: string;
+      src: string;
+      aspectRatio?: '9:16' | '16:9' | '1:1';
+      sourcePath?: string;
+    }>;
+    scores: Array<{
+      category: string;
+      winnerScore: number;
+      loserScore: number;
+    }>;
+    sideBySideTable: Array<{
+      element: string;
+      winner: string;
+      loser: string;
+    }>;
+    fixPlan: {
+      title: string;
+      points: string[];
+      hypothesis: string;
+    };
+    linkedInHook?: {
+      postText: string;
+      firstComment: string;
+    };
+    clientCta?: {
+      pitch: string;
+      email: string;
+      contactUrl: string;
+      nextBreakdown: string;
+    };
+  };
 }
 
 export interface PortfolioProject {
