@@ -2,6 +2,166 @@ import { AdsBreakdownArticle } from '../types';
 
 export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
   {
+    id: 'ab-6',
+    slug: 'bd-winter-hoodie-fabrilife-vs-sara-2026',
+    brandName: 'Fabrilife vs SaRa Lifestyle',
+    industry: 'Winter Fashion / Ecom BD',
+    title: 'Hoodie Wars: Why Fabrilife 1850 BDT Story Beats SaRa 850 BDT Catalog in November',
+    shortDescription: 'Same product. Same November feed. One wins 11.11 cold traffic, one burns it. Mens Premium Hoodie 1850 BDT vs Winter Hoodie Jacket 850 BDT.',
+    date: 'November 05, 2026',
+    readingTime: '7 min read',
+    targetAudience: 'Dhaka and Bangladesh urban youth, university students, bike commuters, and corporate office wearers facing cold November mornings and 11.11 winter drops.',
+    isWinningVsLosing: true,
+    dayNumber: 2,
+    theHook: {
+      observable: "Lifestyle photo/video, real person wearing Winterbound/Polarize outdoors, Bangla-English hook 'Winter mornings and long evenings'.",
+      analysis: 'WHY IT WINS: self-identifies Dhaka commuter/student in 2s, shows fit on body (solves size fear), premium cotton texture visible, native to feed not catalog.',
+      hypothesis: 'Hypothesis: 30%+ thumb-stop (vs <18% for ghost-mannequin catalog static).'
+    },
+    theCreative: {
+      format: 'Winning: Native outdoor lifestyle video & real-person carousel. Loser: Studio flat catalog on white.',
+      visualStyle: 'Dhaka foggy dawn street & rooftop context, cold breath, warm natural lighting, honest texture close-ups.',
+      breakdown: 'WINNER CREATIVE: 3 beats - 1) context (foggy street), 2) fabric (stretch + inside fleece), 3) fit (front + back + hood up). No studio gradient. Caption lists fabric, GSM, unisex, office time 10AM-8PM. Inference: reduces "kapor patla hobe?" objection that kills BD COD.'
+    },
+    theOffer: '1850 BDT COD+exchange vs 850 BDT vague urgency',
+    theCopy: {
+      headline: 'Designed for cold mornings and long evenings, warmth without weight. vs Stay warm stay fashionable / Perfect blend of comfort and coolness',
+      body: '1850 BDT single (1590 older), clear CTA Order via inbox/website + COD + exchange. vs 850 BDT incl VAT, synthetic fabric, Nearly sold out Grab yours now! + Shop Now -> collection page.',
+      breakdown: 'WINNER: 1850 BDT single (1590 older), clear CTA Order via inbox/website + COD + exchange. Psychology: replacement (one good hoodie for whole season), social proof via comments ("offer price?"), risk reversal via exchange. Funnel: Meta/TikTok -> single PDP with size chart -> bKash/COD -> WhatsApp confirm. Hypothesis: higher AOV but lower return: Net Delivered ROAS wins. LOSER: 850 BDT incl VAT, synthetic fabric, "Nearly sold out Grab yours now!" + Shop Now -> collection page. WHY IT LOSES: cheap price signals thin fabric in BD winter (trust drop), fake scarcity with no count, synthetic hides breathability fear, collection page forces hunt. COD order -> high return when real feel != photo.'
+    },
+    theCta: 'Inbox/Order -> single PDP vs Shop Now -> collection',
+    thePsychology: [
+      'Replacement psychology: One premium hoodie that lasts the whole season instead of buying 2 cheap throwaways.',
+      'Pre-handling BD COD fear: Clear size charts and exchange policies eliminate the fear of wrong sizing on delivery.',
+      'Texture as proof: Showing thick brushed fleece directly neutralizes the "kapor patla hobe?" (will fabric be thin?) hesitation.',
+      'Contextual self-identification: 7:00 AM bike commute and university campus setting makes the product feel immediately necessary.'
+    ],
+    theFunnel: 'Meta/TikTok -> single PDP with size chart -> bKash/COD -> WhatsApp confirm. Loser: Shop Now -> 20-item collection with no direct product match.',
+    whyIThinkItWorks:
+      'TL;DR: Same hoodie need, different job. Fabrilife sells a November morning (cold air, bike ride, varsity). SaRa sells a product code. In BD COD + size-exchange fear, story + proof beats catalog + discount.',
+    whatGrowingBusinessesCanLearn: [
+      'Sell the morning context, not just fabric specifications: A cold bike ride in fog triggers an immediate lifestyle reaction.',
+      'Show the inside fleece: In Bangladesh winter apparel, proving fabric thickness visually prevents delivery rejection.',
+      'Pre-handle return reasons: Provide clear size charts, chest/length measurements, and 7-day exchange guarantees.',
+      'Eliminate collection page leaks: When advertising a specific winter hoodie, land traffic on that exact item, never a 20-product category page.'
+    ],
+    myVerdict:
+      'In Bangladesh e-commerce, the real battle is not cheap clicks — it is Net Delivered ROAS after COD returns. Fabrilife wins because their creative pre-handles fabric doubt, fit anxiety, and payment trust before the order is placed.',
+    comparisonData: {
+      winnerBrand: 'Fabrilife',
+      winnerTagline: 'Mens Premium Hoodie - Winterbound / Polarize (1850 BDT single, unisex, cotton). Angle: "Designed for cold mornings and long evenings, warmth without weight."',
+      loserBrand: 'SaRa Lifestyle Ltd',
+      loserTagline: 'Winter Hoodie Jacket (850 BDT incl VAT, synthetic fabric). Angle: "Perfect blend of comfort and coolness / Stay warm stay fashionable."',
+      winnerLinks: {
+        store: 'https://deshiz.com/winter-clothes-online-bangladesh/',
+        adLibraryAll: 'https://www.facebook.com/fabrilife/posts/1168713178682335/',
+        adLibraryActive: 'https://www.facebook.com/fabrilife/posts/1162539662633020/',
+        igHookReel: 'https://www.facebook.com/fabrilife/posts/1154418276778492/',
+        teardownRef: 'https://www.facebook.com/fabrilife/photos/684642340422757/',
+        brandData: 'https://www.daraz.com.bd/tag/winter-collection-2026-for-men/'
+      },
+      loserLinks: {
+        findLoserUrl: 'https://www.facebook.com/saralifestyle.bd/videos/winter-2526-is-here/3340360019448684/',
+        selectionTip: 'Strong offline retail distribution, but paid social creative relies on static ghost-mannequin catalog shots with zero thumb-stop.'
+      },
+      screenshots: [
+        {
+          id: 'win-1',
+          title: 'WIN-1 Hook',
+          role: 'winner',
+          caption: 'Human + context in 2s.',
+          src: './images/fabrilife_hook_morning.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'facebook.com/fabrilife/posts/1168713178682335/'
+        },
+        {
+          id: 'win-2',
+          title: 'WIN-2 Fabric proof',
+          role: 'winner',
+          caption: "Warmth without weight - show don't tell.",
+          src: './images/fabrilife_fabric_proof.jpg',
+          aspectRatio: '16:9',
+          sourcePath: 'Same post carousel slide 2-3'
+        },
+        {
+          id: 'win-3',
+          title: 'WIN-3 Offer clarity',
+          role: 'winner',
+          caption: 'One price, one action.',
+          src: './images/fabrilife_offer_clarity.jpg',
+          aspectRatio: '16:9',
+          sourcePath: 'Fabrilife PDP / inbox flow'
+        },
+        {
+          id: 'lose-1',
+          title: 'LOSE-1 Flat catalog',
+          role: 'loser',
+          caption: 'No human, no hook.',
+          src: './images/sara_flat_catalog.jpg',
+          aspectRatio: '1:1',
+          sourcePath: 'facebook.com/saralifestyle.bd/photos/789001626592548/'
+        },
+        {
+          id: 'lose-2',
+          title: 'LOSE-2 Urgency without proof',
+          role: 'loser',
+          caption: 'Urgency with no reason.',
+          src: './images/sara_urgency_noprf.jpg',
+          aspectRatio: '1:1',
+          sourcePath: 'Same + post 768392368653474'
+        },
+        {
+          id: 'lose-3',
+          title: 'LOSE-3 Funnel',
+          role: 'loser',
+          caption: 'Message mismatch.',
+          src: './images/sara_funnel_leak.jpg',
+          aspectRatio: '16:9',
+          sourcePath: 'saralifestyle.com.bd collection'
+        }
+      ],
+      scores: [
+        { category: 'Hook (first 3s)', winnerScore: 9, loserScore: 3 },
+        { category: 'Proof / Demo', winnerScore: 8, loserScore: 2 },
+        { category: 'Offer clarity + COD', winnerScore: 8, loserScore: 4 },
+        { category: 'CTA + Landing match', winnerScore: 9, loserScore: 3 }
+      ],
+      sideBySideTable: [
+        { element: 'Element', winner: 'Fabrilife (WIN)', loser: 'SaRa (LOSE PATTERN)' },
+        { element: 'First 3s', winner: 'Human + foggy morning + hoodie on', loser: 'Manequin on white + slogan' },
+        { element: 'Trigger', winner: 'Cold morning sorted', loser: 'Stay fashionable' },
+        { element: 'Claims', winner: '1: warmth without weight', loser: '3: comfort+coolness+fashion' },
+        { element: 'Proof', winner: 'Stretch + fleece + fit on body', loser: 'None, catalog only' },
+        { element: 'Specificity', winner: '1850 BDT, cotton, GSM, unisex', loser: '850 BDT, synthetic, no GSM' },
+        { element: 'Offer', winner: 'COD + 7-day exchange + clear price', loser: '850 cheap + vague urgency' },
+        { element: 'CTA/Landing', winner: 'Order -> single PDP size chart', loser: 'Shop Now -> 20-item collection' },
+        { element: 'Returns', winner: 'Pre-handled (fabric+fit+exchange)', loser: 'Surprise (thin/synthetic fear)' },
+        { element: 'Lifespan', winner: 'Iterated winners Polarize/Winterbound', loser: 'One-post catalog, low saves' }
+      ],
+      fixPlan: {
+        title: '48-hour fix for SaRa (loser) - keep product, change creative',
+        points: [
+          'Keep same 850 BDT jacket. Reshoot 15s iPhone: boy wears it on bike at 7am + hood up + zip close-up. First text: "Sokal 7tay bike-e thanda lage?"',
+          'Kill catalog. Show 1 proof: inside fleece rub + wind test (candle/hair dryer). 6s demo beats 6 features.',
+          'Swap copy: Headline "850 TK Winter Hoodie - Fleece Inside" Body "Size M-XXL, COD, check-before-pay, exchange if size wrong." CTA Inbox with size chart image.',
+          'Add trust: overlay "1200+ sold" if true OR "Sara outlet-e giye dekhe nin" + outlet list + real try-on video. Offline trust is SaRa edge - use it.',
+          'Test 3 hooks same body: (a) 850 TK-te hoodie? Fabric dekho (b) Bike riders: kan thanda? Hood test (c) 11.11: 1 hoodie full winter. Winner reveals language for scaling.'
+        ],
+        hypothesis: 'same budget, human + proof + COD clarity cuts return rate (key BD metric) and lifts CTR 0.7% -> 1.5% in 2 weeks.'
+      },
+      linkedInHook: {
+        postText: 'BD winter is here. Same hoodie, 2 ads. One will own 11.11, one will pay COD returns. I broke down Fabrilife (1850 BDT) vs SaRa (850 BDT). Winner sells a 7am bike ride, not a jacket. Loser sells a catalog code. Full flaws + pros + 48h fix + screenshot map in blog (LINK AFTER YOU PUBLISH). Day 2 of daily Winning vs Losing. Follow for BD DTC breakdowns. #Bangladesh #DTC #MetaAds #MediaBuying #EcommerceBD #WinterCollection',
+        firstComment: 'Full blog here: [YOUR NEW BLOG LINK ab-6] - includes table + fix plan. Which hook would you test first for BD COD?'
+      },
+      clientCta: {
+        pitch: 'I audit BD winter creatives for COD returns, not just CTR. If your hoodie/jacket ad dies after 7 days, I tell you why in one teardown.',
+        email: 'AhamedAfif87@gmail.com',
+        contactUrl: 'https://frage3r.github.io/AfifAhamedLam/#contact',
+        nextBreakdown: 'Vaseline vs Meril winter lotion? Tell me niche.'
+      }
+    }
+  },
+  {
     id: 'ab-5',
     slug: 'winning-vs-losing-wallet-brick-vs-premium-2026',
     brandName: 'Everyday Carry Wallets (Winning vs Losing)',

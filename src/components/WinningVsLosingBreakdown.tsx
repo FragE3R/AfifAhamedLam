@@ -8,21 +8,11 @@ import {
   Copy,
   Check,
   TrendingUp,
-  AlertTriangle,
-  Lightbulb,
-  Layers,
-  Sparkles,
-  ExternalLink,
-  Target,
   Clock,
   Calendar,
-  Share2,
   Mail,
-  Zap,
-  BarChart3,
-  HelpCircle,
   Eye,
-  Info
+  Sparkles
 } from 'lucide-react';
 
 interface WinningVsLosingBreakdownProps {
@@ -55,7 +45,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
       {/* Lightbox Modal for Screenshots */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 backdrop-blur-xs cursor-pointer animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 backdrop-blur-xs cursor-pointer animate-in fade-in duration-200"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-w-4xl max-h-[90vh] bg-slate-900 rounded-xl overflow-hidden shadow-2xl p-2 border border-slate-700">
@@ -73,7 +63,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
       {/* Top Banner Navigation if standalone */}
       {isStandalonePage && (
-        <div className="border-b border-slate-200 bg-slate-50/60 sticky top-20 z-30">
+        <div className="border-b border-slate-200 bg-slate-50/70 sticky top-20 z-30 backdrop-blur-md">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
             <button
               onClick={() => {
@@ -87,10 +77,10 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             </button>
             <div className="flex items-center gap-2">
               <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 font-semibold">
-                Day 1 Breakdown
+                Day {article.dayNumber || 1} Breakdown
               </span>
               <a
-                href="mailto:AhamedAfif87@gmail.com?subject=Growth%20Audit%20Inquiry%20from%20Ads%20Breakdown"
+                href="mailto:AhamedAfif87@gmail.com?subject=Creative%20Audit%20Inquiry"
                 className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 bg-slate-950 text-white rounded hover:bg-slate-800 transition-colors"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -107,32 +97,38 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-semibold tracking-wider uppercase text-slate-500 mb-3">
             <span className="text-slate-900 font-bold">AFIF AHAMED</span>
             <span>|</span>
-            <span className="text-emerald-700 font-bold">MEDIA BUYER & MARKETING STRATEGIST</span>
+            <span className="text-emerald-700 font-bold">
+              DAY {article.dayNumber || 1} - {article.industry.toUpperCase()}
+            </span>
           </div>
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 text-xs font-semibold uppercase tracking-wider mb-4">
             <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Winning vs Losing Ad Breakdown • Day 1</span>
+            <span>Winning vs Losing Ad Breakdown • Day {article.dayNumber || 1}</span>
           </div>
 
-          <h1 className="font-editorial text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 leading-[1.15] mb-5">
-            Day 1: Why 'Stop Sitting On This Brick' Scales and 'Premium Quality - 20% OFF' Dies in 7 Days
+          <h1 className="font-editorial text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 leading-[1.15] mb-4">
+            {article.title}
           </h1>
+
+          <p className="text-base sm:text-lg text-slate-700 font-normal leading-relaxed mb-6">
+            {article.shortDescription}
+          </p>
 
           <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 font-medium mb-6">
             <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-900 font-semibold">
-              DTC / Ecom - Wallets
+              {article.industry}
             </span>
-            <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700">
-              Meta + TikTok Ads
+            <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 font-medium">
+              {comp?.winnerBrand} vs {comp?.loserBrand}
             </span>
             <span className="flex items-center gap-1 text-slate-600">
               <Calendar className="w-3.5 h-3.5" />
-              November 04, 2026
+              {article.date}
             </span>
             <span className="flex items-center gap-1 text-slate-600">
               <Clock className="w-3.5 h-3.5" />
-              7 min read
+              {article.readingTime}
             </span>
           </div>
 
@@ -165,11 +161,11 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               1
             </span>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              The Two Ads — Companies &amp; Exact Links
+              The 2 Brands — Exact Products &amp; Links
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
             {/* Winner Card */}
             <div className="p-6 rounded-xl border-2 border-emerald-500/40 bg-emerald-50/20 shadow-xs flex flex-col justify-between">
               <div>
@@ -179,70 +175,92 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     WINNER
                   </span>
                   <span className="text-xs font-mono font-semibold text-emerald-800">
-                    5,689 active Meta ads
+                    Proven Creative Angle
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-950 mb-1">
-                  The Ridge (Ridge Wallet)
+                  {comp?.winnerBrand}
                 </h3>
-                <p className="text-xs text-slate-600 mb-4">
-                  Real long-runner as of Nov 2026. Minimalist RFID wallet. This is your proof of <em>"what good looks like."</em>
+                <p className="text-xs text-slate-600 mb-4 leading-relaxed">
+                  {comp?.winnerTagline}
                 </p>
 
                 <div className="space-y-2 pt-2 border-t border-emerald-200/60 text-xs">
-                  <div className="flex items-center justify-between py-1 border-b border-emerald-100">
-                    <span className="text-slate-600 font-medium">Official Store:</span>
-                    <a
-                      href={comp?.winnerLinks.store || 'https://ridge.com/'}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1"
-                    >
-                      <span>ridge.com</span>
-                      <ArrowUpRight className="w-3 h-3" />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between py-1 border-b border-emerald-100">
-                    <span className="text-slate-600 font-medium">Meta Ad Library (Active):</span>
-                    <a
-                      href={comp?.winnerLinks.adLibraryActive}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
-                    >
-                      <span>View 5,689 Active Ads</span>
-                      <ArrowUpRight className="w-3 h-3 shrink-0" />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between py-1 border-b border-emerald-100">
-                    <span className="text-slate-600 font-medium">Original IG Hook Reel:</span>
-                    <a
-                      href={comp?.winnerLinks.igHookReel}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1"
-                    >
-                      <span>"Stop sitting on a brick"</span>
-                      <ArrowUpRight className="w-3 h-3" />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between py-1">
-                    <span className="text-slate-600 font-medium">Teardown &amp; Brand Intel:</span>
-                    <a
-                      href={comp?.winnerLinks.teardownRef}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1"
-                    >
-                      <span>SparkUGC Creative Audit</span>
-                      <ArrowUpRight className="w-3 h-3" />
-                    </a>
-                  </div>
+                  {comp?.winnerLinks.store && (
+                    <div className="flex items-center justify-between py-1 border-b border-emerald-100">
+                      <span className="text-slate-600 font-medium">Product / Market Reference:</span>
+                      <a
+                        href={comp.winnerLinks.store}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
+                      >
+                        <span>View Guide / Source</span>
+                        <ArrowUpRight className="w-3 h-3 shrink-0" />
+                      </a>
+                    </div>
+                  )}
+                  {comp?.winnerLinks.adLibraryAll && (
+                    <div className="flex items-center justify-between py-1 border-b border-emerald-100">
+                      <span className="text-slate-600 font-medium">Post Proof 1 (Angle):</span>
+                      <a
+                        href={comp.winnerLinks.adLibraryAll}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
+                      >
+                        <span>Verified Creative Post 1</span>
+                        <ArrowUpRight className="w-3 h-3 shrink-0" />
+                      </a>
+                    </div>
+                  )}
+                  {comp?.winnerLinks.adLibraryActive && (
+                    <div className="flex items-center justify-between py-1 border-b border-emerald-100">
+                      <span className="text-slate-600 font-medium">Post Proof 2 (Price &amp; Offer):</span>
+                      <a
+                        href={comp.winnerLinks.adLibraryActive}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
+                      >
+                        <span>Verified Creative Post 2</span>
+                        <ArrowUpRight className="w-3 h-3 shrink-0" />
+                      </a>
+                    </div>
+                  )}
+                  {comp?.winnerLinks.igHookReel && (
+                    <div className="flex items-center justify-between py-1 border-b border-emerald-100">
+                      <span className="text-slate-600 font-medium">Post Proof 3 (Confidence):</span>
+                      <a
+                        href={comp.winnerLinks.igHookReel}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
+                      >
+                        <span>Verified Creative Post 3</span>
+                        <ArrowUpRight className="w-3 h-3 shrink-0" />
+                      </a>
+                    </div>
+                  )}
+                  {comp?.winnerLinks.brandData && (
+                    <div className="flex items-center justify-between py-1">
+                      <span className="text-slate-600 font-medium">Market Demand Context:</span>
+                      <a
+                        href={comp.winnerLinks.brandData}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
+                      >
+                        <span>Winter Category Spike</span>
+                        <ArrowUpRight className="w-3 h-3 shrink-0" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="mt-5 p-3 rounded-lg bg-emerald-100/60 text-emerald-950 text-xs">
-                <strong>Longevity Proxy:</strong> 60+ days running across broad cold audiences indicates profitable unit economics and continuous ad spend.
+                <strong>Why It Wins:</strong> Sells human emotion, warmth without weight, and context in 2 seconds instead of treating paid social as a passive catalog.
               </div>
             </div>
 
@@ -252,47 +270,55 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 <div className="flex items-center justify-between mb-3">
                   <span className="px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-rose-600 text-white inline-flex items-center gap-1">
                     <XCircle className="w-3.5 h-3.5" />
-                    LOSER
+                    LOSER PATTERN
                   </span>
                   <span className="text-xs font-mono font-semibold text-rose-800">
-                    Killed in &lt;7 days
+                    High COD Return Risk
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-950 mb-1">
-                  Composite DTC Leather Wallet
+                  {comp?.loserBrand}
                 </h3>
-                <p className="text-xs text-slate-600 mb-4">
-                  No single brand named (composite). This shows the systematic <strong>PATTERN of losing</strong> (studio static + discount badge + Learn More to homepage) without disclosing a small shop's private ROAS.
+                <p className="text-xs text-slate-600 mb-4 leading-relaxed">
+                  {comp?.loserTagline}
                 </p>
 
                 <div className="space-y-2 pt-2 border-t border-rose-200/60 text-xs">
-                  <div className="flex items-center justify-between py-1 border-b border-rose-100">
-                    <span className="text-slate-600 font-medium">Meta Ad Library Search:</span>
-                    <a
-                      href={comp?.loserLinks.findLoserUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-rose-700 hover:text-rose-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
-                    >
-                      <span>Ad Library: "leather wallet"</span>
-                      <ArrowUpRight className="w-3 h-3 shrink-0" />
-                    </a>
-                  </div>
-                  <div className="py-2 text-[11px] text-slate-600 leading-relaxed bg-white/70 p-2.5 rounded border border-rose-200">
-                    <strong className="text-rose-900 block mb-0.5">How to spot losers in 2 mins:</strong>
-                    Filter <em>Media Type = Image</em>, look for 1:1 studio wallet on gradient, text <em>"Premium Quality / Genuine Leather / 20% OFF"</em>, running &lt;7 days. That is your losing pattern.
-                  </div>
+                  {comp?.loserLinks.findLoserUrl && (
+                    <div className="flex items-center justify-between py-1 border-b border-rose-100">
+                      <span className="text-slate-600 font-medium">Reference Creative:</span>
+                      <a
+                        href={comp.loserLinks.findLoserUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-rose-700 hover:text-rose-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
+                      >
+                        <span>View Catalog Video Post</span>
+                        <ArrowUpRight className="w-3 h-3 shrink-0" />
+                      </a>
+                    </div>
+                  )}
+                  {comp?.loserLinks.selectionTip && (
+                    <div className="py-2 text-[11px] text-slate-600 leading-relaxed bg-white/70 p-2.5 rounded border border-rose-200">
+                      <strong className="text-rose-900 block mb-0.5">Audit Insight:</strong>
+                      {comp.loserLinks.selectionTip}
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="mt-5 p-3 rounded-lg bg-rose-100/60 text-rose-950 text-xs">
-                <strong>Failure Mechanism:</strong> Zero thumb-stop, 4 features instead of 1 outcome, unmotivated discount, and fatal homepage bounce leak.
+                <strong>Failure Mechanism:</strong> No human model, ghost mannequin on white, cheap synthetic fear, and catalog landing leak.
               </div>
             </div>
           </div>
+
+          <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-500 font-mono">
+            <strong>Analytical note:</strong> This compares publicly observable creative + landing patterns. Price, fabric, and run context are observable. ROAS/CTR numbers are hypotheses marked as such. No private dashboard data claimed.
+          </div>
         </section>
 
-        {/* SECTION 2: Screenshot Map - What to capture with [SCREENSHOT PLACEHOLDER] tags */}
+        {/* SECTION 2: Screenshot Map - What AI Studio Must Show */}
         <section className="mb-14 scroll-mt-28" id="screenshot-map">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">
@@ -300,7 +326,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 2
               </span>
               <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-                Screenshot Map &amp; Visual Evidence
+                Screenshot Map — What AI Studio Must Show
               </h2>
             </div>
             <div className="flex items-center gap-1.5 text-xs font-medium">
@@ -310,7 +336,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                   activeTab === 'all' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
-                All (5)
+                All ({comp?.screenshots.length || 0})
               </button>
               <button
                 onClick={() => setActiveTab('winner')}
@@ -318,7 +344,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                   activeTab === 'winner' ? 'bg-emerald-700 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
-                Winner Proof (3)
+                Winner Proof
               </button>
               <button
                 onClick={() => setActiveTab('loser')}
@@ -326,13 +352,13 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                   activeTab === 'loser' ? 'bg-rose-700 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
-                Loser Leaks (2)
+                Loser Leaks
               </button>
             </div>
           </div>
 
           <p className="text-sm text-slate-600 mb-8 leading-relaxed max-w-3xl">
-            Below are the five verified campaign captures annotated with exact video timestamps, creative agitation mechanisms, and conversion funnel leak points. Click any screenshot for high-resolution inspection.
+            Below are the verified campaign captures annotated with exact video timestamps, creative agitation mechanisms, and conversion funnel leak points. Click any screenshot for high-resolution inspection.
           </p>
 
           <div className="space-y-8">
@@ -355,7 +381,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     >
                       <div className="flex items-center gap-2">
                         <span className="font-bold px-2 py-0.5 rounded bg-white border border-current text-[11px]">
-                          [SCREENSHOT PLACEHOLDER]
+                          [SCREENSHOT]
                         </span>
                         <span className="font-bold">{shot.title}</span>
                       </div>
@@ -394,69 +420,23 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                       {/* Analysis Column */}
                       <div className="md:col-span-5 space-y-3">
                         <div className="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-semibold bg-slate-100 text-slate-700">
-                          Verified Creative Annotation
+                          Creative Analysis &amp; Annotation
                         </div>
                         <h4 className="font-editorial text-xl font-bold text-slate-950">
                           {shot.caption}
                         </h4>
 
-                        {shot.id === 'win-1' && (
-                          <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
-                            <p>
-                              <strong>Observable:</strong> Man in jeans sits down on wooden chair, winces in back pain, shifts awkwardly, and pulls absurd 3-inch swollen leather brick with receipts.
-                            </p>
-                            <p>
-                              <strong>Why it stops the thumb:</strong> Zero corporate fluff. Sound-off readable pattern interrupt. The viewer feels the pain in 2 seconds before realizing it's an ad.
-                            </p>
-                          </div>
-                        )}
-
-                        {shot.id === 'win-2' && (
-                          <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
-                            <p>
-                              <strong>Observable:</strong> Camera looks straight down on table as 12 credit cards, crumpled receipts, and bent cards spill out next to a sleek gunmetal Ridge wallet.
-                            </p>
-                            <p>
-                              <strong>Visual Agitation:</strong> Extreme contrast between chaotic bulk and precision minimalism. Proves high capacity without unnecessary width.
-                            </p>
-                          </div>
-                        )}
-
-                        {shot.id === 'win-3' && (
-                          <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
-                            <p>
-                              <strong>Observable:</strong> Effortless front-pocket slide demonstration paired with PDP risk-reversal terms.
-                            </p>
-                            <p>
-                              <strong>Conversion Architecture:</strong> 30-day test drive, free returns worldwide, and 2,000+ verified 5-star reviews systematically neutralize the $75+ price barrier.
-                            </p>
-                          </div>
-                        )}
-
-                        {shot.id === 'lose-1' && (
-                          <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
-                            <p>
-                              <strong>Observable:</strong> Floating brown leather wallet on smooth studio blue gradient with generic text "Premium Quality Craftsmanship" and yellow 20% OFF badge.
-                            </p>
-                            <p>
-                              <strong>Why it dies:</strong> No human element, no problem agitation, zero thumb-stop. Looks like an ignored flyer; discount without motivation equals zero conversions.
-                            </p>
-                          </div>
-                        )}
-
-                        {shot.id === 'lose-2' && (
-                          <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
-                            <p>
-                              <strong>Observable:</strong> User clicks "Learn More" on a specific wallet ad and gets dumped onto a broad general catalog homepage showing 20 random products.
-                            </p>
-                            <p>
-                              <strong>The Funnel Leak:</strong> Severe message mismatch. Cold traffic will never hunt through menus to find the product they saw in the ad.
-                            </p>
-                          </div>
-                        )}
+                        <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
+                          <p>
+                            <strong>Visual Observation:</strong> {shot.title} demonstrates how consumers process the creative before reading the caption or price tag.
+                          </p>
+                          <p>
+                            <strong>Performance Impact:</strong> {isWin ? 'Pre-handles return reasons, builds tactile trust, and hooks high-intent buyers.' : 'Forces the user into high mental friction, creates message mismatch, and burns cold ad spend.'}
+                          </p>
+                        </div>
 
                         <div className="pt-2 text-[11px] font-mono text-slate-500 border-t border-slate-100 flex items-center justify-between">
-                          <span>Audit Ref: #{shot.id.toUpperCase()}</span>
+                          <span>Ref: #{shot.id.toUpperCase()}</span>
                           <span className="text-emerald-700 font-semibold cursor-pointer" onClick={() => setSelectedImage(shot.src)}>
                             Enlarge +
                           </span>
@@ -469,19 +449,19 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </section>
 
-        {/* SECTION 3: Visual Story - Creative Score (Render as 4 horizontal bar pairs, green vs red) */}
+        {/* SECTION 3: Visual Story - Creative Score (Render as bars) */}
         <section className="mb-14 scroll-mt-28" id="creative-scores">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
               3
             </span>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              Visual Story — Creative Score Card
+              Visual Story — Creative Scores (Rendered as Bars)
             </h2>
           </div>
 
           <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-            Rendered as 4 horizontal bar pairs (<strong>Green = Winner</strong> vs <strong>Red = Loser</strong>). This side-by-side gap is what makes founders immediately understand why one scales while the other burns budget.
+            Rendered as 4 horizontal bar pairs (<strong>Green = {comp?.winnerBrand}</strong> vs <strong>Red = {comp?.loserBrand}</strong>). Founders get it in 10 seconds.
           </p>
 
           <div className="p-6 sm:p-8 rounded-xl bg-slate-900 text-white border border-slate-800 shadow-md space-y-6">
@@ -491,17 +471,17 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                   Diagnostic Creative Framework
                 </span>
                 <h3 className="text-lg font-bold text-white mt-0.5">
-                  The Ridge (9.0/10) vs Composite DTC (2.5/10)
+                  {comp?.winnerBrand} vs {comp?.loserBrand}
                 </h3>
               </div>
               <div className="flex items-center gap-4 text-xs font-mono">
                 <span className="inline-flex items-center gap-1.5 text-emerald-400 font-semibold">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                  Winner (Scaling)
+                  Winner
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-rose-400 font-semibold">
                   <span className="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
-                  Loser (Killed &lt;7d)
+                  Loser Pattern
                 </span>
               </div>
             </div>
@@ -522,7 +502,9 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                   <div className="space-y-1.5">
                     {/* Winner Bar */}
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-slate-400 w-16 text-right">WINNER:</span>
+                      <span className="text-[10px] font-mono text-slate-400 w-24 text-right truncate">
+                        {comp.winnerBrand.split(' ')[0]}:
+                      </span>
                       <div className="h-6 flex-1 bg-slate-800 rounded-md overflow-hidden relative">
                         <div
                           className="h-full bg-gradient-to-r from-emerald-600 to-teal-400 rounded-md flex items-center justify-end pr-2.5 transition-all duration-500"
@@ -537,7 +519,9 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
                     {/* Loser Bar */}
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-slate-400 w-16 text-right">LOSER:</span>
+                      <span className="text-[10px] font-mono text-slate-400 w-24 text-right truncate">
+                        {comp.loserBrand.split(' ')[0]}:
+                      </span>
                       <div className="h-6 flex-1 bg-slate-800 rounded-md overflow-hidden relative">
                         <div
                           className="h-full bg-gradient-to-r from-rose-600 to-red-500 rounded-md flex items-center justify-end pr-2.5 transition-all duration-500"
@@ -566,14 +550,14 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </section>
 
-        {/* SECTION 4: Full Breakdown Copy (paste-ready) */}
+        {/* SECTION 4: Full Breakdown Copy */}
         <section className="mb-14 scroll-mt-28" id="full-breakdown-copy">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
               4
             </span>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              Full Breakdown Copy &amp; Systematic Teardown
+              Full Breakdown Copy &amp; Observable vs. Inference
             </h2>
           </div>
 
@@ -584,7 +568,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 TL;DR Strategic Summary
               </span>
               <p className="text-base text-slate-900 font-medium leading-relaxed">
-                Winning opens with a painful visual problem you feel in 2s. One claim. One proof. One CTA for cold traffic. Losing opens with product + discount. No problem. No proof. Built like a flyer, not a feed interrupt. In Andromeda-era Meta, <strong>creative IS targeting</strong>.
+                {article.whyIThinkItWorks}
               </p>
             </div>
 
@@ -592,7 +576,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="p-6 sm:p-8 rounded-xl border border-emerald-200 bg-white shadow-2xs space-y-6">
               <div className="flex items-center gap-2 text-emerald-800 font-bold text-sm uppercase tracking-wider pb-3 border-b border-emerald-100">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>The Winner Playbook: The Ridge</span>
+                <span>The Winner Playbook: {comp?.winnerBrand}</span>
               </div>
 
               <div className="space-y-4 text-sm text-slate-700 leading-relaxed">
@@ -601,10 +585,10 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     WINNER HOOK (observable):
                   </h4>
                   <p className="text-slate-800 mb-2">
-                    Man in jeans sits, winces, pulls absurdly swollen 3-inch leather wallet with receipts. Text: 'Stop sitting on this brick.' Natural chair-creak + wallet slap.
+                    {article.theHook.observable}
                   </p>
                   <p className="text-emerald-950 font-medium">
-                    <strong>WHY IT WINS:</strong> Self-identifies in 2s, visual not verbal, pattern interrupt like skit not ad. <em>Hypothesis: 30%+ thumb-stop.</em>
+                    {article.theHook.analysis} <em>{article.theHook.hypothesis}</em>
                   </p>
                 </div>
 
@@ -613,7 +597,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     WINNER CREATIVE (3 beats):
                   </h4>
                   <p className="text-slate-700">
-                    <strong>0–4s agitation</strong> (sitting pain) → <strong>4–12s contrast</strong> (dump 12 cards vs 2-card slim) → <strong>12–22s proof</strong> (front-pocket slide + clean sit + RFID tap). Handheld warm light, slightly imperfect = trust. No lifestyle padding — every single second shows the product doing something.
+                    {article.theCreative.breakdown}
                   </p>
                 </div>
 
@@ -622,21 +606,25 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     WINNER OFFER / COPY / CTA:
                   </h4>
                   <p className="text-slate-700 mb-2">
-                    <strong>Headline:</strong> 'Carry 12 cards. Ditch the brick.' <br />
-                    <strong>Body:</strong> 'Slim RFID-blocking. 30-day test drive. Free returns.' <br />
-                    <strong>CTA:</strong> Shop Now → dedicated PDP with side-by-side comparison + review count.
+                    <strong>Headline:</strong> {article.theCopy.headline} <br />
+                    <strong>Body / CTA:</strong> {article.theCopy.body}
                   </p>
-                  <p className="text-slate-800 text-xs">
-                    <strong>Psychology:</strong> Identity (minimalist) + replacement (replace chronic pain, not buy another accessory) + risk reversal for $75+ price.
-                  </p>
+                  <div className="pt-2 text-xs text-slate-800">
+                    <strong>Psychology in Play:</strong>
+                    <ul className="mt-1 list-disc list-inside space-y-1">
+                      {article.thePsychology.map((p, i) => (
+                        <li key={i}>{p}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
                 <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
                   <h4 className="font-bold text-slate-950 text-sm mb-1">
-                    WINNER FUNNEL:
+                    OBSERVED FUNNEL &amp; UNIT ECONOMICS:
                   </h4>
                   <p className="text-slate-700 font-mono text-xs">
-                    Cold Meta Broad → PDP (same promise) → retargeting testimonial static ('Lost the bulk, kept everything - 11,400+ reviews'). Longevity 60+ days = profitability proxy.
+                    {article.theFunnel}
                   </p>
                 </div>
               </div>
@@ -646,7 +634,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="p-6 sm:p-8 rounded-xl border border-rose-200 bg-white shadow-2xs space-y-6">
               <div className="flex items-center gap-2 text-rose-800 font-bold text-sm uppercase tracking-wider pb-3 border-b border-rose-100">
                 <XCircle className="w-4 h-4 text-rose-600" />
-                <span>The Loser Playbook: Composite Brand Failure</span>
+                <span>The Loser Playbook: {comp?.loserBrand} Failure Pattern</span>
               </div>
 
               <div className="space-y-4 text-sm text-slate-700 leading-relaxed">
@@ -655,10 +643,10 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     LOSER HOOK (observable):
                   </h4>
                   <p className="text-slate-800 mb-2">
-                    Perfectly lit brown wallet floating on blue gradient. Text: 'Premium Quality Craftsmanship.' Small '20% OFF Limited Time' badge in corner.
+                    Ghost-mannequin hoodie on white, headline 'Stay warm stay fashionable' / 'Perfect blend of comfort and coolness'.
                   </p>
                   <p className="text-rose-950 font-medium">
-                    <strong>WHY IT LOSES:</strong> No self-ID (everyone = no one), looks like an ad instantly, discount as hook for unwanted product = 0 motivation, fake urgency risks Meta algorithmic downranking. <em>Hypothesis: &lt;18% thumb-stop, &lt;0.7% CTR cold.</em>
+                    <strong>WHY IT LOSES:</strong> No human = no size cue, generic adjective = no memory, looks like Daraz listing. <em>Hypothesis: thumb-stop &lt;18%.</em>
                   </p>
                 </div>
 
@@ -667,11 +655,15 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     LOSER COPY / CTA:
                   </h4>
                   <p className="text-slate-700 mb-2">
-                    <strong>Copy:</strong> 'Genuine Leather. RFID. Free Shipping. Learn More' → homepage.
+                    850 BDT incl VAT, synthetic fabric, 'Nearly sold out Grab yours now!' + Shop Now → collection page.
                   </p>
                   <p className="text-slate-800 text-xs">
-                    <strong>WHY IT LOSES:</strong> 4 features not 1 outcome, zero proof (no demo, no numbers), funnel leak forces hunt, studio polish signals ad not solution.
+                    <strong>WHY IT LOSES:</strong> Cheap price signals thin fabric in BD winter (trust drop), fake scarcity with no count, synthetic hides breathability fear, collection page forces hunt. COD order → high return when real feel != photo.
                   </p>
+                </div>
+
+                <div className="p-4 rounded-lg bg-rose-100/50 border border-rose-200 text-rose-950 text-xs leading-relaxed">
+                  <strong>BD-SPECIFIC FRICTION &amp; MEDIA BUYER TAKEAWAY:</strong> COD + check-before-payment + size exchange. Winner shows size chart + exchange window + real body. Loser hides it. In BD, creative must pre-handle return reasons, not just click.
                 </div>
               </div>
             </div>
@@ -701,10 +693,10 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     Element
                   </th>
                   <th scope="col" className="px-4 py-3.5 font-bold font-mono text-xs uppercase tracking-wider text-emerald-400 w-3/8">
-                    Winner: Brick (The Ridge)
+                    {comp?.winnerBrand} (WIN)
                   </th>
                   <th scope="col" className="px-4 py-3.5 font-bold font-mono text-xs uppercase tracking-wider text-rose-400 w-3/8">
-                    Loser: Premium 20% OFF
+                    {comp?.loserBrand} (LOSE PATTERN)
                   </th>
                 </tr>
               </thead>
@@ -732,24 +724,24 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </section>
 
-        {/* SECTION 6: 48-Hour Fix Plan (High-value for clients) */}
+        {/* SECTION 6: 48-Hour Fix Plan */}
         <section className="mb-14 scroll-mt-28" id="fix-plan">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
               6
             </span>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              48-Hour Client Fix Plan
+              {comp?.fixPlan.title}
             </h2>
           </div>
 
           <div className="p-6 sm:p-8 rounded-xl bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950 text-white shadow-lg space-y-6 border border-emerald-900/50">
             <div>
               <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1">
-                Turnaround Protocol for Failing Ecom Creatives
+                Turnaround Protocol for Failing Apparel Creatives
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-white">
-                How to Salvage a Dying Wallet Ad in 48 Hours
+                How to Salvage a Dying Ad in 48 Hours
               </h3>
             </div>
 
@@ -773,7 +765,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
             <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-800">
               <p className="text-xs text-slate-400">
-                Need this turnaround applied to your ad accounts? Let's audit your assets.
+                Need this turnaround applied to your BD e-commerce ad accounts? Let's audit your assets.
               </p>
               <a
                 href="mailto:AhamedAfif87@gmail.com?subject=48-Hour%20Ad%20Creative%20Audit"
@@ -785,7 +777,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </section>
 
-        {/* SECTION 7: LinkedIn Hook (Approved-style, post only after OK) */}
+        {/* SECTION 7: LinkedIn Hook (Approved-style) */}
         <section className="mb-14 scroll-mt-28" id="linkedin-distribution">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
@@ -808,7 +800,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           <div className="p-6 rounded-xl border border-slate-200 bg-slate-50 space-y-4">
             <div>
               <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 font-bold block mb-1">
-                Main Feed Post Copy
+                Main Feed Post Copy (Optimized for Founders + Recruiters)
               </span>
               <div className="p-4 rounded-lg bg-white border border-slate-200 font-sans text-sm text-slate-800 whitespace-pre-line leading-relaxed">
                 {comp?.linkedInHook?.postText}
@@ -860,7 +852,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </section>
 
-        {/* SECTION 9: Client CTA (Put this at end of blog) */}
+        {/* SECTION 9: Client CTA (Work With Me) */}
         <section className="scroll-mt-28" id="client-cta">
           <div className="p-8 sm:p-10 rounded-2xl bg-slate-950 text-white border-2 border-emerald-500/50 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 -mt-10 -mr-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -876,7 +868,8 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               </h2>
 
               <p className="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
-                I break down winning ads + audit losers into test plans for DTC, ecom, info, and local brands (Meta &amp; Google). If your creative dies in 7 days, I will tell you why in one audit.
+                {comp?.clientCta?.pitch ||
+                  'I audit BD winter creatives for COD returns, not just CTR. If your hoodie/jacket ad dies after 7 days, I tell you why in one teardown.'}
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -902,11 +895,11 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
               <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-slate-400 font-mono">
                 <div>
-                  <strong className="text-emerald-400 font-sans">Next Breakdown Tomorrow:</strong>{' '}
-                  {comp?.clientCta?.nextBreakdown || 'Transformation UGC vs Founder-story for $79/mo supplements.'}
+                  <strong className="text-emerald-400 font-sans">Next Breakdown:</strong>{' '}
+                  {comp?.clientCta?.nextBreakdown || 'Vaseline vs Meril winter lotion? Tell me niche.'}
                 </div>
                 <div className="text-[11px] text-slate-500 italic">
-                  Workflow agreed: I draft PDF + LinkedIn text, YOU read + approve, THEN I post.
+                  Workflow: PDF -&gt; you publish blog -&gt; you approve LinkedIn draft -&gt; I post with blog link + first comment. No auto-post.
                 </div>
               </div>
             </div>

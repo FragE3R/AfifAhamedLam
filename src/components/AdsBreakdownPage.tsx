@@ -10,10 +10,14 @@ interface AdsBreakdownPageProps {
 
 export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }) => {
   const [activeSection, setActiveSection] = useState<'featured-post' | 'archive'>('featured-post');
+  const [selectedTeardownId, setSelectedTeardownId] = useState<string>('ab-6');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
 
-  const day1Article = ADS_BREAKDOWN_ARTICLES.find((a) => a.id === 'ab-5') || ADS_BREAKDOWN_ARTICLES[0];
+  const currentTeardown =
+    ADS_BREAKDOWN_ARTICLES.find((a) => a.id === selectedTeardownId) ||
+    ADS_BREAKDOWN_ARTICLES.find((a) => a.id === 'ab-6') ||
+    ADS_BREAKDOWN_ARTICLES[0];
 
   const industries = useMemo(() => {
     const inds = Array.from(new Set(ADS_BREAKDOWN_ARTICLES.map((a) => a.industry)));
@@ -49,49 +53,67 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
           </p>
         </div>
 
-        {/* View Switcher: Day 1 Blog Series vs All Archive */}
-        <div className="mb-10 flex flex-wrap items-center justify-between gap-4 p-2 bg-slate-200/60 rounded-xl border border-slate-300/70">
-          <div className="flex items-center gap-2">
+        {/* View Switcher: Day Teardowns vs All Archive */}
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-4 p-2 bg-slate-200/60 rounded-xl border border-slate-300/70">
+          <div className="flex flex-wrap items-center gap-2">
             <button
-              onClick={() => setActiveSection('featured-post')}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                activeSection === 'featured-post'
+              onClick={() => {
+                setActiveSection('featured-post');
+                setSelectedTeardownId('ab-6');
+              }}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                activeSection === 'featured-post' && selectedTeardownId === 'ab-6'
                   ? 'bg-slate-950 text-white shadow-xs'
                   : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
               }`}
             >
               <TrendingUp className="w-4 h-4 text-emerald-400" />
-              <span>Day 1 Teardown: Winning vs Losing</span>
+              <span>Day 2: BD Winter Hoodie Wars</span>
               <span className="hidden sm:inline px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-mono">
-                Active Series
+                Latest Drop
               </span>
             </button>
 
             <button
+              onClick={() => {
+                setActiveSection('featured-post');
+                setSelectedTeardownId('ab-5');
+              }}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                activeSection === 'featured-post' && selectedTeardownId === 'ab-5'
+                  ? 'bg-slate-950 text-white shadow-xs'
+                  : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
+              }`}
+            >
+              <TrendingUp className="w-4 h-4 text-teal-400" />
+              <span>Day 1: The Ridge vs Composite</span>
+            </button>
+
+            <button
               onClick={() => setActiveSection('archive')}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeSection === 'archive'
                   ? 'bg-slate-950 text-white shadow-xs'
                   : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
               }`}
             >
               <Layers className="w-4 h-4" />
-              <span>All Breakdowns Archive ({ADS_BREAKDOWN_ARTICLES.length})</span>
+              <span>All Breakdowns ({ADS_BREAKDOWN_ARTICLES.length})</span>
             </button>
           </div>
 
           <div className="text-xs text-slate-600 font-mono hidden md:flex items-center gap-1.5 px-3">
-            <span>Client Conversion Blog Post</span>
+            <span>Client Conversion Teardowns</span>
             <span>•</span>
             <span className="text-emerald-700 font-semibold">Meta &amp; TikTok Focus</span>
           </div>
         </div>
 
-        {/* View 1: Day 1 Featured Post Section */}
+        {/* View 1: Active Teardown Blog Section */}
         {activeSection === 'featured-post' && (
           <div className="rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden mb-16 bg-white">
             <WinningVsLosingBreakdown
-              article={day1Article}
+              article={currentTeardown}
               onNavigate={onNavigate}
               isStandalonePage={false}
             />
@@ -149,6 +171,10 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredArticles.map((item) => {
                   const mediaMap: Record<string, { src: string; caption: string }> = {
+                    'ab-6': {
+                      src: './images/fabrilife_hook_morning.jpg',
+                      caption: 'WIN-1 Hook: Cold mornings? Sorted. (Fabrilife)'
+                    },
                     'ab-5': {
                       src: './images/win1_hook_brick_wallet.jpg',
                       caption: 'WIN-1 Hook (0-3s): Stop sitting on this brick'
