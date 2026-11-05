@@ -5,8 +5,6 @@ import {
   ArrowUpRight,
   CheckCircle2,
   XCircle,
-  Copy,
-  Check,
   TrendingUp,
   Clock,
   Calendar,
@@ -26,19 +24,10 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
   onNavigate,
   isStandalonePage = false,
 }) => {
-  const [copiedLinkedIn, setCopiedLinkedIn] = useState(false);
   const [activeTab, setActiveTab] = useState<'all' | 'winner' | 'loser'>('all');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const comp = article.comparisonData;
-
-  const handleCopyLinkedIn = () => {
-    if (!comp?.linkedInHook) return;
-    const fullText = `${comp.linkedInHook.postText}\n\nFirst comment:\n${comp.linkedInHook.firstComment}`;
-    navigator.clipboard.writeText(fullText);
-    setCopiedLinkedIn(true);
-    setTimeout(() => setCopiedLinkedIn(false), 2500);
-  };
 
   return (
     <div className="bg-white">
@@ -318,17 +307,9 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </section>
 
-        {/* SECTION 2: Screenshot Map - What AI Studio Must Show */}
+        {/* SECTION 2: Screenshot Map */}
         <section className="mb-14 scroll-mt-28" id="screenshot-map">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-2">
-              <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
-                2
-              </span>
-              <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-                Screenshot Map — What AI Studio Must Show
-              </h2>
-            </div>
+          <div className="flex items-center justify-end mb-6">
             <div className="flex items-center gap-1.5 text-xs font-medium">
               <button
                 onClick={() => setActiveTab('all')}
@@ -777,82 +758,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </section>
 
-        {/* SECTION 7: LinkedIn Hook (Approved-style) */}
-        <section className="mb-14 scroll-mt-28" id="linkedin-distribution">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2">
-              <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
-                7
-              </span>
-              <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-                Distribution Asset — LinkedIn Breakdown Hook
-              </h2>
-            </div>
-            <button
-              onClick={handleCopyLinkedIn}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold transition-colors cursor-pointer"
-            >
-              {copiedLinkedIn ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-              <span>{copiedLinkedIn ? 'Copied Post!' : 'Copy LinkedIn Post'}</span>
-            </button>
-          </div>
-
-          <div className="p-6 rounded-xl border border-slate-200 bg-slate-50 space-y-4">
-            <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 font-bold block mb-1">
-                Main Feed Post Copy (Optimized for Founders + Recruiters)
-              </span>
-              <div className="p-4 rounded-lg bg-white border border-slate-200 font-sans text-sm text-slate-800 whitespace-pre-line leading-relaxed">
-                {comp?.linkedInHook?.postText}
-              </div>
-            </div>
-
-            <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 font-bold block mb-1">
-                First Comment (Distribution Buffer)
-              </span>
-              <div className="p-3 rounded-lg bg-white border border-slate-200 font-sans text-xs text-slate-700 italic">
-                "{comp?.linkedInHook?.firstComment}"
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 8: Site JSON & Spec */}
-        <section className="mb-14 scroll-mt-28" id="site-json">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
-              8
-            </span>
-            <h2 className="font-editorial text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
-              Site Data Schema &amp; Entry Spec
-            </h2>
-          </div>
-
-          <div className="p-4 rounded-lg bg-slate-950 text-slate-300 font-mono text-xs overflow-x-auto border border-slate-800">
-            <pre>
-{JSON.stringify(
-  {
-    id: article.id,
-    slug: article.slug,
-    brandName: article.brandName,
-    industry: article.industry,
-    title: article.title,
-    date: article.date,
-    readingTime: article.readingTime,
-    shortDescription: article.shortDescription,
-    theHook: article.theHook.observable,
-    theOffer: article.theOffer,
-    theCta: article.theCta
-  },
-  null,
-  2
-)}
-            </pre>
-          </div>
-        </section>
-
-        {/* SECTION 9: Client CTA (Work With Me) */}
+        {/* SECTION 7: Client CTA (Work With Me) */}
         <section className="scroll-mt-28" id="client-cta">
           <div className="p-8 sm:p-10 rounded-2xl bg-slate-950 text-white border-2 border-emerald-500/50 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 -mt-10 -mr-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
