@@ -130,6 +130,13 @@ export interface AdsBreakdownArticle {
       points: string[];
       hypothesis: string;
     };
+    loserAnalysis?: {
+      hookObservable: string;
+      hookWhyLoses: string;
+      copyCtaObservable: string;
+      copyCtaWhyLoses: string;
+      frictionTakeaway: string;
+    };
     linkedInHook?: {
       postText: string;
       firstComment: string;

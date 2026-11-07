@@ -2,6 +2,172 @@ import { AdsBreakdownArticle } from '../types';
 
 export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
   {
+    id: 'ab-7',
+    slug: 'nov-week1-geyser-haier-vs-walton-2026',
+    brandName: 'Haier vs Walton',
+    industry: 'Home Appliance BD',
+    title: 'Geyser Wars: Why Haier Shockproof Beats Walton Catalog in Nov Week 1',
+    shortDescription: 'Same 30L electric geyser. Same cold morning. One sells safety, one sells steel. Shockproof Tigris vs Instant Warmth catalog. Nov 7, 2026 - BD 11.11 Week 1 Special.',
+    date: 'November 07, 2026',
+    readingTime: '7 min read',
+    targetAudience: 'BD founders, e-commerce managers, appliance marketers, and media buyers scaling high-ticket home appliances during Daraz 11.11 and winter cold snaps in Dhaka, Chittagong, and northern Bangladesh.',
+    isWinningVsLosing: true,
+    dayNumber: 3,
+    theHook: {
+      observable: "Cold bathroom tile + shivering hand -> instant steam. Text 'Winter brings chill. Haier brings warmth. 100% Shockproof.'",
+      analysis: 'WHY IT WINS: Names 6am pain Dhaka/Rangpur winter, shows safety first (electric + water = death fear in BD households), premium look justifies 11k.',
+      hypothesis: 'Hypothesis: 32%+ thumb-stop (vs <18% for Walton white unit render on gradient).'
+    },
+    theCreative: {
+      format: 'Winning: 3-beat emotional problem-solution video & proof carousel. Loser: 3D studio catalog render + automated factory assembly tour.',
+      visualStyle: 'Steaming bathroom shower, cold shivering hands, water splash hitting shockproof enclosure with 0.00V leakage sensor, cozy family morning.',
+      breakdown: "WINNER CREATIVE: 3 beats - 1) chill (cold blue), 2) shock test (splash + badge), 3) family (mother + kid warm). Capacity + price overlay. Inference: kills 'current-e shock lagbe?' objection that blocks 11k COD/EMI in BD."
+    },
+    theOffer: '30L 11,520 -10%, online exclusive, call hotline 09666-88-00-99 + haier.com/bd/water-heaters vs 14% OFF selected plaza',
+    theCopy: {
+      headline: 'Winter brings chill. Haier brings warmth. 100% Shockproof. vs Warm up instantly / Turn Cold Mornings into Warm Comfort',
+      body: '30L 11,520 taka -10%, online exclusive, call 09666-88-00-99 + haier.com/bd/water-heaters. vs 30/40/50L choice without guide, 16267 + buy online, porcelain tank + durability.',
+      breakdown: "WINNER: 30L 11,520 -10%, online exclusive, call + haier.com/bd/water-heaters. Psychology: safety + warranty + hotline = risk reversal for high-ticket home appliance. Funnel: Meta -> PDP with specs + EMI + installer booking. LOSER: 30/40/50L choice without guide (which for family of 4?), 16267 + buy online, porcelain tank + durability. WHY IT LOSES: choice overload, no safety demo, factory tour irrelevant to cold fear. Trust from Made in BD wasted without human proof."
+    },
+    theCta: 'Shop Now -> PDP + free installer slot vs Call 16267 -> generic hotline',
+    thePsychology: [
+      'Safety before savings: In electric geysers, fear of electrocution ("current-e shock lagbe?") is 10x stronger than discount or wattage specs.',
+      '6:00 AM cold bathroom context: Evoking the physical shock of freezing water on cold tiles triggers immediate purchase urgency.',
+      'Decision simplification: Promoting one hero capacity (30L for 11,520 BDT) beats overwhelming buyers with 30L/40L/50L options without sizing advice.',
+      'Assurance of professional setup: High-ticket home appliances in BD require installation certainty; offering a booked technician removes the hassle barrier.'
+    ],
+    theFunnel: 'Meta/TikTok -> Dedicated 30L PDP with live shock-test video, EMI calculator, and certified technician installation slot booking. Loser: Meta static -> generic catalog / plaza finder with no direct checkout.',
+    whyIThinkItWorks:
+      'TL;DR: Same 30L hot water. Haier sells safe 6am shower for mother + baby. Walton sells steel tank. In BD week 1, fear > features.',
+    whatGrowingBusinessesCanLearn: [
+      'Kill the primary objection first: In categories with perceived danger (appliances, baby care, skincare), lead with safety certifications and live stress tests.',
+      'Replace factory tours with human benefit: Automated assembly lines prove manufacturing scale to engineers, but cold morning steam proves value to mothers.',
+      'Bundle high-ticket friction away: For products above 10,000 BDT in BD, combine price discount with free installation and verified hotline support.',
+      'Tie into seasonal momentum: Week 1 of Daraz 11.11 paired with northern cold snaps creates peak buying intent—deliver before peak winter hits.'
+    ],
+    myVerdict:
+      'Haier wins because they understand that an electric water heater is an anxiety purchase in Bangladesh. By proving 100% Shockproof safety in the first 3 seconds, they convert high-ticket shoppers while competitors are still showcasing sheet metal welding.',
+    comparisonData: {
+      winnerBrand: 'Haier Bangladesh',
+      winnerTagline: 'Tigris Shockproof / Zenglow 30L Electric (11,520 taka -10%). Angle: "Winter brings chill. Haier brings warmth. 100% Shockproof."',
+      loserBrand: 'Walton',
+      loserTagline: 'Geyser 30L/40L/50L Crystal/Smart (call 16267). Angle: "Warm up instantly / Turn Cold Mornings into Warm Comfort."',
+      winnerLinks: {
+        store: 'https://haier.com/bd/water-heaters',
+        adLibraryAll: 'https://www.facebook.com/HaierBangladesh/posts/1617667590388754/',
+        adLibraryActive: 'https://www.facebook.com/HaierBangladesh/posts/1615570897265090/',
+        igHookReel: 'https://www.facebook.com/HaierBangladesh/posts/1614449754043871/',
+        teardownRef: 'https://www.facebook.com/HaierBangladesh/posts/1614073090748204/',
+        brandData: 'https://bangladeshpost.net/posts/what-s-changed-in-bangladeshis-shopping-carts-a-view-from-daraz-11-11-175249'
+      },
+      loserLinks: {
+        findLoserUrl: 'https://www.facebook.com/Waltonbd/posts/880502317863918/',
+        selectionTip: 'Strong local trust and massive plaza network across Bangladesh, but digital creative relies on sterile product renders and factory b-roll without human safety reassurance.'
+      },
+      screenshots: [
+        {
+          id: 'win-1',
+          title: 'WIN-1 Hook',
+          role: 'winner',
+          caption: 'Problem + promise in 2s.',
+          src: './images/haier_geyser_hook.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Haier post 1617667590388754'
+        },
+        {
+          id: 'win-2',
+          title: 'WIN-2 Safety proof',
+          role: 'winner',
+          caption: 'Fear killed: shockproof.',
+          src: './images/haier_shockproof_proof.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Haier Tigris 1615570897265090'
+        },
+        {
+          id: 'win-3',
+          title: 'WIN-3 Offer',
+          role: 'winner',
+          caption: 'One size, one price, one call.',
+          src: './images/haier_geyser_offer.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Haier Zenglow 1614449754043871'
+        },
+        {
+          id: 'lose-1',
+          title: 'LOSE-1 Catalog',
+          role: 'loser',
+          caption: 'No human, no morning.',
+          src: './images/walton_geyser_catalog.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Walton 880502317863918'
+        },
+        {
+          id: 'lose-2',
+          title: 'LOSE-2 Feature list',
+          role: 'loser',
+          caption: 'Specs without feeling.',
+          src: './images/walton_specs_icons.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Walton 832443146003169'
+        },
+        {
+          id: 'lose-3',
+          title: 'LOSE-3 Factory',
+          role: 'loser',
+          caption: 'Factory does not warm my 6am shower.',
+          src: './images/walton_factory_assembly.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Walton 871960465384770'
+        }
+      ],
+      scores: [
+        { category: 'Hook (first 3s)', winnerScore: 9, loserScore: 3 },
+        { category: 'Safety proof', winnerScore: 9, loserScore: 4 },
+        { category: 'Offer clarity', winnerScore: 8, loserScore: 5 },
+        { category: 'CTA + Trust', winnerScore: 9, loserScore: 4 }
+      ],
+      sideBySideTable: [
+        { element: 'First 3s', winner: 'Cold + steam + shockproof', loser: 'Render + instantly' },
+        { element: 'Trigger', winner: '6am shower fear', loser: 'Warm comfort slogan' },
+        { element: 'Claims', winner: '1: safe warmth', loser: '3: quick + reliable + durable' },
+        { element: 'Proof', winner: 'Splash + badge + family', loser: 'Icons, no demo' },
+        { element: 'Specificity', winner: '30L 11,520 -10%, Tigris', loser: '30/40/50L, no guide' },
+        { element: 'Offer', winner: 'Online exclusive + hotline', loser: '14% selected plaza' },
+        { element: 'CTA', winner: 'Shop -> PDP + installer', loser: 'Call 16267 -> generic' },
+        { element: 'Fear', winner: 'Shock + bill addressed', loser: 'Shock ignored' },
+        { element: 'Lifespan', winner: 'Iterated series launch', loser: 'One-off catalog' }
+      ],
+      fixPlan: {
+        title: '48h fix for Walton - keep product, change creative',
+        points: [
+          'Keep same 30L. Reshoot 15s phone: 6am, father turns on, kid touches water safely, meter shows bill. First text: "Gosol-e shock lagbe na?"',
+          'Kill factory. Show 1 proof: pour bucket on live unit + shockproof meter zero. 6s demo beats 6 icons.',
+          'Swap copy: "30L - 4 jon family, 20 min garam, shockproof + auto-off. 16267 + free install Dhaka." + size guide image (2 jon=30L, 5 jon=50L).',
+          'Add trust: "Walton plaza-e giye dekhe nin + 5yr warranty card photo" + real installer uncle face. Local edge = service, use it.',
+          'Test 3 hooks: (a) Sokal 6tay thanda pani? (b) Geyser-e current? Proof dekho (c) 11.11-te install free. Winner tells fear language.'
+        ],
+        hypothesis: 'same budget, safety demo + size guide lifts CTR 0.7% -> 1.5% + installer bookings + fewer returns.'
+      },
+      loserAnalysis: {
+        hookObservable: "White unit render + 'Warm up instantly' on gradient background.",
+        hookWhyLoses: "WHY IT LOSES: No morning context, no human element, looks like generic catalog. Hypothesis thumb-stop <18%. 'Instant' is vague (how many mins? how high the electric bill?).",
+        copyCtaObservable: "30/40/50L choice without guide, 16267 hotline + buy online, porcelain tank + durability icons.",
+        copyCtaWhyLoses: "WHY IT LOSES: Choice overload (which for family of 4?), no live safety demo, factory tour irrelevant to cold shower fear. Trust from 'Made in BD' wasted without human proof.",
+        frictionTakeaway: "BD WEEK 1 ANGLE: 11.11 + first cold snap = urgency is real. Winner ties to 11.11 delivery before deep winter + installer slot. Loser says 14% OFF selected plaza (conditional, low trust)."
+      },
+      linkedInHook: {
+        postText: 'Nov week 1 bestseller is not hoodie. Its geyser. Same 30L, 2 ads. Haier sells safe 6am shower (shockproof + 11,520 BDT). Walton sells steel (instant + catalog). I broke flaws + pros + 48h fix + screenshot map in blog: [PASTE YOUR NEW ab-7 LINK AFTER YOU PUBLISH]. Day 3 daily Winning vs Losing. Follow for BD DTC. #Bangladesh #11sale #DTC #MetaAds #MediaBuying #Walton #Haier',
+        firstComment: 'Full blog here: [YOUR ab-7 LINK] - table + fix. BD founders: what stops geyser COD - shock fear or bill?'
+      },
+      clientCta: {
+        pitch: 'I audit BD 11.11 creatives for installer bookings + COD returns, not just CTR. If geyser ad dies in 7 days, I tell why in one teardown.',
+        email: 'AhamedAfif87@gmail.com',
+        contactUrl: 'https://frage3r.github.io/AfifAhamedLam/#contact',
+        nextBreakdown: 'Nivea vs Vaseline lotion? Tell niche.'
+      }
+    }
+  },
+  {
     id: 'ab-6',
     slug: 'bd-winter-hoodie-fabrilife-vs-sara-2026',
     brandName: 'Fabrilife vs SaRa Lifestyle',
@@ -136,7 +302,7 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
         { element: 'Offer', winner: 'COD + 7-day exchange + clear price', loser: '850 cheap + vague urgency' },
         { element: 'CTA/Landing', winner: 'Order -> single PDP size chart', loser: 'Shop Now -> 20-item collection' },
         { element: 'Returns', winner: 'Pre-handled (fabric+fit+exchange)', loser: 'Surprise (thin/synthetic fear)' },
-        { element: 'Lifespan', winner: 'Iterated winners Polarize/Winterbound', loser: 'One-post catalog, low saves' }
+        { element: 'Lifespan', winner: 'Iterated winners Polarize/Winterbound', loser: 'One-off catalog, low saves' }
       ],
       fixPlan: {
         title: '48-hour fix for SaRa (loser) - keep product, change creative',
@@ -148,6 +314,13 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
           'Test 3 hooks same body: (a) 850 TK-te hoodie? Fabric dekho (b) Bike riders: kan thanda? Hood test (c) 11.11: 1 hoodie full winter. Winner reveals language for scaling.'
         ],
         hypothesis: 'same budget, human + proof + COD clarity cuts return rate (key BD metric) and lifts CTR 0.7% -> 1.5% in 2 weeks.'
+      },
+      loserAnalysis: {
+        hookObservable: "Ghost-mannequin hoodie on white, headline 'Stay warm stay fashionable' / 'Perfect blend of comfort and coolness'.",
+        hookWhyLoses: "No human = no size cue, generic adjective = no memory, looks like Daraz listing. Hypothesis: thumb-stop <18%.",
+        copyCtaObservable: "850 BDT incl VAT, synthetic fabric, 'Nearly sold out Grab yours now!' + Shop Now → collection page.",
+        copyCtaWhyLoses: "Cheap price signals thin fabric in BD winter (trust drop), fake scarcity with no count, synthetic hides breathability fear, collection page forces hunt. COD order → high return when real feel != photo.",
+        frictionTakeaway: "COD + check-before-payment + size exchange. Winner shows size chart + exchange window + real body. Loser hides it. In BD, creative must pre-handle return reasons, not just click."
       },
       linkedInHook: {
         postText: 'BD winter is here. Same hoodie, 2 ads. One will own 11.11, one will pay COD returns. I broke down Fabrilife (1850 BDT) vs SaRa (850 BDT). Winner sells a 7am bike ride, not a jacket. Loser sells a catalog code. Full flaws + pros + 48h fix + screenshot map in blog (LINK AFTER YOU PUBLISH). Day 2 of daily Winning vs Losing. Follow for BD DTC breakdowns. #Bangladesh #DTC #MetaAds #MediaBuying #EcommerceBD #WinterCollection',

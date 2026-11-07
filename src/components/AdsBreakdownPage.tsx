@@ -10,13 +10,13 @@ interface AdsBreakdownPageProps {
 
 export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }) => {
   const [activeSection, setActiveSection] = useState<'featured-post' | 'archive'>('featured-post');
-  const [selectedTeardownId, setSelectedTeardownId] = useState<string>('ab-6');
+  const [selectedTeardownId, setSelectedTeardownId] = useState<string>('ab-7');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
 
   const currentTeardown =
     ADS_BREAKDOWN_ARTICLES.find((a) => a.id === selectedTeardownId) ||
-    ADS_BREAKDOWN_ARTICLES.find((a) => a.id === 'ab-6') ||
+    ADS_BREAKDOWN_ARTICLES.find((a) => a.id === 'ab-7') ||
     ADS_BREAKDOWN_ARTICLES[0];
 
   const industries = useMemo(() => {
@@ -59,6 +59,24 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
             <button
               onClick={() => {
                 setActiveSection('featured-post');
+                setSelectedTeardownId('ab-7');
+              }}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                activeSection === 'featured-post' && selectedTeardownId === 'ab-7'
+                  ? 'bg-slate-950 text-white shadow-xs'
+                  : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
+              }`}
+            >
+              <TrendingUp className="w-4 h-4 text-emerald-400" />
+              <span>Day 3: Geyser Wars (Haier vs Walton)</span>
+              <span className="hidden sm:inline px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-mono">
+                Latest Drop
+              </span>
+            </button>
+
+            <button
+              onClick={() => {
+                setActiveSection('featured-post');
                 setSelectedTeardownId('ab-6');
               }}
               className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
@@ -69,9 +87,6 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
             >
               <TrendingUp className="w-4 h-4 text-emerald-400" />
               <span>Day 2: BD Winter Hoodie Wars</span>
-              <span className="hidden sm:inline px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-mono">
-                Latest Drop
-              </span>
             </button>
 
             <button
@@ -86,7 +101,7 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
               }`}
             >
               <TrendingUp className="w-4 h-4 text-teal-400" />
-              <span>Day 1: The Ridge vs Composite</span>
+              <span>Day 1: The Ridge vs Bulky</span>
             </button>
 
             <button
@@ -171,6 +186,10 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredArticles.map((item) => {
                   const mediaMap: Record<string, { src: string; caption: string }> = {
+                    'ab-7': {
+                      src: './images/haier_geyser_hook.jpg',
+                      caption: 'WIN-1 Hook: Cold Bathroom? Haier 100% Shockproof Warmth (Haier vs Walton)'
+                    },
                     'ab-6': {
                       src: './images/fabrilife_hook_morning.jpg',
                       caption: 'WIN-1 Hook: Cold mornings? Sorted. (Fabrilife)'

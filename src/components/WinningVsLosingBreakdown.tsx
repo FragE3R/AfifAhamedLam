@@ -65,9 +65,32 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               <span>Back to All Breakdowns</span>
             </button>
             <div className="flex items-center gap-2">
-              <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 font-semibold">
-                Day {article.dayNumber || 1} Breakdown
-              </span>
+              <div className="hidden sm:flex items-center gap-1 bg-slate-200/70 p-1 rounded-lg text-xs font-medium">
+                <button
+                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-7')}
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                    article.id === 'ab-7' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
+                  }`}
+                >
+                  Day 3 (Haier)
+                </button>
+                <button
+                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-6')}
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                    article.id === 'ab-6' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
+                  }`}
+                >
+                  Day 2 (Fabrilife)
+                </button>
+                <button
+                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-5')}
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                    article.id === 'ab-5' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
+                  }`}
+                >
+                  Day 1 (Ridge)
+                </button>
+              </div>
               <a
                 href="mailto:AhamedAfif87@gmail.com?subject=Creative%20Audit%20Inquiry"
                 className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 bg-slate-950 text-white rounded hover:bg-slate-800 transition-colors"
@@ -125,10 +148,10 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <span className="text-[11px] font-mono uppercase tracking-widest text-emerald-400 font-bold block">
-                Executive Premise &amp; Visual Intent
+                Strategic Campaign Blueprint
               </span>
               <p className="text-sm text-slate-200 leading-snug font-normal">
-                A founder should understand in <strong>30 seconds</strong> why the winner wins, see proof, and know how to fix losing creative.
+                Zero fluff, pure conversion anatomy: spot the psychological trigger that wins the feed, examine verified proof, and steal the playbook to scale profitable ROAS.
               </p>
             </div>
             <div className="flex items-center gap-3 shrink-0 text-xs font-mono">
@@ -249,7 +272,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               </div>
 
               <div className="mt-5 p-3 rounded-lg bg-emerald-100/60 text-emerald-950 text-xs">
-                <strong>Why It Wins:</strong> Sells human emotion, warmth without weight, and context in 2 seconds instead of treating paid social as a passive catalog.
+                <strong>Why It Wins:</strong> {article.theHook.analysis || 'Sells human emotion, warmth without weight, and context in 2 seconds instead of treating paid social as a passive catalog.'}
               </div>
             </div>
 
@@ -262,7 +285,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     LOSER PATTERN
                   </span>
                   <span className="text-xs font-mono font-semibold text-rose-800">
-                    High COD Return Risk
+                    High Friction / Conversion Leak
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-slate-950 mb-1">
@@ -297,7 +320,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               </div>
 
               <div className="mt-5 p-3 rounded-lg bg-rose-100/60 text-rose-950 text-xs">
-                <strong>Failure Mechanism:</strong> No human model, ghost mannequin on white, cheap synthetic fear, and catalog landing leak.
+                <strong>Failure Mechanism:</strong> {comp?.loserAnalysis?.hookWhyLoses || article.theHook.hypothesis || 'No human model, sterile product catalog on gradient, and failure to address primary customer fear.'}
               </div>
             </div>
           </div>
@@ -624,10 +647,10 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     LOSER HOOK (observable):
                   </h4>
                   <p className="text-slate-800 mb-2">
-                    Ghost-mannequin hoodie on white, headline 'Stay warm stay fashionable' / 'Perfect blend of comfort and coolness'.
+                    {comp?.loserAnalysis?.hookObservable || "Ghost-mannequin / sterile product on blank gradient background with generic slogan."}
                   </p>
                   <p className="text-rose-950 font-medium">
-                    <strong>WHY IT LOSES:</strong> No human = no size cue, generic adjective = no memory, looks like Daraz listing. <em>Hypothesis: thumb-stop &lt;18%.</em>
+                    <strong>WHY IT LOSES:</strong> {comp?.loserAnalysis?.hookWhyLoses || "No human context = no emotional urgency, generic claim = no recall. Hypothesis: thumb-stop <18%."}
                   </p>
                 </div>
 
@@ -636,15 +659,15 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     LOSER COPY / CTA:
                   </h4>
                   <p className="text-slate-700 mb-2">
-                    850 BDT incl VAT, synthetic fabric, 'Nearly sold out Grab yours now!' + Shop Now → collection page.
+                    {comp?.loserAnalysis?.copyCtaObservable || "Discount or feature claims with generic hotline/collection CTA."}
                   </p>
                   <p className="text-slate-800 text-xs">
-                    <strong>WHY IT LOSES:</strong> Cheap price signals thin fabric in BD winter (trust drop), fake scarcity with no count, synthetic hides breathability fear, collection page forces hunt. COD order → high return when real feel != photo.
+                    <strong>WHY IT LOSES:</strong> {comp?.loserAnalysis?.copyCtaWhyLoses || "Choice overload, absence of safety/quality proof, and friction-heavy buying journey."}
                   </p>
                 </div>
 
                 <div className="p-4 rounded-lg bg-rose-100/50 border border-rose-200 text-rose-950 text-xs leading-relaxed">
-                  <strong>BD-SPECIFIC FRICTION &amp; MEDIA BUYER TAKEAWAY:</strong> COD + check-before-payment + size exchange. Winner shows size chart + exchange window + real body. Loser hides it. In BD, creative must pre-handle return reasons, not just click.
+                  <strong>BD-SPECIFIC FRICTION &amp; MEDIA BUYER TAKEAWAY:</strong> {comp?.loserAnalysis?.frictionTakeaway || "In Bangladesh e-commerce, ad creative must pre-handle trust and return objections before the order is placed."}
                 </div>
               </div>
             </div>
