@@ -67,6 +67,14 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="flex items-center gap-2">
               <div className="hidden sm:flex items-center gap-1 bg-slate-200/70 p-1 rounded-lg text-xs font-medium">
                 <button
+                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-8')}
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                    article.id === 'ab-8' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
+                  }`}
+                >
+                  Day 4 (Owala)
+                </button>
+                <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-7')}
                   className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
                     article.id === 'ab-7' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
@@ -826,9 +834,6 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 <div>
                   <strong className="text-emerald-400 font-sans">Next Breakdown:</strong>{' '}
                   {comp?.clientCta?.nextBreakdown || 'Vaseline vs Meril winter lotion? Tell me niche.'}
-                </div>
-                <div className="text-[11px] text-slate-500 italic">
-                  Workflow: PDF -&gt; you publish blog -&gt; you approve LinkedIn draft -&gt; I post with blog link + first comment. No auto-post.
                 </div>
               </div>
             </div>

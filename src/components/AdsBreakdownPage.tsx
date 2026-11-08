@@ -10,13 +10,13 @@ interface AdsBreakdownPageProps {
 
 export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }) => {
   const [activeSection, setActiveSection] = useState<'featured-post' | 'archive'>('featured-post');
-  const [selectedTeardownId, setSelectedTeardownId] = useState<string>('ab-7');
+  const [selectedTeardownId, setSelectedTeardownId] = useState<string>('ab-8');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
 
   const currentTeardown =
     ADS_BREAKDOWN_ARTICLES.find((a) => a.id === selectedTeardownId) ||
-    ADS_BREAKDOWN_ARTICLES.find((a) => a.id === 'ab-7') ||
+    ADS_BREAKDOWN_ARTICLES.find((a) => a.id === 'ab-8') ||
     ADS_BREAKDOWN_ARTICLES[0];
 
   const industries = useMemo(() => {
@@ -54,73 +54,107 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
         </div>
 
         {/* View Switcher: Day Teardowns vs All Archive */}
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-4 p-2 bg-slate-200/60 rounded-xl border border-slate-300/70">
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              onClick={() => {
-                setActiveSection('featured-post');
-                setSelectedTeardownId('ab-7');
-              }}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                activeSection === 'featured-post' && selectedTeardownId === 'ab-7'
-                  ? 'bg-slate-950 text-white shadow-xs'
-                  : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
-              }`}
-            >
-              <TrendingUp className="w-4 h-4 text-emerald-400" />
-              <span>Day 3: Geyser Wars (Haier vs Walton)</span>
-              <span className="hidden sm:inline px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-mono">
-                Latest Drop
+        <div className="mb-8 p-3 sm:p-4 bg-slate-100/90 rounded-2xl border border-slate-300/80 shadow-xs flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+          {/* Sub-box: Daily Ads Breakdown Series */}
+          <div className="p-3 bg-white rounded-xl border border-slate-200/90 shadow-2xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
+            <div className="flex items-center gap-2.5">
+              <span className="p-2 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0">
+                <TrendingUp className="w-4 h-4" />
               </span>
-            </button>
+              <div>
+                <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 font-bold block">
+                  Daily Ads Breakdown Series
+                </span>
+                <span className="text-xs font-semibold text-slate-900 block truncate max-w-[240px] sm:max-w-none">
+                  Day 4: Tumbler Wars (Owala vs Stanley)
+                </span>
+              </div>
+            </div>
 
-            <button
-              onClick={() => {
-                setActiveSection('featured-post');
-                setSelectedTeardownId('ab-6');
-              }}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                activeSection === 'featured-post' && selectedTeardownId === 'ab-6'
-                  ? 'bg-slate-950 text-white shadow-xs'
-                  : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
-              }`}
-            >
-              <TrendingUp className="w-4 h-4 text-emerald-400" />
-              <span>Day 2: BD Winter Hoodie Wars</span>
-            </button>
+            <div className="flex flex-wrap items-center gap-2">
+              {/* Primary "Read Today's Breakdown" Hero CTA */}
+              <button
+                onClick={() => {
+                  setActiveSection('featured-post');
+                  setSelectedTeardownId('ab-8');
+                }}
+                className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer shadow-xs ${
+                  activeSection === 'featured-post' && selectedTeardownId === 'ab-8'
+                    ? 'bg-slate-950 text-white ring-2 ring-emerald-500/60'
+                    : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                }`}
+              >
+                <Sparkles className="w-4 h-4 text-emerald-300" />
+                <span>Read Today's Breakdown</span>
+                <span className="px-1.5 py-0.5 rounded text-[10px] bg-white/20 font-mono text-white uppercase tracking-wider font-semibold">
+                  Latest
+                </span>
+              </button>
 
-            <button
-              onClick={() => {
-                setActiveSection('featured-post');
-                setSelectedTeardownId('ab-5');
-              }}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                activeSection === 'featured-post' && selectedTeardownId === 'ab-5'
-                  ? 'bg-slate-950 text-white shadow-xs'
-                  : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
-              }`}
-            >
-              <TrendingUp className="w-4 h-4 text-teal-400" />
-              <span>Day 1: The Ridge vs Bulky</span>
-            </button>
+              {/* Past Drops Compact Selector */}
+              <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs">
+                <span className="text-[10px] font-mono text-slate-400 px-1 font-semibold uppercase hidden sm:inline">
+                  Past:
+                </span>
+                <button
+                  onClick={() => {
+                    setActiveSection('featured-post');
+                    setSelectedTeardownId('ab-7');
+                  }}
+                  title="Day 3: Geyser Wars (Haier vs Walton)"
+                  className={`px-2 py-1 rounded text-xs font-semibold transition-all cursor-pointer ${
+                    activeSection === 'featured-post' && selectedTeardownId === 'ab-7'
+                      ? 'bg-slate-950 text-white shadow-2xs'
+                      : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200'
+                  }`}
+                >
+                  Day 3
+                </button>
+                <button
+                  onClick={() => {
+                    setActiveSection('featured-post');
+                    setSelectedTeardownId('ab-6');
+                  }}
+                  title="Day 2: BD Winter Hoodie Wars (Fabrilife vs SaRa)"
+                  className={`px-2 py-1 rounded text-xs font-semibold transition-all cursor-pointer ${
+                    activeSection === 'featured-post' && selectedTeardownId === 'ab-6'
+                      ? 'bg-slate-950 text-white shadow-2xs'
+                      : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200'
+                  }`}
+                >
+                  Day 2
+                </button>
+                <button
+                  onClick={() => {
+                    setActiveSection('featured-post');
+                    setSelectedTeardownId('ab-5');
+                  }}
+                  title="Day 1: The Ridge Wallet vs Bulky"
+                  className={`px-2 py-1 rounded text-xs font-semibold transition-all cursor-pointer ${
+                    activeSection === 'featured-post' && selectedTeardownId === 'ab-5'
+                      ? 'bg-slate-950 text-white shadow-2xs'
+                      : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200'
+                  }`}
+                >
+                  Day 1
+                </button>
+              </div>
+            </div>
+          </div>
 
+          {/* Archive Toggle Button */}
+          <div className="flex items-center gap-2 shrink-0 self-end lg:self-center">
             <button
               onClick={() => setActiveSection('archive')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer border ${
                 activeSection === 'archive'
-                  ? 'bg-slate-950 text-white shadow-xs'
-                  : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
+                  ? 'bg-slate-950 text-white border-slate-950 shadow-xs'
+                  : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
               }`}
             >
               <Layers className="w-4 h-4" />
               <span>All Breakdowns ({ADS_BREAKDOWN_ARTICLES.length})</span>
             </button>
-          </div>
-
-          <div className="text-xs text-slate-600 font-mono hidden md:flex items-center gap-1.5 px-3">
-            <span>Client Conversion Teardowns</span>
-            <span>•</span>
-            <span className="text-emerald-700 font-semibold">Meta &amp; TikTok Focus</span>
           </div>
         </div>
 
@@ -186,6 +220,10 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredArticles.map((item) => {
                   const mediaMap: Record<string, { src: string; caption: string }> = {
+                    'ab-8': {
+                      src: './images/owala_spillproof_test.jpg',
+                      caption: 'WIN-1 Hook: Spill-Proof Test Zero Leak (Owala vs Stanley)'
+                    },
                     'ab-7': {
                       src: './images/haier_geyser_hook.jpg',
                       caption: 'WIN-1 Hook: Cold Bathroom? Haier 100% Shockproof Warmth (Haier vs Walton)'

@@ -2,6 +2,171 @@ import { AdsBreakdownArticle } from '../types';
 
 export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
   {
+    id: 'ab-8',
+    slug: 'usa-tumbler-owala-vs-stanley-2026',
+    brandName: 'Owala vs Stanley 1913',
+    industry: 'Drinkware USA',
+    title: 'Tumbler Wars: Why $27 FreeSip Beats $45 Quencher in 2026',
+    shortDescription: 'Same 40oz insulated tumbler. Same Amazon + Target shelf. One owns 2026 search, one lives on discount. FreeSip spill-proof vs Quencher classic. Nov 8, 2026 - USA Amazon + Stores Special.',
+    date: 'November 08, 2026',
+    readingTime: '7 min read',
+    targetAudience: 'USA DTC founders, Amazon sellers, beverage & drinkware brand operators, TikTok Shop media buyers, and retail e-commerce strategists.',
+    isWinningVsLosing: true,
+    dayNumber: 4,
+    theHook: {
+      observable: "TikTok car cupholder test: flip Owala sideways, zero leak, sip directly. Text: 'Spill-proof test: zero leak.'",
+      analysis: 'WHY IT WINS: Names commuter and mom fear (bag spill, car seat stain, kid knock) in 2 seconds, shows not tells, native UGC format not polished studio.',
+      hypothesis: 'Hypothesis: 30%+ thumb-stop (vs <18% for Stanley studio kitchen handle lift).'
+    },
+    theCreative: {
+      format: 'Winning: 3-beat native UGC test & cupholder proof. Loser: Polished studio kitchen aesthetic & celebrity collab wall.',
+      visualStyle: 'Car cupholder tilt test, ice cube audio clink, macro FreeSip dual-spout demonstration, 6 aesthetic colorway swatches.',
+      breakdown: 'WINNER CREATIVE: 3 beats - 1) leak test (flip sideways over car seat, zero drops), 2) FreeSip dual drink (sip-or-straw in one patented spout), 3) colors + cupholder fit. Light + $27-37 vs $45. Inference: $10-18 gap + spill = switch trigger.'
+    },
+    theOffer: '$27 40oz FreeSip + Amazon Prime + 6 colors vs $45 crossed to $19.99 (56% off clearance deals)',
+    theCopy: {
+      headline: 'Spill-proof test: zero leak / Built-in straw or tilt to swig. vs Classic handle / Turn Cold Mornings into Warm Comfort',
+      body: 'Amazon + owalalife, Prime, 6 Sway colors, 132k reviews rising fast. vs $45 -> $18-24 endless sale, $15.99-$100 range confusion, holiday collabs.',
+      breakdown: 'WINNER: Amazon + owalalife, Prime, 6 Sway colors, 132k reviews rising fast. Psychology: smart switch (cheaper + better), identity (anti-hype practical). Funnel: TikTok -> Amazon PDP -> color variant. LOSER: $45 -> $18-24 endless sale, $15.99-$100 range confusion, collabs. WHY: discount trains wait-for-sale, leak + wear reviews kill trust, heavy + tall = car pain. Funnel: Meta -> generic PDP with 20 colors, no proof.'
+    },
+    theCta: 'Order on Amazon Prime (Variant PDP) vs Shop Sale (Generic collection)',
+    thePsychology: [
+      'Smart switch validation: Buying a $27 product that demonstrably outperforms a $45 status symbol makes the consumer feel clever rather than frugal.',
+      'Everyday commuter anxiety: Car cup-holder wobble and backpack spills are immediate daily pain points; solving them creates irrational product loyalty.',
+      'Anti-hype practical identity: Positioning against over-hyped trendiness gives buyers social permission to adopt a cleaner, more functional aesthetic.',
+      'The price-slashing discount trap: Slashing prices from $45 to $19.99 signals falling prestige and conditions customers never to pay full retail.'
+    ],
+    theFunnel: 'TikTok / Meta UGC test -> Direct Amazon PDP with pre-selected color variant & Prime 1-day delivery. Loser: Meta static collab -> 20-color catalog collection page with no leak proof.',
+    whyIThinkItWorks:
+      'TL;DR: Same water. Owala sells no-spill freedom for car + bag. Stanley sells classic status that leaks. 2026 search picked freedom.',
+    whatGrowingBusinessesCanLearn: [
+      'Test the competitor flaw visibly: If the category leader has an obvious defect (leaking, bulk, fragility), demonstrate your solution in the first 3 seconds.',
+      'Avoid the 56% off discount death spiral: Constant promotional markdowns destroy brand equity and train buyers to wait for clearance.',
+      'Leverage native UGC over high-production studio gloss: A real hand flipping a tumbler in a car will always beat an artificial studio kitchen render.',
+      'Capitalize on Andromeda algorithmic broad targeting: Creative IS the targeting; demonstrable stress tests generate natural shares and algorithmic scale.'
+    ],
+    myVerdict:
+      'Owala owns 71% of 2026 drinkware search share because they engineered out the tumbler category’s #1 frustration. When product design solves an emotional annoyance and creative proves it instantly, lower price is just the accelerant.',
+    comparisonData: {
+      winnerBrand: 'Owala',
+      winnerTagline: 'FreeSip 40oz + Sway 30/64oz ($27-37.99). Angle: Anti-Stanley viral TikTok, sip-or-straw, spill-proof, lighter, cold for hours.',
+      loserBrand: 'Stanley 1913',
+      loserTagline: 'Quencher H2.0 Flowstate 40oz ($45 -> $19.99 56% off, $22-24 deals). Angle: Holiday collabs (Kacey Musgraves), frequent sales. Classic handle + long ice, but leaks + wear fast.',
+      winnerLinks: {
+        store: 'https://www.amazon.com/Best-Sellers/zgbs',
+        adLibraryAll: 'https://adlibrary.com/brands/owala',
+        adLibraryActive: 'https://www.facebook.com/ads/library/?id=1404282281792338',
+        igHookReel: 'https://www.facebook.com/owala/',
+        brandData: 'https://gobrandwave.com/demand/global-en/compare/owala-vs-stanley'
+      },
+      loserLinks: {
+        findLoserUrl: 'https://www.facebook.com/ads/library/?id=1109407208453402',
+        selectionTip: 'Stanley holds a 203k review legacy base, but reliance on heavy discounting ($19.99 clearance) and lack of spill-proof innovation has seen search share plummet to 659k vs Owala 4.4M.'
+      },
+      screenshots: [
+        {
+          id: 'win-1',
+          title: 'WIN-1 Hook',
+          role: 'winner',
+          caption: 'Leak fear killed in 3s.',
+          src: './images/owala_spillproof_test.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'adlibrary.com/brands/owala + TikTok FreeSip'
+        },
+        {
+          id: 'win-2',
+          title: 'WIN-2 Design',
+          role: 'winner',
+          caption: 'Portable, not bulky.',
+          src: './images/owala_freesip_spout.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'facebook.com/owala/'
+        },
+        {
+          id: 'win-3',
+          title: 'WIN-3 Offer',
+          role: 'winner',
+          caption: 'Cheaper + lighter wins.',
+          src: './images/owala_amazon_offer.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Amazon Owala FreeSip PDP'
+        },
+        {
+          id: 'lose-1',
+          title: 'LOSE-1 Handle',
+          role: 'loser',
+          caption: 'Classic but clumsy.',
+          src: './images/stanley_quencher_wobble.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Stanley Quencher ad'
+        },
+        {
+          id: 'lose-2',
+          title: 'LOSE-2 Discount',
+          role: 'loser',
+          caption: 'Discount = demand leak.',
+          src: './images/stanley_discount_deal.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'Groups post 1574341250401860'
+        },
+        {
+          id: 'lose-3',
+          title: 'LOSE-3 Collab',
+          role: 'loser',
+          caption: 'Collabs hide core flaw.',
+          src: './images/stanley_collab_wall.jpg',
+          aspectRatio: '9:16',
+          sourcePath: 'fb-answers Stanley details'
+        }
+      ],
+      scores: [
+        { category: 'Hook (first 3s)', winnerScore: 9, loserScore: 4 },
+        { category: 'Spill proof', winnerScore: 9, loserScore: 3 },
+        { category: 'Price + Weight', winnerScore: 8, loserScore: 4 },
+        { category: 'CTA + Amazon fit', winnerScore: 9, loserScore: 5 }
+      ],
+      sideBySideTable: [
+        { element: 'First 3s', winner: 'Leak flip + sip', loser: 'Handle lift studio' },
+        { element: 'Trigger', winner: 'Spill in bag/car', loser: 'Classic status' },
+        { element: 'Claims', winner: '1: spill-proof', loser: '3: handle+ice+collab' },
+        { element: 'Proof', winner: 'Sideways test', loser: 'None' },
+        { element: 'Specificity', winner: '$27 40oz FreeSip', loser: '$45->$19.99 vague' },
+        { element: 'Offer', winner: 'Prime + colors', loser: 'Endless sale' },
+        { element: 'CTA', winner: 'Amazon variant PDP', loser: 'Generic PDP' },
+        { element: 'Weight', winner: 'Lighter portable', loser: 'Bulky wobble' },
+        { element: 'Search', winner: '4.4M 71% share', loser: '659k fading' }
+      ],
+      fixPlan: {
+        title: '48h fix for Stanley - keep product, change creative',
+        points: [
+          'Keep 40oz. Reshoot 15s iPhone: spill test side-by-side (Stanley vs Owala) + admit + show new lid. First text: "We heard you - leak test."',
+          'Kill collab wall. Show 1 proof: car brake test + bag toss. 6s honesty beats 6 colors.',
+          'Swap copy: "New leak-resistant lid - trade old lid free" + size/weight vs Owala chart. CTA Amazon with lid-compare image.',
+          'Add trust: show 203k base + "we fixed #1 complaint" + real mom review. Legacy = trust if you listen.',
+          'Test 3 hooks: (a) Does Stanley leak? Honest test (b) $45 vs $27 - why stay? (c) New lid 2026. Winner reveals loyalty driver.'
+        ],
+        hypothesis: 'Honesty + fix + trade program lifts CTR 0.7%->1.4% + saves + stops discount death.'
+      },
+      loserAnalysis: {
+        hookObservable: 'Studio kitchen setting with slow-motion handle lift and generic ambient acoustic track.',
+        hookWhyLoses: 'WHY IT LOSES: No leak test, no everyday problem agitation, looks like a static Target shelf endcap. Hypothesis: <18% thumb-stop on cold audiences.',
+        copyCtaObservable: '$45 slashed to $18-$24 endless sales, $15.99-$100 price range confusion, cosmetic celebrity collabs.',
+        copyCtaWhyLoses: 'WHY IT LOSES: Continuous deep discounting trains shoppers to wait for clearance; reviews complaining about leaks kill trust; heavy + tall profile wobbles in cars.',
+        frictionTakeaway: 'USA 2026 ANGLE: Under Andromeda broad targeting, creative IS targeting. Owala leak test gives the algorithm clear savers/sharers. Stanley polish finds no organic signal and requires 56% off to move units.'
+      },
+      linkedInHook: {
+        postText: 'USA 2026 bestseller is not AirPods. Its 40oz tumbler. Same tumbler, 2 ads. Owala ($27 spill-proof) owns 4.4M searches (71%). Stanley ($45-> $19) lives on 56% off. I broke flaws + pros + 48h fix + map in blog: [PASTE ab-8 LINK]. Day 4 daily. Follow for DTC. Tags: #USA #Amazon #DTC #MetaAds #Stanley #Owala',
+        firstComment: 'Full: [ab-8 LINK] - table + fix. Founders: spill or status? Recruiters: daily teardown, open roles.'
+      },
+      clientCta: {
+        pitch: 'I audit USA Amazon creatives for search share + saves, not just CTR. If tumbler ad needs 56% off to move, I tell why.',
+        email: 'AhamedAfif87@gmail.com',
+        contactUrl: 'https://frage3r.github.io/AfifAhamedLam/#contact',
+        nextBreakdown: 'Next: tell niche.'
+      }
+    }
+  },
+  {
     id: 'ab-7',
     slug: 'nov-week1-geyser-haier-vs-walton-2026',
     brandName: 'Haier vs Walton',

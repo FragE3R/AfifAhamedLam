@@ -135,6 +135,10 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ onNavigate }) 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {latestAdsBreakdown.map((item) => {
               const adsMediaMap: Record<string, { src: string; caption: string }> = {
+                'ab-8': {
+                  src: './images/owala_spillproof_test.jpg',
+                  caption: 'Tumbler Wars: Owala vs Stanley 40oz'
+                },
                 'ab-7': {
                   src: './images/haier_geyser_hook.jpg',
                   caption: 'Geyser Wars: Haier vs Walton 100% Shockproof'
