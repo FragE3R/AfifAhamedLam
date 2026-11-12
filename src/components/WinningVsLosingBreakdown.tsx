@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageView, AdsBreakdownArticle } from '../types';
 import {
   ArrowLeft,
@@ -10,7 +10,10 @@ import {
   Calendar,
   Mail,
   Eye,
-  Sparkles
+  Sparkles,
+  BookOpen,
+  Lightbulb,
+  Layers
 } from 'lucide-react';
 
 interface WinningVsLosingBreakdownProps {
@@ -29,6 +32,25 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
   const comp = article.comparisonData;
 
+  useEffect(() => {
+    const seoTitle = comp?.seoMeta?.metaTitle
+      ? `${comp.seoMeta.metaTitle} | Afif Ahamed`
+      : `${article.title} | Afif Ahamed`;
+    const seoDesc = comp?.seoMeta?.metaDescription || article.shortDescription;
+
+    document.title = seoTitle;
+
+    const updateMeta = (selector: string, content: string) => {
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute('content', content);
+    };
+    updateMeta('meta[name="description"]', seoDesc);
+    updateMeta('meta[property="og:title"]', seoTitle);
+    updateMeta('meta[property="og:description"]', seoDesc);
+    updateMeta('meta[name="twitter:title"]', seoTitle);
+    updateMeta('meta[name="twitter:description"]', seoDesc);
+  }, [article, comp]);
+
   return (
     <div className="bg-white">
       {/* Lightbox Modal for Screenshots */}
@@ -41,6 +63,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <img
               src={selectedImage}
               alt="Ad Breakdown Screenshot Preview"
+              referrerPolicy="no-referrer"
               className="max-h-[80vh] w-auto mx-auto object-contain rounded"
             />
             <p className="text-center text-xs text-slate-300 pt-2 font-mono">
@@ -67,8 +90,16 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="flex items-center gap-2">
               <div className="hidden sm:flex items-center gap-1 bg-slate-200/70 p-1 rounded-lg text-xs font-medium">
                 <button
+                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-9')}
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
+                    article.id === 'ab-9' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
+                  }`}
+                >
+                  Day 5 (Momcozy vs eufy)
+                </button>
+                <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-8')}
-                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     article.id === 'ab-8' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
                   }`}
                 >
@@ -76,7 +107,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 </button>
                 <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-7')}
-                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     article.id === 'ab-7' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
                   }`}
                 >
@@ -84,7 +115,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 </button>
                 <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-6')}
-                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     article.id === 'ab-6' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
                   }`}
                 >
@@ -92,7 +123,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 </button>
                 <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-5')}
-                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     article.id === 'ab-5' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
                   }`}
                 >
@@ -101,7 +132,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               </div>
               <a
                 href="mailto:AhamedAfif87@gmail.com?subject=Creative%20Audit%20Inquiry"
-                className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 bg-slate-950 text-white rounded hover:bg-slate-800 transition-colors"
+                className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 bg-slate-950 text-white rounded hover:bg-slate-800 transition-colors whitespace-nowrap shrink-0"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>Request Creative Audit</span>
@@ -114,12 +145,26 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         {/* Header Section */}
         <header className="mb-12 border-b border-slate-200 pb-10">
-          <div className="flex flex-wrap items-center gap-2 text-xs font-mono font-semibold tracking-wider uppercase text-slate-500 mb-3">
-            <span className="text-slate-900 font-bold">AFIF AHAMED</span>
-            <span>|</span>
-            <span className="text-emerald-700 font-bold">
-              DAY {article.dayNumber || 1} - {article.industry.toUpperCase()}
-            </span>
+          <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono font-semibold tracking-wider uppercase text-slate-500 mb-3">
+            <div className="flex items-center gap-2">
+              <span className="text-slate-900 font-bold">AFIF AHAMED</span>
+              <span>|</span>
+              <span className="text-emerald-700 font-bold">
+                DAY {article.dayNumber || 1} - {article.industry.toUpperCase()}
+              </span>
+            </div>
+            <a
+              href="#ads-breakdown"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('ads-breakdown');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-emerald-700 hover:text-emerald-900 underline font-sans font-semibold normal-case inline-flex items-center gap-1"
+            >
+              <span>Explore All Ads Breakdowns</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
           </div>
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 text-xs font-semibold uppercase tracking-wider mb-4">
@@ -130,10 +175,6 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           <h1 className="font-editorial text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 leading-[1.15] mb-4">
             {article.title}
           </h1>
-
-          <p className="text-base sm:text-lg text-slate-700 font-normal leading-relaxed mb-6">
-            {article.shortDescription}
-          </p>
 
           <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 font-medium mb-6">
             <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-900 font-semibold">
@@ -174,6 +215,50 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </header>
 
+        {/* Product Niche & Market Context (if present) */}
+        {comp?.marketContext && (
+          <section className="mb-14 scroll-mt-28" id="market-context">
+            <div className="p-6 sm:p-8 rounded-xl bg-slate-50 border border-slate-200 space-y-5">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-4">
+                <div>
+                  <span className="text-xs font-mono uppercase tracking-wider text-emerald-700 font-bold block">
+                    Product Niche &amp; Market Context
+                  </span>
+                  <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 mt-0.5">
+                    {comp.marketContext.niche}: {comp.marketContext.category}
+                  </h2>
+                </div>
+                <span className="text-xs font-mono text-slate-500">
+                  2026 Paid Social &amp; DTC Landscape
+                </span>
+              </div>
+
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                {comp.marketContext.overview}
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                <div className="p-4 rounded-lg bg-white border border-slate-200">
+                  <span className="text-xs font-mono font-bold uppercase text-emerald-700 block mb-1">
+                    Brand A Selling Proposition ({comp.winnerBrand})
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    {comp.marketContext.brandAProposition}
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg bg-white border border-slate-200">
+                  <span className="text-xs font-mono font-bold uppercase text-slate-700 block mb-1">
+                    Brand B Selling Proposition ({comp.loserBrand})
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    {comp.marketContext.brandBProposition}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* SECTION 1: The Two Ads - Companies + Exact Links */}
         <section className="mb-14 scroll-mt-28" id="companies-and-links">
           <div className="flex items-center gap-2 mb-6">
@@ -181,7 +266,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               1
             </span>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              The 2 Brands — Exact Products &amp; Links
+              Brand A vs. Brand B — Exact Products &amp; Verified Links
             </h2>
           </div>
 
@@ -419,7 +504,8 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                       >
                         <img
                           src={shot.src}
-                          alt={`${shot.title} - ${shot.caption}`}
+                          alt={shot.altText || `${shot.title} - ${shot.caption}`}
+                          referrerPolicy="no-referrer"
                           className="w-full max-h-[380px] object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-300"
                           loading="lazy"
                         />
@@ -440,10 +526,16 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
                         <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
                           <p>
-                            <strong>Visual Observation:</strong> {shot.title} demonstrates how consumers process the creative before reading the caption or price tag.
+                            <strong>Visual Observation:</strong>{' '}
+                            {shot.detailedAnalysis ||
+                              `${shot.title} demonstrates how consumers process the creative before reading the caption or price tag.`}
                           </p>
                           <p>
-                            <strong>Performance Impact:</strong> {isWin ? 'Pre-handles return reasons, builds tactile trust, and hooks high-intent buyers.' : 'Forces the user into high mental friction, creates message mismatch, and burns cold ad spend.'}
+                            <strong>Performance Impact:</strong>{' '}
+                            {shot.performanceImpact ||
+                              (isWin
+                                ? 'Pre-handles return reasons, builds tactile trust, and hooks high-intent buyers.'
+                                : 'Forces the user into high mental friction, creates message mismatch, and burns cold ad spend.')}
                           </p>
                         </div>
 
@@ -569,7 +661,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               4
             </span>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              Full Breakdown Copy &amp; Observable vs. Inference
+              The Winner vs. The Loser — Actual Advertisement Breakdown
             </h2>
           </div>
 
@@ -588,13 +680,13 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="p-6 sm:p-8 rounded-xl border border-emerald-200 bg-white shadow-2xs space-y-6">
               <div className="flex items-center gap-2 text-emerald-800 font-bold text-sm uppercase tracking-wider pb-3 border-b border-emerald-100">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>The Winner Playbook: {comp?.winnerBrand}</span>
+                <span>Winning Brand — What {comp?.winnerBrand} Gets Right</span>
               </div>
 
               <div className="space-y-4 text-sm text-slate-700 leading-relaxed">
                 <div className="p-4 rounded-lg bg-emerald-50/50 border border-emerald-200/60">
                   <h4 className="font-bold text-slate-950 text-sm mb-1">
-                    WINNER HOOK (observable):
+                    WINNER HOOK &amp; OPENING 3 SECONDS (observable):
                   </h4>
                   <p className="text-slate-800 mb-2">
                     {article.theHook.observable}
@@ -606,7 +698,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
                 <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
                   <h4 className="font-bold text-slate-950 text-sm mb-1">
-                    WINNER CREATIVE (3 beats):
+                    WINNER CREATIVE FORMAT &amp; VISUAL STORYTELLING (3 beats):
                   </h4>
                   <p className="text-slate-700">
                     {article.theCreative.breakdown}
@@ -615,14 +707,14 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
                 <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
                   <h4 className="font-bold text-slate-950 text-sm mb-1">
-                    WINNER OFFER / COPY / CTA:
+                    WINNER OFFER / COPYWRITING / CTA:
                   </h4>
                   <p className="text-slate-700 mb-2">
                     <strong>Headline:</strong> {article.theCopy.headline} <br />
                     <strong>Body / CTA:</strong> {article.theCopy.body}
                   </p>
                   <div className="pt-2 text-xs text-slate-800">
-                    <strong>Psychology in Play:</strong>
+                    <strong>Emotional &amp; Functional Psychology in Play:</strong>
                     <ul className="mt-1 list-disc list-inside space-y-1">
                       {article.thePsychology.map((p, i) => (
                         <li key={i}>{p}</li>
@@ -633,7 +725,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
                 <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
                   <h4 className="font-bold text-slate-950 text-sm mb-1">
-                    OBSERVED FUNNEL &amp; UNIT ECONOMICS:
+                    OBSERVED LANDING-PAGE EXPERIENCE &amp; CONVERSION FUNNEL:
                   </h4>
                   <p className="text-slate-700 font-mono text-xs">
                     {article.theFunnel}
@@ -646,13 +738,13 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="p-6 sm:p-8 rounded-xl border border-rose-200 bg-white shadow-2xs space-y-6">
               <div className="flex items-center gap-2 text-rose-800 font-bold text-sm uppercase tracking-wider pb-3 border-b border-rose-100">
                 <XCircle className="w-4 h-4 text-rose-600" />
-                <span>The Loser Playbook: {comp?.loserBrand} Failure Pattern</span>
+                <span>Losing Approach — What {comp?.loserBrand} Gets Wrong in Cold-Traffic Execution</span>
               </div>
 
               <div className="space-y-4 text-sm text-slate-700 leading-relaxed">
                 <div className="p-4 rounded-lg bg-rose-50/50 border border-rose-200/60">
                   <h4 className="font-bold text-slate-950 text-sm mb-1">
-                    LOSER HOOK (observable):
+                    LOSER HOOK &amp; OPENING 3 SECONDS (observable):
                   </h4>
                   <p className="text-slate-800 mb-2">
                     {comp?.loserAnalysis?.hookObservable || "Ghost-mannequin / sterile product on blank gradient background with generic slogan."}
@@ -664,7 +756,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
                 <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
                   <h4 className="font-bold text-slate-950 text-sm mb-1">
-                    LOSER COPY / CTA:
+                    LOSER COPY / OFFER / FUNNEL FRICTION:
                   </h4>
                   <p className="text-slate-700 mb-2">
                     {comp?.loserAnalysis?.copyCtaObservable || "Discount or feature claims with generic hotline/collection CTA."}
@@ -675,7 +767,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 </div>
 
                 <div className="p-4 rounded-lg bg-rose-100/50 border border-rose-200 text-rose-950 text-xs leading-relaxed">
-                  <strong>BD-SPECIFIC FRICTION &amp; MEDIA BUYER TAKEAWAY:</strong> {comp?.loserAnalysis?.frictionTakeaway || "In Bangladesh e-commerce, ad creative must pre-handle trust and return objections before the order is placed."}
+                  <strong>STRATEGIC FRICTION &amp; MEDIA BUYER TAKEAWAY:</strong> {comp?.loserAnalysis?.frictionTakeaway || "Ad creative must pre-handle trust and return objections before the order is placed."}
                 </div>
               </div>
             </div>
@@ -689,12 +781,12 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               5
             </span>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              Side-by-Side Comparison Table
+              Brand A vs. Brand B — Side-by-Side Comparison Table
             </h2>
           </div>
 
           <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-            Direct parameter-by-parameter analysis showing why algorithms distribute one creative to high-intent buyers while choking the other.
+            Direct parameter-by-parameter analysis showing why algorithms distribute one creative to high-intent buyers while penalizing the other.
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-2xs bg-white">
@@ -736,6 +828,127 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
         </section>
 
+        {/* OPTIONAL SECTION: What eCommerce Brands Can Learn */}
+        {comp?.ecommerceLessons && comp.ecommerceLessons.length > 0 && (
+          <section className="mb-14 scroll-mt-28" id="ecommerce-lessons">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-7 h-7 rounded-lg bg-emerald-700 text-white text-xs font-bold font-mono flex items-center justify-center">
+                <Lightbulb className="w-3.5 h-3.5" />
+              </span>
+              <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
+                What eCommerce Brands Can Learn From {comp.winnerBrand} vs. {comp.loserBrand}
+              </h2>
+            </div>
+
+            <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+              Practical lessons for founders, CMOs, and eCommerce operators inside and outside the baby-products category on translating product engineering into scalable paid social performance.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {comp.ecommerceLessons.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="p-6 rounded-xl bg-white border border-slate-200 shadow-2xs flex flex-col justify-between hover:border-slate-300 transition-colors"
+                >
+                  <div>
+                    <div className="flex items-center gap-2 mb-2.5">
+                      <span className="w-6 h-6 rounded-md bg-slate-900 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0">
+                        0{idx + 1}
+                      </span>
+                      <h3 className="font-editorial text-lg font-bold text-slate-950 leading-snug">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-slate-700 leading-relaxed">
+                      {item.lesson}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* OPTIONAL SECTION: My Take as a Media Buyer */}
+        {comp?.mediaBuyerTake && (
+          <section className="mb-14 scroll-mt-28" id="media-buyer-take">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
+                <TrendingUp className="w-3.5 h-3.5" />
+              </span>
+              <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
+                {comp.mediaBuyerTake.headline}
+              </h2>
+            </div>
+
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-950 text-white border border-slate-800 shadow-lg space-y-6">
+              <div className="space-y-4">
+                <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+                  {comp.mediaBuyerTake.perspective}
+                </p>
+              </div>
+
+              {comp.mediaBuyerTake.accountChanges && comp.mediaBuyerTake.accountChanges.length > 0 && (
+                <div className="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+                  <h3 className="text-sm font-mono uppercase tracking-wider text-emerald-400 font-bold">
+                    How I Would Restructure the Weaker Ad Account ({comp.loserBrand}):
+                  </h3>
+                  <ul className="space-y-3">
+                    {comp.mediaBuyerTake.accountChanges.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <span className="w-5 h-5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                          {idx + 1}
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* 48-Hour Creative Testing Architecture Visual */}
+              {comp.mediaBuyerTake.testingMatrix && comp.mediaBuyerTake.testingMatrix.length > 0 && (
+                <div className="p-5 rounded-xl bg-slate-900/90 border border-emerald-500/30 space-y-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                    <div>
+                      <span className="text-[11px] font-mono uppercase tracking-widest text-emerald-400 font-bold block">
+                        Creative Testing Architecture
+                      </span>
+                      <h4 className="text-base font-bold text-white">
+                        48-Hour Rapid Testing Matrix (Cold Prospecting vs. Warm Retargeting)
+                      </h4>
+                    </div>
+                    <span className="text-[11px] font-mono text-slate-400">
+                      Goal: Lower Outbound CPC &amp; Increase Landing Page CVR
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    {comp.mediaBuyerTake.testingMatrix.map((matrixItem, idx) => (
+                      <div key={idx} className="p-4 rounded-lg bg-slate-950 border border-slate-800 space-y-2.5 flex flex-col justify-between">
+                        <div className="space-y-2">
+                          <span className="text-[10px] font-mono uppercase text-emerald-400 font-bold block">
+                            {matrixItem.stream}
+                          </span>
+                          <div className="font-bold text-white text-sm">{matrixItem.objective}</div>
+                          <ul className="space-y-1.5 text-slate-300 leading-relaxed list-disc list-inside">
+                            {matrixItem.variations?.map((v, vIdx) => (
+                              <li key={vIdx}>{v}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="pt-2 border-t border-slate-800/80 text-[11px] font-mono text-emerald-300">
+                          <strong className="text-slate-400">Metrics:</strong> {matrixItem.metricsToMonitor}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
         {/* SECTION 6: 48-Hour Fix Plan */}
         <section className="mb-14 scroll-mt-28" id="fix-plan">
           <div className="flex items-center gap-2 mb-4">
@@ -750,15 +963,15 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           <div className="p-6 sm:p-8 rounded-xl bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950 text-white shadow-lg space-y-6 border border-emerald-900/50">
             <div>
               <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1">
-                Turnaround Protocol for Failing Apparel Creatives
+                48-Hour Creative Testing &amp; Funnel Optimization Protocol
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-white">
-                How to Salvage a Dying Ad in 48 Hours
+                How to Turn Hardware Innovation Into Cold-Traffic Conversions in 48 Hours
               </h3>
             </div>
 
             <ul className="space-y-4">
-              {comp?.fixPlan.points.map((pt, idx) => (
+              {comp?.fixPlan?.points?.map((pt, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-200">
                   <span className="w-6 h-6 rounded-md bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 font-mono font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
                     {idx + 1}
@@ -770,14 +983,14 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 
             <div className="p-4 rounded-lg bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-sm leading-relaxed font-mono">
               <strong className="text-white block font-sans text-xs uppercase tracking-wider mb-1">
-                Expected Lift Hypothesis:
+                Metrics to Monitor &amp; Strategic Hypothesis:
               </strong>
               {comp?.fixPlan.hypothesis}
             </div>
 
             <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-slate-800">
               <p className="text-xs text-slate-400">
-                Need this turnaround applied to your BD e-commerce ad accounts? Let's audit your assets.
+                Need this 48-hour creative testing framework applied to your DTC ad account? Let&apos;s audit your creatives.
               </p>
               <a
                 href="mailto:AhamedAfif87@gmail.com?subject=48-Hour%20Ad%20Creative%20Audit"
@@ -788,6 +1001,104 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             </div>
           </div>
         </section>
+
+        {/* OPTIONAL SECTION: Final Verdict & Honest Limitations */}
+        {comp?.finalVerdict && (
+          <section className="mb-14 scroll-mt-28" id="final-verdict">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
+                7
+              </span>
+              <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
+                Final Verdict &amp; Actionable Takeaway
+              </h2>
+            </div>
+
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-5">
+              <div className="p-4 rounded-xl bg-emerald-950 text-white border border-emerald-800">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold block mb-1">
+                  Executive Verdict
+                </span>
+                <p className="text-sm sm:text-base font-medium leading-relaxed">
+                  {comp.finalVerdict.summary}
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-950 leading-relaxed">
+                <strong className="font-mono uppercase tracking-wider text-[11px] text-amber-900 block mb-1">
+                  Methodological Limitations &amp; Evidence Note (Observable vs. Inference):
+                </strong>
+                {comp.finalVerdict.honestLimitation}
+              </div>
+
+              <div className="p-4 rounded-xl bg-slate-900 text-white text-xs sm:text-sm leading-relaxed">
+                <strong className="text-emerald-400 font-mono uppercase tracking-wider text-xs block mb-1">
+                  Bottom-Line Actionable Takeaway for Founders &amp; Media Buyers:
+                </strong>
+                {comp.finalVerdict.actionableTakeaway}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* OPTIONAL SECTION: Sources & References */}
+        {comp?.sourcesAndReferences && comp.sourcesAndReferences.length > 0 && (
+          <section className="mb-14 scroll-mt-28" id="sources-references">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-7 h-7 rounded-lg bg-slate-200 text-slate-900 text-xs font-bold font-mono flex items-center justify-center">
+                <Layers className="w-3.5 h-3.5" />
+              </span>
+              <h2 className="font-editorial text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
+                Sources, Advertisement References &amp; Research Database Links
+              </h2>
+            </div>
+
+            <div className="p-5 sm:p-6 rounded-xl bg-slate-50 border border-slate-200 space-y-4">
+              <p className="text-xs text-slate-600 leading-relaxed">
+                All product specifications, pricing, and creative observations in this teardown were cross-referenced against official brand landing pages, Meta Ad Library listings, and creator UGC feeds. No unverified ROAS or private ad-account metrics were fabricated.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {comp.sourcesAndReferences.map((src, idx) => (
+                  <a
+                    key={idx}
+                    href={src.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3.5 rounded-lg bg-white border border-slate-200 hover:border-slate-400 transition-colors flex flex-col justify-between gap-1.5 group"
+                  >
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-xs font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                        {src.label}
+                      </span>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 shrink-0" />
+                    </div>
+                    <p className="text-[11px] text-slate-600 leading-relaxed">{src.note}</p>
+                    <span className="text-[10px] font-mono text-slate-400 truncate">{src.url}</span>
+                  </a>
+                ))}
+              </div>
+
+              <div className="pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs">
+                <a
+                  href="#ads-breakdown"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('ads-breakdown');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="font-semibold text-emerald-700 hover:text-emerald-800 underline inline-flex items-center gap-1"
+                >
+                  <span>← Explore All Daily Ads Breakdowns (#ads-breakdown)</span>
+                </a>
+                {comp.seoMeta && (
+                  <span className="text-[11px] font-mono text-slate-500">
+                    Primary Keyword: {comp.seoMeta.primaryKeyword}
+                  </span>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* SECTION 7: Client CTA (Work With Me) */}
         <section className="scroll-mt-28" id="client-cta">

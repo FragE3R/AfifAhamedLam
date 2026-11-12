@@ -112,6 +112,9 @@ export interface AdsBreakdownArticle {
       role: 'winner' | 'loser';
       caption: string;
       src: string;
+      altText?: string;
+      detailedAnalysis?: string;
+      performanceImpact?: string;
       aspectRatio?: '9:16' | '16:9' | '1:1';
       sourcePath?: string;
     }>;
@@ -137,6 +140,45 @@ export interface AdsBreakdownArticle {
       copyCtaWhyLoses: string;
       frictionTakeaway: string;
     };
+    seoMeta?: {
+      metaTitle: string;
+      metaDescription: string;
+      primaryKeyword: string;
+      secondaryKeywords: string[];
+      canonicalSlug: string;
+    };
+    marketContext?: {
+      niche: string;
+      category: string;
+      overview: string;
+      brandAProposition: string;
+      brandBProposition: string;
+    };
+    ecommerceLessons?: Array<{
+      title: string;
+      lesson: string;
+    }>;
+    mediaBuyerTake?: {
+      headline: string;
+      perspective: string;
+      accountChanges: string[];
+      testingMatrix: Array<{
+        stream: string;
+        objective: string;
+        variations: string[];
+        metricsToMonitor: string;
+      }>;
+    };
+    finalVerdict?: {
+      summary: string;
+      actionableTakeaway: string;
+      honestLimitation: string;
+    };
+    sourcesAndReferences?: Array<{
+      label: string;
+      url: string;
+      note: string;
+    }>;
     linkedInHook?: {
       postText: string;
       firstComment: string;
