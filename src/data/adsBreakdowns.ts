@@ -2,6 +2,192 @@ import { AdsBreakdownArticle } from '../types';
 
 export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
   {
+    id: 'ab-09',
+    slug: 'skincare-cerave-vs-lrp-2026',
+    brandName: 'CeraVe vs La Roche-Posay',
+    industry: 'Skincare Worldwide',
+    title: 'Barrier Wars: Why 120h $15 Tub Beats 48h Prestige',
+    shortDescription: 'Same ceramide moisturizer. Same November dryness. One sells 120h for $10, one sells 48h premium. Drugstore tub vs French pharmacy. Nov 15, 2026 - Skincare Worldwide Special.',
+    date: 'November 15, 2026',
+    readingTime: '7 min read',
+    targetAudience: 'Global skincare DTC founders, beauty media buyers, Amazon & TikTok Shop operators, and creative strategists scaling barrier creams, moisturizers, and dermatological routines in Q4 winter dryness.',
+    isWinningVsLosing: true,
+    dayNumber: 6,
+    theHook: {
+      observable: "Arrakis desert + dry cracked knuckle -> thick tub scoop. Text: '120-hour hydration $15'. Caption: 'Hours + price in 2s.'",
+      analysis: 'WHY IT WINS: 120h number + $10-20 anchors value immediately in the first 2 seconds; creator demonstration + larger tub size triggers winter family stock-up behavior.',
+      hypothesis: 'Hypothesis: High save/share rate driven by concrete hydration hours (120h) + low cost-per-ounce anchor (vs lower cold CTR on LRP 1h white tube).'
+    },
+    theCreative: {
+      format: 'Winning: 3-beat winter dryness test, ceramide barrier visual diagram, and multi-use tub scoop. Loser: Small 100ml white tube studio shot, chemist jargon list, and third-party reseller post.',
+      visualStyle: 'Extreme desert/winter cracked knuckle contrast, thick rich cream smear, clinical 3-ceramide barrier lock graphic, and family-size pump tub.',
+      breakdown: 'WINNER CREATIVE: 3 beats - 1) dry test (cracked winter knuckle scoop), 2) ceramide barrier visual (show barrier, not buzz), 3) face + body + hands use. Super Boost 5 ingredients + 3 essential ceramides. Inference: multi-use across face, body, and hands justifies the big tub.'
+    },
+    theOffer: '$10-20 drugstore tub everywhere (Amazon/Target), pump + tub, up to 120h hydration, 3 essential ceramides vs 100ml tube, 48h hydration, reseller 2-3 days delivery',
+    theCopy: {
+      headline: '120-hour hydration $15 (Official Moisturizer of Arrakis) vs Repairs in 1 hour / 48h hydration (Toleriane Double Repair 100ml)',
+      body: '$10-20 drugstore everywhere (Amazon/Target), pump + tub, 3 essential ceramides. vs 48h (less than half of 120h), ceramide-3 + niacinamide + glycerin list, 100ml.',
+      breakdown: 'WINNER OFFER: $10-20 drugstore everywhere (Amazon/Target), pump + tub, 3 ceramides. Psychology: derm + budget + family. Funnel: TikTok/Meta -> Amazon PDP size variant. LOSER COPY: 48h (less than half of 120h), ceramide-3 + niacinamide + glycerin list, 100ml. WHY: premium price + small = cost/oz loss, matte vs glow confusion (oily vs dry versions). Funnel: Meta -> reseller InstaGlow/Ladily 2-3 day post, not official PDP.'
+    },
+    theCta: 'Amazon size PDP (Drugstore everywhere) vs Generic reseller post (2-3 days delivery)',
+    thePsychology: [
+      'Concrete hours + ounces math: Cold traffic in November buys quantifiable hydration duration (120h vs 48h) and lower cost-per-ounce.',
+      'Multi-surface family utility: Showing one $15 tub solving face, body, and cracked winter hands eliminates the need for separate pricey creams.',
+      'Visual barrier proof over chemist jargon: A 2-second thick cream smear + barrier diagram beats listing Prebiotic Thermal Water + Ceramide-3 + Niacinamide without a test.',
+      'Heater-season urgency: November indoor heating + cold wind triggers acute barrier damage; tying 120h moisture lock to winter dryness outperforms abstract French pharmacy prestige.'
+    ],
+    theFunnel: 'TikTok/Meta -> Amazon PDP size variant (tub + pump options, $10-20). Loser: Meta -> reseller InstaGlow/Ladily 2-3 day post, not official PDP.',
+    whyIThinkItWorks:
+      'TL;DR: Same barrier. CeraVe sells 120h + tub for winter family. LRP sells 48h + 100ml French prestige. Cold traffic buys hours + ounces.',
+    whatGrowingBusinessesCanLearn: [
+      'Anchor hours + price in the first 2 seconds: "120-hour hydration $15" gives cold scrollers an instant value equation before they can swipe away.',
+      'Show the barrier, not the buzzwords: Visual smear tests and simple barrier diagrams convert better than listing chemical ingredients without a demo.',
+      'Never fight a head-on value war with a smaller bottle: If your SKU is 100ml at a premium price, niche down to a specific skin type (e.g., oily sensitive 8h matte control) where a heavy tub fails.',
+      'Control the post-click destination: Sending paid social traffic to unofficial reseller posts instead of an official skin-type PDP leaks trust and conversion.'
+    ],
+    myVerdict:
+      'November is barrier month worldwide. CeraVe wins cold traffic because it pairs a massive 120-hour hydration claim with a $10–$20 multi-use family tub. For La Roche-Posay to win without losing a cost-per-ounce war, it must pivot its 100ml tube creative exclusively to oily-sensitive faces where heavy tubs feel too greasy.',
+    comparisonData: {
+      winnerBrand: 'CeraVe',
+      winnerTagline: 'CeraVe Moisturizing Cream ($10-20, up to 120h hydration, Official Moisturizer of Arrakis, larger sizes low cost/oz, 3 essential ceramides).',
+      loserBrand: 'La Roche-Posay',
+      loserTagline: 'La Roche-Posay Toleriane Double Repair (100ml, repairs in 1h, 48h hydration, ceramide-3 + niacinamide, premium texture).',
+      winnerLinks: {
+        store: 'https://finance.yahoo.com/media-advertising/articles/cerave-becomes-official-moisturizer-arrakis-130500135.html',
+        adLibraryAll: 'https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=140620315959593',
+        adLibraryActive: 'https://www.facebook.com/ads/library/?id=1746152743358907',
+        igHookReel: 'https://ceramideclub.com/compare/cerave-vs-la-roche-posay',
+        brandData: 'https://www.risingtrends.co/trends/skincare-trends-2026'
+      },
+      loserLinks: {
+        findLoserUrl: 'https://www.facebook.com/LaRochePosayUSA/videos/2386413655498292/',
+        selectionTip: 'LRP 48h post (facebook.com/LadilyBangladesh/posts/1145325794682974/) & Wirecutter review (nytimes.com/wirecutter/reviews/best-moisturizers/): LRP excels for oily/matte niche, while CeraVe dominates dry winter cost/oz value. Note: public claims + price + size only. No private ROAS. Value + hours = proxy.'
+      },
+      screenshots: [
+        {
+          id: 'win-1',
+          title: 'WIN-1 Hook',
+          role: 'winner',
+          caption: 'Hours + price in 2s.',
+          src: './images/cerave_hook_120h.jpg',
+          altText: 'WIN-1 Hook: Dry cracked knuckle + tub scoop, text 120-hour hydration $15',
+          detailedAnalysis: "Dry cracked knuckle + tub scoop, text '120-hour hydration $15'. Arrakis desert + cracked skin -> tub.",
+          performanceImpact: 'WHY: 120h number + $10-20 anchors value, creator + larger size = stock-up. Hypothesis: high save/share.',
+          aspectRatio: '9:16',
+          sourcePath: 'CeraVe Arrakis campaign + library'
+        },
+        {
+          id: 'win-2',
+          title: 'WIN-2 Texture',
+          role: 'winner',
+          caption: 'Show barrier, not buzz.',
+          src: './images/cerave_texture_barrier.jpg',
+          altText: 'WIN-2 Texture: Thick cream smear + barrier diagram ceramides',
+          detailedAnalysis: 'Thick cream smear + barrier diagram ceramides. 3 beats: 1) dry test, 2) ceramide barrier visual, 3) face + body + hands use.',
+          performanceImpact: 'Inference: Multi-use across face, body, and hands + visual barrier repair proof justifies buying the big tub.',
+          aspectRatio: '9:16',
+          sourcePath: 'CeraVe PDP'
+        },
+        {
+          id: 'win-3',
+          title: 'WIN-3 Offer',
+          role: 'winner',
+          caption: 'Bigger = cheaper/oz.',
+          src: './images/cerave_tub_offer.jpg',
+          altText: 'WIN-3 Offer: Large tub + pump + $10-20 + 3 essential ceramides',
+          detailedAnalysis: 'Large tub + pump + $10-20 + 3 essential ceramides. Drugstore everywhere (Amazon/Target).',
+          performanceImpact: 'Psychology: derm + budget + family. Funnel: TikTok/Meta -> Amazon PDP size variant.',
+          aspectRatio: '9:16',
+          sourcePath: 'Amazon CeraVe Cream'
+        },
+        {
+          id: 'lose-1',
+          title: 'LOSE-1 Premium',
+          role: 'loser',
+          caption: 'Premium, tiny.',
+          src: './images/lrp_small_tube.jpg',
+          altText: 'LOSE-1 Premium: Small white 100ml tube on beige + Double Repair',
+          detailedAnalysis: "Small white 100ml tube on beige + 'Double Repair' / 'Repairs in 1 hour'.",
+          performanceImpact: 'WHY: 1h claim without visual test, prebiotic confuses, 100ml looks small for body. Hypothesis: lower cold CTR.',
+          aspectRatio: '9:16',
+          sourcePath: 'LRP Ladily post 1145325794682974'
+        },
+        {
+          id: 'lose-2',
+          title: 'LOSE-2 Jargon',
+          role: 'loser',
+          caption: 'Chemist, not human.',
+          src: './images/lrp_jargon_list.jpg',
+          altText: 'LOSE-2 Jargon: Prebiotic + ceramide-3 + niacinamide list, no demo',
+          detailedAnalysis: 'Prebiotic + ceramide-3 + niacinamide + glycerin list, no demo. 48h (less than half of 120h), 100ml.',
+          performanceImpact: 'WHY: Premium price + small = cost/oz loss, matte vs glow confusion (oily vs dry versions).',
+          aspectRatio: '9:16',
+          sourcePath: 'LRP video 2386413655498292'
+        },
+        {
+          id: 'lose-3',
+          title: 'LOSE-3 Sale',
+          role: 'loser',
+          caption: 'Reseller, not brand.',
+          src: './images/lrp_reseller_post.jpg',
+          altText: 'LOSE-3 Sale: In-stock 2-3 days delivery reseller post',
+          detailedAnalysis: 'In-stock 2-3 days delivery reseller post. Funnel routes Meta traffic to reseller InstaGlow/Ladily 2-3 day post instead of official PDP.',
+          performanceImpact: 'Loses official brand authority, skin-type guidance, and direct conversion momentum.',
+          aspectRatio: '9:16',
+          sourcePath: 'Ladily salesale post'
+        }
+      ],
+      scores: [
+        { category: 'Hook (first 3s)', winnerScore: 9, loserScore: 4 },
+        { category: 'Proof (hours)', winnerScore: 9, loserScore: 4 },
+        { category: 'Value + Size', winnerScore: 9, loserScore: 3 },
+        { category: 'CTA + Routine', winnerScore: 8, loserScore: 4 }
+      ],
+      sideBySideTable: [
+        { element: 'First 3s', winner: '120h + $15 tub', loser: '1h + white tube' },
+        { element: 'Trigger', winner: 'Dry crack winter', loser: 'Sensitive prestige' },
+        { element: 'Claims', winner: '1: 120h barrier', loser: '3: repair+48h+prebiotic' },
+        { element: 'Proof', winner: 'Smear + hours', loser: 'No test' },
+        { element: 'Specificity', winner: '120h, $10-20 big', loser: '48h, 100ml small' },
+        { element: 'Offer', winner: 'Drugstore everywhere', loser: 'Reseller 2-3 days' },
+        { element: 'CTA', winner: 'Amazon size PDP', loser: 'Generic post' },
+        { element: 'Texture', winner: 'Rich body+face', loser: 'Matte vs glow split' },
+        { element: 'Winner tag', winner: 'Best drugstore', loser: 'Best face (niche)' }
+      ],
+      fixPlan: {
+        title: '48h fix for LRP',
+        points: [
+          "Keep 100ml. Reshoot 15s split face: half CeraVe thick vs half LRP matte, 8h oil blot test. First text: 'Oily? Matte wins in 8h.'",
+          'Kill prebiotic list. Show 1 proof: 1h redness fade timelapse. 6s beats 3 ingredients.',
+          "Swap copy: 'Oily sensitive? 48h matte, no shine, 1h calm.' + skin-type quiz (dry->CeraVe, oily->LRP). CTA official PDP, not reseller.",
+          "Add trust: '101 experts 3500 products Marie Claire 2026' + derm badge + 100ml = purse size for reapply. Small = portable, use it.",
+          'Test 3 hooks: (a) Shine by noon? (b) 120h too heavy? (c) 1h calm test. Winner reveals oily language.'
+        ],
+        hypothesis: 'Hypothesis: niche down to oily sensitive + matte proof lifts CTR + stops head-on value war you lose.'
+      },
+      loserAnalysis: {
+        hookObservable: "White tube + 'Repairs in 1 hour'. Small 100ml tube on beige background.",
+        hookWhyLoses: '1h claim without visual test, prebiotic confuses, 100ml looks small for body. Hypothesis: lower cold CTR.',
+        copyCtaObservable: '48h (less than half of 120h), ceramide-3 + niacinamide + glycerin list, 100ml. Funnel: Meta -> reseller InstaGlow/Ladily 2-3 day post, not official PDP.',
+        copyCtaWhyLoses: 'Premium price + small = cost/oz loss, matte vs glow confusion (oily vs dry versions).',
+        frictionTakeaway: 'NOV ANGLE: Heating + cold wind = barrier damage. Winner ties 120h to heater season. Loser sells French pharmacy prestige without winter proof.'
+      },
+      marketContext: {
+        niche: 'Skincare Worldwide (November Barrier Month)',
+        category: 'Ceramide Barrier Moisturizers',
+        overview: 'November = barrier month worldwide: eczema treatment, collagen, anti-wrinkle, azelaic fastest rising (live search). Best of 2026: SkinCeuticals P-Tiox winner, Epicutis serum bestseller, CeraVe drugstore winner, La Roche-Posay best face. TikTok Shop trending Nov 2, 2026: snail mucin, peptide, vitamin C, barrier creams, Korean sunscreen, lip oils. Note: public claims + price + size only. No private ROAS. Value + hours = proxy.',
+        brandAProposition: 'WINNER: CeraVe Moisturizing Cream ($10–20, up to 120h hydration, Official Moisturizer of Arrakis, larger sizes with low cost/oz, 3 essential ceramides for face + body + hands).',
+        brandBProposition: 'LOSER PATTERN: La Roche-Posay Toleriane Double Repair (100ml, repairs in 1h, 48h hydration, ceramide-3 + niacinamide + prebiotic thermal water, premium texture).'
+      },
+      clientCta: {
+        pitch: 'I audit skincare creatives for saves + routine fit, not just CTR. If moisturizer needs prestige to sell, I tell why.',
+        email: 'AhamedAfif87@gmail.com',
+        contactUrl: 'https://frage3r.github.io/AfifAhamedLam/#contact',
+        nextBreakdown: 'tell niche.'
+      }
+    }
+  },
+  {
     id: 'ab-9',
     slug: 'wearable-breast-pump-advertising-strategy-momcozy-vs-eufy-2026',
     brandName: 'Momcozy vs eufy',

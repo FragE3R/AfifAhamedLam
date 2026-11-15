@@ -135,6 +135,10 @@ export const InsightsSection: React.FC<InsightsSectionProps> = ({ onNavigate }) 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {latestAdsBreakdown.map((item) => {
               const adsMediaMap: Record<string, { src: string; caption: string }> = {
+                'ab-09': {
+                  src: './images/cerave_hook_120h.jpg',
+                  caption: 'Barrier Wars: CeraVe 120h Tub vs La Roche-Posay 48h'
+                },
                 'ab-9': {
                   src: './images/momcozy_m5_ugc_hook.jpg',
                   caption: 'Momcozy M5 vs eufy S1 Pro: Wearable Pump Strategy'
