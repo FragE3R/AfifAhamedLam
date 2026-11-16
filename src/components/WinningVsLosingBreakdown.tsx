@@ -90,12 +90,20 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="flex items-center gap-2">
               <div className="hidden sm:flex items-center gap-1 bg-slate-200/70 p-1 rounded-lg text-xs font-medium">
                 <button
+                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-11')}
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
+                    article.id === 'ab-11' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
+                  }`}
+                >
+                  Day 7 (Pampers vs Huggies)
+                </button>
+                <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-09')}
                   className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     article.id === 'ab-09' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
                   }`}
                 >
-                  Day 6 (CeraVe vs LRP)
+                  Day 6 (CeraVe)
                 </button>
                 <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-9')}
@@ -301,70 +309,70 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 <div className="space-y-2 pt-2 border-t border-emerald-200/60 text-xs">
                   {comp?.winnerLinks.store && (
                     <div className="flex items-center justify-between py-1 border-b border-emerald-100">
-                      <span className="text-slate-600 font-medium">Product / Market Reference:</span>
+                      <span className="text-slate-600 font-medium">Official Product Page:</span>
                       <a
                         href={comp.winnerLinks.store}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
                       >
-                        <span>View Guide / Source</span>
+                        <span>View Product Source</span>
                         <ArrowUpRight className="w-3 h-3 shrink-0" />
                       </a>
                     </div>
                   )}
                   {comp?.winnerLinks.adLibraryAll && (
                     <div className="flex items-center justify-between py-1 border-b border-emerald-100">
-                      <span className="text-slate-600 font-medium">Post Proof 1 (Angle):</span>
+                      <span className="text-slate-600 font-medium">Ad Library / Creative Proof 1:</span>
                       <a
                         href={comp.winnerLinks.adLibraryAll}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
                       >
-                        <span>Verified Creative Post 1</span>
+                        <span>Verified Ad Library 1</span>
                         <ArrowUpRight className="w-3 h-3 shrink-0" />
                       </a>
                     </div>
                   )}
                   {comp?.winnerLinks.adLibraryActive && (
                     <div className="flex items-center justify-between py-1 border-b border-emerald-100">
-                      <span className="text-slate-600 font-medium">Post Proof 2 (Price &amp; Offer):</span>
+                      <span className="text-slate-600 font-medium">Ad Library / Offer Proof 2:</span>
                       <a
                         href={comp.winnerLinks.adLibraryActive}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
                       >
-                        <span>Verified Creative Post 2</span>
+                        <span>Verified Ad Library 2</span>
                         <ArrowUpRight className="w-3 h-3 shrink-0" />
                       </a>
                     </div>
                   )}
                   {comp?.winnerLinks.igHookReel && (
                     <div className="flex items-center justify-between py-1 border-b border-emerald-100">
-                      <span className="text-slate-600 font-medium">Post Proof 3 (Confidence):</span>
+                      <span className="text-slate-600 font-medium">Loyalty / Value Reference:</span>
                       <a
                         href={comp.winnerLinks.igHookReel}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
                       >
-                        <span>Verified Creative Post 3</span>
+                        <span>Verified Reference 3</span>
                         <ArrowUpRight className="w-3 h-3 shrink-0" />
                       </a>
                     </div>
                   )}
                   {comp?.winnerLinks.brandData && (
                     <div className="flex items-center justify-between py-1">
-                      <span className="text-slate-600 font-medium">Market Demand Context:</span>
+                      <span className="text-slate-600 font-medium">Category Bestseller Snapshot:</span>
                       <a
                         href={comp.winnerLinks.brandData}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-emerald-700 hover:text-emerald-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
                       >
-                        <span>Winter Category Spike</span>
+                        <span>View Market Snapshot</span>
                         <ArrowUpRight className="w-3 h-3 shrink-0" />
                       </a>
                     </div>
@@ -399,14 +407,14 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 <div className="space-y-2 pt-2 border-t border-rose-200/60 text-xs">
                   {comp?.loserLinks.findLoserUrl && (
                     <div className="flex items-center justify-between py-1 border-b border-rose-100">
-                      <span className="text-slate-600 font-medium">Reference Creative:</span>
+                      <span className="text-slate-600 font-medium">Reference Ad Library:</span>
                       <a
                         href={comp.loserLinks.findLoserUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-rose-700 hover:text-rose-900 font-semibold inline-flex items-center gap-1 truncate max-w-[200px]"
                       >
-                        <span>View Catalog Video Post</span>
+                        <span>View Verified Ad Source</span>
                         <ArrowUpRight className="w-3 h-3 shrink-0" />
                       </a>
                     </div>
@@ -427,13 +435,21 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
 
           <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-500 font-mono">
-            <strong>Analytical note:</strong> This compares publicly observable creative + landing patterns. Price, fabric, and run context are observable. ROAS/CTR numbers are hypotheses marked as such. No private dashboard data claimed.
+            <strong>Analytical note:</strong> This compares publicly observable creative + landing patterns. Price, pack count, and run context are observable. ROAS/CTR numbers are hypotheses marked as such. No private dashboard data claimed.
           </div>
         </section>
 
         {/* SECTION 2: Screenshot Map */}
         <section className="mb-14 scroll-mt-28" id="screenshot-map">
-          <div className="flex items-center justify-end mb-6">
+          <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+            <div className="flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-900 text-white text-xs font-bold font-mono flex items-center justify-center">
+                2
+              </span>
+              <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
+                Advertising Creative Screenshot &amp; Evidence Map
+              </h2>
+            </div>
             <div className="flex items-center gap-1.5 text-xs font-medium">
               <button
                 onClick={() => setActiveTab('all')}
@@ -463,7 +479,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
 
           <p className="text-sm text-slate-600 mb-8 leading-relaxed max-w-3xl">
-            Below are the verified campaign captures annotated with exact video timestamps, creative agitation mechanisms, and conversion funnel leak points. Click any screenshot for high-resolution inspection.
+            Below are the verified campaign captures and structured creative evidence logs annotated with opening hooks, visual sequences, on-screen copy, and conversion funnel leak points.
           </p>
 
           <div className="space-y-8">
@@ -503,25 +519,86 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     </div>
 
                     <div className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                      {/* Image Frame */}
-                      <div
-                        className={`md:col-span-7 relative group cursor-pointer rounded-lg overflow-hidden border ${
-                          isWin ? 'border-emerald-100 bg-slate-950' : 'border-rose-100 bg-slate-900'
-                        }`}
-                        onClick={() => setSelectedImage(shot.src)}
-                      >
-                        <img
-                          src={shot.src}
-                          alt={shot.altText || `${shot.title} - ${shot.caption}`}
-                          referrerPolicy="no-referrer"
-                          className="w-full max-h-[380px] object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-300"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5 backdrop-blur-2xs">
-                          <Eye className="w-4 h-4" />
-                          <span>Expand Evidence</span>
+                      {/* Image Frame OR Verified Ad Creative Evidence Card (when no fabricated screenshot is used) */}
+                      {shot.src ? (
+                        <div
+                          className={`md:col-span-7 relative group cursor-pointer rounded-lg overflow-hidden border ${
+                            isWin ? 'border-emerald-100 bg-slate-950' : 'border-rose-100 bg-slate-900'
+                          }`}
+                          onClick={() => setSelectedImage(shot.src)}
+                        >
+                          <img
+                            src={shot.src}
+                            alt={shot.altText || `${shot.title} - ${shot.caption}`}
+                            referrerPolicy="no-referrer"
+                            className="w-full max-h-[380px] object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-300"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5 backdrop-blur-2xs">
+                            <Eye className="w-4 h-4" />
+                            <span>Expand Evidence</span>
+                          </div>
                         </div>
-                      </div>
+                      ) : (
+                        <div
+                          className={`md:col-span-7 rounded-lg border p-5 space-y-3 text-xs ${
+                            isWin
+                              ? 'bg-slate-950 text-slate-100 border-emerald-500/40'
+                              : 'bg-slate-950 text-slate-100 border-rose-500/40'
+                          }`}
+                        >
+                          <div className="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-slate-800">
+                            <span
+                              className={`font-mono text-[11px] font-bold uppercase tracking-wider ${
+                                isWin ? 'text-emerald-400' : 'text-rose-400'
+                              }`}
+                            >
+                              Verified Ad Library Creative Log ({shot.evidenceMeta?.adFormat || 'Social Video Ad'})
+                            </span>
+                            {shot.sourceUrl && (
+                              <a
+                                href={shot.sourceUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-white font-mono text-[11px] font-semibold transition-colors"
+                              >
+                                <span>Inspect Live Source</span>
+                                <ArrowUpRight className="w-3 h-3" />
+                              </a>
+                            )}
+                          </div>
+
+                          {shot.evidenceMeta && (
+                            <div className="space-y-2 leading-relaxed text-slate-300">
+                              <div>
+                                <strong className="text-white">Opening Hook (0–3s):</strong>{' '}
+                                {shot.evidenceMeta.openingHook}
+                              </div>
+                              <div>
+                                <strong className="text-white">Visual Sequence:</strong>{' '}
+                                {shot.evidenceMeta.visualSequence}
+                              </div>
+                              <div className="p-2.5 rounded bg-slate-900 border border-slate-800 font-mono text-[11px] text-emerald-300">
+                                <strong className="text-slate-400 block uppercase text-[10px]">On-Screen Text &amp; Spoken Audio:</strong>
+                                {shot.evidenceMeta.onScreenText} — <em>{shot.evidenceMeta.voiceoverMessage}</em>
+                              </div>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                                <div className="p-2 rounded bg-slate-900/70 border border-slate-800">
+                                  <strong className="text-white block text-[11px]">Offer &amp; CTA:</strong>
+                                  <span>{shot.evidenceMeta.offerAndCta}</span>
+                                </div>
+                                <div className="p-2 rounded bg-slate-900/70 border border-slate-800">
+                                  <strong className="text-white block text-[11px]">Landing Destination:</strong>
+                                  <span className="break-all">{shot.evidenceMeta.landingPage}</span>
+                                </div>
+                              </div>
+                              <div className="pt-1 text-[11px] text-amber-300/90 font-mono">
+                                <strong>Verification Note:</strong> {shot.evidenceMeta.verificationStatus}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
 
                       {/* Analysis Column */}
                       <div className="md:col-span-5 space-y-3">
@@ -547,11 +624,43 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                           </p>
                         </div>
 
-                        <div className="pt-2 text-[11px] font-mono text-slate-500 border-t border-slate-100 flex items-center justify-between">
+                        {shot.evidenceMeta && (
+                          <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 text-[11px] text-slate-700 space-y-1.5 leading-relaxed">
+                            <div>
+                              <strong className="text-slate-900">Format:</strong> {shot.evidenceMeta.adFormat}
+                            </div>
+                            <div>
+                              <strong className="text-slate-900">On-Screen Copy:</strong> {shot.evidenceMeta.onScreenText}
+                            </div>
+                            <div>
+                              <strong className="text-slate-900">Offer &amp; CTA:</strong> {shot.evidenceMeta.offerAndCta}
+                            </div>
+                          </div>
+                        )}
+
+                        <div className="pt-2 text-[11px] font-mono text-slate-500 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
                           <span>Ref: #{shot.id.toUpperCase()}</span>
-                          <span className="text-emerald-700 font-semibold cursor-pointer" onClick={() => setSelectedImage(shot.src)}>
-                            Enlarge +
-                          </span>
+                          <div className="flex items-center gap-3">
+                            {shot.sourceUrl && (
+                              <a
+                                href={shot.sourceUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-slate-700 hover:text-emerald-700 font-semibold hover:underline inline-flex items-center gap-1"
+                              >
+                                <span>Ad Library Source</span>
+                                <ArrowUpRight className="w-3 h-3" />
+                              </a>
+                            )}
+                            {shot.src && (
+                              <span
+                                className="text-emerald-700 font-semibold cursor-pointer"
+                                onClick={() => setSelectedImage(shot.src)}
+                              >
+                                Enlarge +
+                              </span>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -568,12 +677,12 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               3
             </span>
             <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              Visual Story — Creative Scores (Rendered as Bars)
+              Creative Scoring Matrix (Editorial Assessment Out of 10)
             </h2>
           </div>
 
           <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-            Rendered as 4 horizontal bar pairs (<strong>Green = {comp?.winnerBrand}</strong> vs <strong>Red = {comp?.loserBrand}</strong>). Founders get it in 10 seconds.
+            Rendered as horizontal bar pairs (<strong>Green = {comp?.winnerBrand}</strong> vs <strong>Red = {comp?.loserBrand}</strong>). Note: These scores are structured editorial assessments of creative execution, not private campaign performance metrics.
           </p>
 
           <div className="p-6 sm:p-8 rounded-xl bg-slate-900 text-white border border-slate-800 shadow-md space-y-6">
@@ -646,6 +755,12 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                       </div>
                     </div>
                   </div>
+
+                  {score.explanation && (
+                    <p className="text-xs text-slate-300 leading-relaxed pl-26 pt-1">
+                      {score.explanation}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -781,6 +896,39 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             </div>
           </div>
         </section>
+
+        {/* OPTIONAL DEEP-DIVE SECTIONS (Fair Product Comparison, Creative Strategy, Offer Architecture, Copy, Psychology, Winner/Loser Analysis) */}
+        {comp?.deepDiveSections && comp.deepDiveSections.length > 0 && (
+          <section className="mb-14 space-y-8 scroll-mt-28" id="deep-dive-analysis">
+            {comp.deepDiveSections.map((sec) => (
+              <div
+                key={sec.id}
+                className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4"
+              >
+                <div className="flex items-center gap-2.5 border-b border-slate-200 pb-3">
+                  <h3 className="font-editorial text-xl sm:text-2xl font-bold text-slate-950">
+                    {sec.title}
+                  </h3>
+                </div>
+                <div className="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed">
+                  {sec.paragraphs.map((p, pIdx) => (
+                    <p key={pIdx}>{p}</p>
+                  ))}
+                </div>
+                {sec.bullets && sec.bullets.length > 0 && (
+                  <ul className="space-y-2.5 pt-2">
+                    {sec.bullets.map((b, bIdx) => (
+                      <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-800 bg-white p-3.5 rounded-lg border border-slate-200">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="leading-relaxed">{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </section>
+        )}
 
         {/* SECTION 5: Side-by-side Table (Render as table on site) */}
         <section className="mb-14 scroll-mt-28" id="comparison-table">

@@ -117,11 +117,24 @@ export interface AdsBreakdownArticle {
       performanceImpact?: string;
       aspectRatio?: '9:16' | '16:9' | '1:1';
       sourcePath?: string;
+      sourceUrl?: string;
+      evidenceMeta?: {
+        adFormat: string;
+        openingHook: string;
+        visualSequence: string;
+        onScreenText: string;
+        voiceoverMessage: string;
+        mainBenefit: string;
+        offerAndCta: string;
+        landingPage: string;
+        verificationStatus: string;
+      };
     }>;
     scores: Array<{
       category: string;
       winnerScore: number;
       loserScore: number;
+      explanation?: string;
     }>;
     sideBySideTable: Array<{
       element: string;
@@ -154,6 +167,13 @@ export interface AdsBreakdownArticle {
       brandAProposition: string;
       brandBProposition: string;
     };
+    deepDiveSections?: Array<{
+      id: string;
+      sectionNumber: string;
+      title: string;
+      paragraphs: string[];
+      bullets?: string[];
+    }>;
     ecommerceLessons?: Array<{
       title: string;
       lesson: string;

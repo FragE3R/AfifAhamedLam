@@ -14,7 +14,12 @@ export const AdsBreakdownDetail: React.FC<AdsBreakdownDetailProps> = ({
   articleId,
   onNavigate
 }) => {
-  const normalizedId = articleId === 'ab-10' ? 'ab-09' : articleId;
+  const normalizedId =
+    articleId === 'ab-10'
+      ? 'ab-09'
+      : articleId === 'day-7'
+      ? 'ab-11'
+      : articleId;
   const item = ADS_BREAKDOWN_ARTICLES.find((a) => a.id === normalizedId || a.slug === normalizedId) || ADS_BREAKDOWN_ARTICLES[0];
   const related = ADS_BREAKDOWN_ARTICLES.filter((a) => a.id !== item.id).slice(0, 2);
 
