@@ -19,7 +19,15 @@ jobs:
         with:
           node-version: 22
       - run: npm install
-      - run: mkdir -p public/images && cp src/assets/images/* public/images/ || true
+      - run: |
+          mkdir -p public/images
+          cp src/assets/images/* public/images/ || true
+          for f in src/assets/images/*_[0-9]*.jpg; do
+            if [ -f "$f" ]; then
+              clean_name=$(basename "$f" | sed -E 's/_[0-9]+\.jpg$/.jpg/')
+              cp "$f" "public/images/$clean_name" || true
+            fi
+          done
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

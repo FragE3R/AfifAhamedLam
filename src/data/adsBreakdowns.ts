@@ -1,4 +1,10 @@
 import { AdsBreakdownArticle } from '../types';
+import pampersWin1Img from '../assets/images/pampers_win1_blowout_hook_1794837329515.jpg';
+import pampersWin2Img from '../assets/images/pampers_win2_lockaway_demo_1794837330542.jpg';
+import pampersWin3Img from '../assets/images/pampers_win3_club_offer_1794837333273.jpg';
+import huggiesLose1Img from '../assets/images/huggies_lose1_lifestyle_hook_1794837335972.jpg';
+import huggiesLose2Img from '../assets/images/huggies_lose2_grip_strips_1794837352586.jpg';
+import huggiesLose3Img from '../assets/images/huggies_lose3_store_modal_1794837338274.jpg';
 
 export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
   {
@@ -71,7 +77,7 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
           title: 'WIN-1: Opening Hook — Rear Blowout Barrier Problem-Solution Cutaway (Pampers Swaddlers)',
           role: 'winner',
           caption: 'Names the #1 parental nightmare (up-the-back blowouts) and shows the rear pocket mechanism in 0–3 seconds.',
-          src: './images/pampers_win1_blowout_hook.jpg',
+          src: pampersWin1Img,
           altText: 'Pampers Swaddlers Size 5 ad showing car-seat toddler lift and anatomical rear Blowout Barrier pocket trapping blue liquid',
           aspectRatio: '9:16',
           sourcePath: 'AdManage Pampers Ad Library (ID: 89121585311) / Meta Ad Library US',
@@ -95,7 +101,7 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
           title: 'WIN-2: Product Demonstration — LockAway Channels & Dryness Press Test (Pampers Swaddlers)',
           role: 'winner',
           caption: 'Side-by-side absorption demo + dermatologist/pediatrician authority turns a commodity diaper into skin protection.',
-          src: './images/pampers_win2_lockaway_demo.jpg',
+          src: pampersWin2Img,
           altText: 'Pampers Swaddlers Size 5 absorption demonstration showing blue liquid locking into LockAway Channels and dry tissue press test',
           aspectRatio: '9:16',
           sourcePath: 'Pampers Meta Ad Library (Page ID: 89121585311) & pampers.com/en-us/diapers-wipes/pampers-swaddlers-diapers',
@@ -119,7 +125,7 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
           title: 'WIN-3: Offer & Conversion Architecture — 132-Count Unit Math + Pampers Club App Loop (Pampers Swaddlers)',
           role: 'winner',
           caption: 'Combines 132-count Size 5 bulk box value (~$0.34/diaper) with $3-per-box Pampers Cash app retention.',
-          src: './images/pampers_win3_club_offer.jpg',
+          src: pampersWin3Img,
           altText: 'Pampers Swaddlers Size 5 132-count Enormous Pack box with smartphone scanning QR code for $3.00 Pampers Cash reward',
           aspectRatio: '9:16',
           sourcePath: 'AdManage Pampers Ad Library (ID: 89121585311) & Pampers Club App Promo Creatives',
@@ -143,7 +149,7 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
           title: 'LOSE-1: Opening Hook Weakness — Lifestyle Toddler Montage Delays the Value Proposition (Huggies Little Movers)',
           role: 'loser',
           caption: 'Spends the critical first 3 seconds on cute dancing/crawling toddler footage before explaining WHY Little Movers fits better.',
-          src: './images/huggies_lose1_lifestyle_hook.jpg',
+          src: huggiesLose1Img,
           altText: 'Huggies Little Movers Size 5 lifestyle video ad frame showing a smiling toddler dancing in a living room with We Got You Baby headline',
           aspectRatio: '9:16',
           sourcePath: 'AdManage Huggies Ad Library (ID: 106874109386) / Meta Ad Library US',
@@ -167,7 +173,7 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
           title: 'LOSE-2: Creative Weakness — Under-Demonstrated "Double Grip Strips" Advantage (Huggies Little Movers)',
           role: 'loser',
           caption: 'Huggies has a genuine engineering advantage for Size 5 walkers (Double Grip Strips), but flashes it as a static diagram instead of a stress test.',
-          src: './images/huggies_lose2_grip_strips.jpg',
+          src: huggiesLose2Img,
           altText: 'Huggies Little Movers Size 5 static feature card pointing to 5-Way Fit System and purple Double Grip Strips without a live sag test',
           aspectRatio: '9:16',
           sourcePath: 'Huggies Meta Ad Library (Page ID: 106874109386) & huggies.com/en-us/diapers/little-movers',
@@ -191,7 +197,7 @@ export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
           title: 'LOSE-3: Offer & Conversion Friction — Multi-Step "Where to Buy" Modal + Lower Count-Per-Box Math (Huggies Little Movers)',
           role: 'loser',
           caption: 'Routes mobile ad clicks to a multi-step retailer selector widget while offering fewer diapers per ~$44.94 box (104–120 ct vs. Pampers 132 ct).',
-          src: './images/huggies_lose3_store_modal.jpg',
+          src: huggiesLose3Img,
           altText: 'Mobile screenshot of Huggies Little Movers Where to Buy pop-up modal requiring Size 5 selection, ZIP code entry, and retailer selection',
           aspectRatio: '9:16',
           sourcePath: 'huggies.com/en-us/diapers/little-movers & Amazon Size 5 Pack Comparison',
