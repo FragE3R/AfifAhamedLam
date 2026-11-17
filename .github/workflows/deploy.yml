@@ -19,15 +19,29 @@ jobs:
         with:
           node-version: 22
       - run: npm install
-      - run: |
-          mkdir -p public/images
-          cp src/assets/images/* public/images/ || true
-          for f in ./images/*_[0-9]*.jpg; do
-            if [ -f "$f" ]; then
-              clean_name=$(basename "$f" | sed -E 's/_[0-9]+\.jpg$/.jpg/')
-              cp "$f" "public/images/$clean_name" || true
+      - name: Validate Day 7 Image Assets
+        run: |
+          MISSING=0
+          for img in pampers-win1.jpg pampers-win2.jpg pampers-win3.jpg huggies-lose1.jpg huggies-lose2.jpg huggies-lose3.jpg; do
+            filepath="public/images/day7/$img"
+            if [ ! -f "$filepath" ]; then
+              echo "ERROR: Missing required Day 7 image asset: $filepath"
+              MISSING=1
+            elif [ ! -s "$filepath" ]; then
+              echo "ERROR: Day 7 image asset is empty (0 bytes): $filepath"
+              MISSING=1
+            elif ! grep -q "images/day7/$img" src/data/adsBreakdowns.ts; then
+              echo "ERROR: Filename mismatch — images/day7/$img is not referenced in src/data/adsBreakdowns.ts"
+              MISSING=1
+            else
+              size=$(wc -c < "$filepath")
+              echo "OK: Verified $filepath ($size bytes) and matched in src/data/adsBreakdowns.ts"
             fi
           done
+          if [ "$MISSING" -ne 0 ]; then
+            echo "FATAL: Day 7 image validation failed. Ensure all 6 files exist and are non-empty in public/images/day7/."
+            exit 1
+          fi
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

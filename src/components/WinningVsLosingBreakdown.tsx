@@ -29,6 +29,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
 }) => {
   const [activeTab, setActiveTab] = useState<'all' | 'winner' | 'loser'>('all');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [failedImages, setFailedImages] = useState<Record<string, boolean>>({});
 
   const comp = article.comparisonData;
 
@@ -487,6 +488,8 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               .filter((shot) => activeTab === 'all' || shot.role === activeTab)
               .map((shot) => {
                 const isWin = shot.role === 'winner';
+                const imageKey = `${article.id}:${shot.id}:${shot.src}`;
+                const hasValidImage = Boolean(shot.src) && !failedImages[imageKey];
                 return (
                   <div
                     key={shot.id}
@@ -519,8 +522,8 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                     </div>
 
                     <div className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                      {/* Image Frame OR Verified Ad Creative Evidence Card (when no fabricated screenshot is used) */}
-                      {shot.src ? (
+                      {/* Image Frame OR Professional Evidence Card Fallback when image is missing or fails to load */}
+                      {hasValidImage ? (
                         <div
                           className={`md:col-span-7 relative group cursor-pointer rounded-lg overflow-hidden border ${
                             isWin ? 'border-emerald-100 bg-slate-950' : 'border-rose-100 bg-slate-900'
@@ -533,6 +536,12 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                             referrerPolicy="no-referrer"
                             className="w-full max-h-[380px] object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-300"
                             loading="lazy"
+                            onError={() =>
+                              setFailedImages((prev) => ({
+                                ...prev,
+                                [imageKey]: true,
+                              }))
+                            }
                           />
                           <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5 backdrop-blur-2xs">
                             <Eye className="w-4 h-4" />
@@ -568,7 +577,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                             )}
                           </div>
 
-                          {shot.evidenceMeta && (
+                          {shot.evidenceMeta ? (
                             <div className="space-y-2 leading-relaxed text-slate-300">
                               <div>
                                 <strong className="text-white">Opening Hook (0–3s):</strong>{' '}
@@ -595,6 +604,19 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                               <div className="pt-1 text-[11px] text-amber-300/90 font-mono">
                                 <strong>Verification Note:</strong> {shot.evidenceMeta.verificationStatus}
                               </div>
+                            </div>
+                          ) : (
+                            <div className="space-y-2 leading-relaxed text-slate-300">
+                              <div>
+                                <strong className="text-white">Creative Evidence Summary:</strong>{' '}
+                                {shot.detailedAnalysis || shot.caption}
+                              </div>
+                              {shot.performanceImpact && (
+                                <div>
+                                  <strong className="text-white">Strategic Impact:</strong>{' '}
+                                  {shot.performanceImpact}
+                                </div>
+                              )}
                             </div>
                           )}
                         </div>
@@ -652,7 +674,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                                 <ArrowUpRight className="w-3 h-3" />
                               </a>
                             )}
-                            {shot.src && (
+                            {hasValidImage && (
                               <span
                                 className="text-emerald-700 font-semibold cursor-pointer"
                                 onClick={() => setSelectedImage(shot.src)}
