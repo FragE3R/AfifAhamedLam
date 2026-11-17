@@ -91,6 +91,14 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="flex items-center gap-2">
               <div className="hidden sm:flex items-center gap-1 bg-slate-200/70 p-1 rounded-lg text-xs font-medium">
                 <button
+                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-10')}
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
+                    article.id === 'ab-10' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
+                  }`}
+                >
+                  Day 7 (Guidecraft)
+                </button>
+                <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-09')}
                   className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     article.id === 'ab-09' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
@@ -209,7 +217,23 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
                 Strategic Campaign Blueprint
               </span>
               <p className="text-sm text-slate-200 leading-snug font-normal">
-                Zero fluff, pure conversion anatomy: spot the psychological trigger that wins the feed, examine verified proof, and steal the playbook to scale profitable ROAS.
+                {{
+                  'ab-10':
+                    'You built an heirloom-grade wooden toddler tower, so why is a 2-second fold-flat clip beating your studio photoshoot? Let’s see whether parents buy “grows with your kid” or “doesn’t eat my kitchen floor”—before Meta eats your ad budget.',
+                  'ab-09':
+                    'You spent millions formulating French-pharmacy skincare in a tiny 100ml tube, and a $15 drugstore tub pitching “Arrakis desert hydration” just stole your cart. Here’s why cold traffic buys hours and ounces over chemist Latin.',
+                  'ab-9':
+                    'You engineered a $350 heated smart pump with a Bluetooth waveform app, and lost to a mom pouring iced coffee on TikTok. Let’s dissect why sleep-deprived buyers at 3 AM want painless relief—not another firmware update.',
+                  'ab-8':
+                    'Stanley had the entire internet in a chokehold, until Owala held a $28 cup upside down and didn’t spill a drop. Here’s how a 3-second leak test dethrones a wall of pastel status symbols.',
+                  'ab-7':
+                    'Nobody wakes up excited to buy a water heater—until a freezing 7 AM shower and a fear of electric shock enter the chat. Watch how Haier sells “warm and alive” while Walton reads you the factory spec sheet.',
+                  'ab-6':
+                    'Your warehouse has 40,000 winter hoodies ready to ship, so why is your ad a lifeless ghost-mannequin PNG that screams “Inbox for price”? Here’s how a 2-second fleece zoom slashes COD returns.',
+                  'ab-5':
+                    'You machined a wallet out of aerospace-grade aluminum, and you’re still running polite studio turnarounds? Watch how Ridge publicly shames a 4-inch leather “dad brick” in 2 seconds flat to print cold-traffic ROAS.'
+                }[article.id] ||
+                  'Your product took 18 months to engineer, so why is it losing the feed to a competitor with a $12 ring light? Let’s dissect what actually makes cold strangers pull out their credit cards—before Meta eats the rest of your ad budget.'}
               </p>
             </div>
             <div className="flex items-center gap-3 shrink-0 text-xs font-mono">
@@ -696,7 +720,7 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
           </div>
 
           <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-            Rendered as horizontal bar pairs (<strong>Green = {comp?.winnerBrand}</strong> vs <strong>Red = {comp?.loserBrand}</strong>). Note: These scores are structured editorial assessments of creative execution, not private campaign performance metrics.
+            Rendered as horizontal bar pairs (<strong>Green = {comp?.winnerBrand}</strong> vs <strong>Red = {comp?.loserBrand}</strong>). Qualitative creative assessment based on public product messaging and available creative evidence. Not CTR, ROAS, conversion or sales data.
           </p>
 
           <div className="p-6 sm:p-8 rounded-xl bg-slate-900 text-white border border-slate-800 shadow-md space-y-6">
@@ -996,6 +1020,9 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-xs text-slate-500 font-mono">
+            Footnote: prices, availability, product specs and offers can change. Compare exact models only.
+          </p>
         </section>
 
         {/* OPTIONAL SECTION: What eCommerce Brands Can Learn */}

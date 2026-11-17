@@ -2,6 +2,397 @@ import { AdsBreakdownArticle } from '../types';
 
 export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
   {
+    id: 'ab-10',
+    slug: 'counter-height-independence-guidecraft-vs-little-partners-2026',
+    brandName: 'Guidecraft vs Little Partners',
+    industry: 'Toddler Products Worldwide',
+    title: 'Counter-Height Independence: Guidecraft vs Little Partners',
+    shortDescription:
+      'A toddler learning tower / kitchen helper brings a toddler to counter height for supervised family activities. Guidecraft sells compact fold-flat storage and easy setup; Little Partners sells four-height adjustability and a classic spacious tower. Nov 17, 2026 — Toddler Products Worldwide.',
+    date: 'November 17, 2026',
+    readingTime: '7 min read',
+    targetAudience:
+      'Parents seeking counter-height toddler participation and independence, plus DTC e-commerce founders, media buyers, and creative strategists marketing high-consideration juvenile, home, and family products.',
+    isWinningVsLosing: true,
+    dayNumber: 7,
+    theHook: {
+      observable:
+        'GUIDECRAFT HOOK: “Your toddler wants to help. Your kitchen still needs its floor space.” Open with the child joining a supervised kitchen task, then show the tower folding flat. (Official product page lifestyle + fold-flat asset; public tracker also logged a Guidecraft toddler-tower ad running 116 days as of Nov 17, 2026.)',
+      analysis:
+        'WHY IT WORKS: Connects an emotional family participation moment directly to a concrete small-space objection (floor space and kitchen storage) in the opening sequence.',
+      hypothesis:
+        'Inference (Observable vs. Inference): A visible fold demonstration makes practical storage value easier to understand than a static wooden frame hero shot. Public ad-tracker longevity (116 days) is treated as a lead for creative verification, not proof of ROAS or campaign success.'
+    },
+    theCreative: {
+      format:
+        'Guidecraft: 3-beat fold-flat & included-feature demonstration. Little Partners: 3-beat 4-height grow-with-me adjustment & structural showcase.',
+      visualStyle:
+        'Supervised family kitchen participation at counter height paired with close-up functional proof (fold-flat mechanism, non-slip platform mat, keepers, and four-position height slots).',
+      breakdown:
+        'GUIDECRAFT CREATIVE: 3 beats — (1) child at counter height with adult supervision, (2) close-up of platform / non-slip mat / keepers, (3) fold tower flat and show storage. Inference: a visible fold demonstration may make practical value easier to understand than a static hero shot. LITTLE PARTNERS CREATIVE: 3 beats — (1) show all four height positions, (2) show four-sided railings and platform, (3) show a supervised everyday activity. Avoid unsupported promises about developmental outcomes or safety superiority.'
+    },
+    theOffer:
+      'Guidecraft Classic Kitchen Helper: $199.95 displayed (was $229.95 at research time), ages 18m–7y, folds flat, non-slip mat + 2 Keepers included, GREENGUARD Gold. Little Partners Original Learning Tower: $179.99 displayed at research time, ages 2–6y, 4 height positions, 4-sided railings, 2 steps.',
+    theCopy: {
+      headline:
+        'Guidecraft: “Your toddler wants to help. Your kitchen still needs its floor space.” vs. Little Partners: “One tower. Four platform heights.”',
+      body:
+        'Guidecraft: “Little kitchen helper, less kitchen clutter.” CTA: “See the Classic Kitchen Helper.” | Little Partners: Demonstrate the four adjustment positions and show the child at the counter with a caregiver. CTA: “Explore the Original Learning Tower.”',
+      breakdown:
+        'GUIDECRAFT OFFER + FUNNEL: Show current official price ($199.95; was $229.95 at capture time); make age guidance (18 months–7 years), dimensions, platform settings (15 or 18 inches), included accessories (non-slip mat + two Kitchen Helper Keepers), assembly and delivery clear. Send clicks to the official product page. LITTLE PARTNERS OFFER + FUNNEL: Show current official price ($179.99), exact model and dimensions, age range (2–6 years), four adjustment positions, materials, assembly and warranty details. Make the product model clear so customers do not confuse Original, Explore \'N Store, Learn \'N Fold or other tower variants.'
+    },
+    theCta:
+      'Guidecraft: “See the Classic Kitchen Helper” (Official PDP) | Little Partners: “Explore the Original Learning Tower” (Official PDP)',
+    thePsychology: [
+      'Solving a specific everyday home problem: A small child wants to participate at adult counter height during food prep, crafts, and handwashing.',
+      'Pre-handling practical parent objections: Floor space, storage, adjustability, assembly, stability, cleaning, and whether the tower fits the kitchen.',
+      'Objection-matched creative angles: Guidecraft resolves the small-space storage objection via fold-flat proof; Little Partners resolves the longevity objection via four platform heights (10.59", 13.19", 15.79", 18.39").',
+      'Model-clarity trust: Explicitly distinguishing the non-folding Original Learning Tower from folding variants prevents post-click buyer confusion.'
+    ],
+    theFunnel:
+      'Guidecraft Funnel: Creative Demo -> Official Classic Kitchen Helper PDP (https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool). Little Partners Funnel: 4-Height Demo -> Official Original Learning Tower PDP (https://littlepartners.com/products/original-learning-tower).',
+    whyIThinkItWorks:
+      'TL;DR: Both brands sell counter-height participation. Guidecraft makes the fold-flat and setup story easy to demonstrate; Little Partners has a stronger four-height adjustment story. The best creative depends on the buyer\'s objection: storage and setup, or long-term adjustability.',
+    whatGrowingBusinessesCanLearn: [
+      'Match the hook to the buyer’s primary physical objection: Use fold-flat proof for space-constrained kitchens and four-height adjustment proof for longevity-focused parents.',
+      'Make included practical details visible: Showing the non-slip mat, Keepers, and platform slots visually answers assembly and usability questions.',
+      'Prevent product-line confusion on the landing page: Clearly distinguish exact models (e.g., Little Partners Original vs. Explore \'N Store or Learn \'N Fold) so buyers know whether a model folds.',
+      'Separate observable facts from inference: Treat third-party ad-tracker day counts (116 days) as creative research leads, never as verified ROAS proof.'
+    ],
+    myVerdict:
+      'VERDICT: Guidecraft is the provisional creative winner for the fold-and-store demonstration angle; Little Partners wins the adjustability proof angle. Do not declare a universal brand winner. 48-HOUR CREATIVE ANGLE: “Little kitchen helper, less kitchen clutter.” Create a 15-second demo with a clear fold/unfold sequence and an adult-supervised kitchen moment, and test it against a “four heights as your toddler grows” version.',
+    comparisonData: {
+      winnerBrand: 'Guidecraft Classic Kitchen Helper',
+      winnerTagline:
+        'Brand A — Guidecraft Classic Kitchen Helper: Official listing shows $199.95 (was $229.95); ages 18 months–7 years; solid hardwood and birch plywood; platform adjusts to 15 or 18 inches; folds flat; includes non-slip mat and two Kitchen Helper Keepers; GREENGUARD Gold certification.',
+      loserBrand: 'Little Partners Original Learning Tower',
+      loserTagline:
+        'Brand B — Little Partners Original Learning Tower: Official listing shows $179.99; adjustable platform with four heights; four-sided railings; designed for ages 2–6; large platform and two steps.',
+      winnerLinks: {
+        store: 'https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool',
+        adLibraryAll: 'https://crossendor.com/winning-ads/us/toddler-tower',
+        adLibraryActive: 'https://guidecraft.com/pages/toddler-tower-kitchen-helper-step-stool'
+      },
+      loserLinks: {
+        findLoserUrl: 'https://littlepartners.com/products/original-learning-tower',
+        selectionTip:
+          'Working strategic tension: Guidecraft sells compact storage and easy setup; Little Partners sells more height-adjustment positions and a classic, spacious tower. Do not imply either design is universally safer or better. Compare only verified, model-specific facts. Public ad signal: a third-party tracker reported a Guidecraft toddler-tower ad running for 116 days as of its Nov 17, 2026 update (treat as a lead for screenshot verification, not proof of ROAS). Do not claim equivalent Little Partners paid-ad activity unless found in Meta Ad Library.'
+      },
+      screenshots: [
+        {
+          id: 'guidecraft-1',
+          title: 'GUIDECRAFT-1 — Product-in-use / family routine',
+          role: 'winner',
+          caption: '“Sell the shared moment, not just the wooden frame.”',
+          src: './images/guidecraft_1_routine.jpg',
+          altText:
+            'GUIDECRAFT-1: Official Guidecraft lifestyle asset showing a toddler at counter height with a caregiver in the kitchen',
+          detailedAnalysis:
+            'Observable (Official Brand Product Page Lifestyle Asset, captured Nov 17, 2026): Shows a child standing inside the Guidecraft Classic Kitchen Helper at adult counter height alongside a supervising parent during kitchen food preparation.',
+          performanceImpact:
+            'Inference: Opening with supervised counter-height participation immediately communicates the core family routine benefit before introducing the fold-flat storage mechanism.',
+          aspectRatio: '1:1',
+          sourcePath: 'Official Product Page (guidecraft.com) • Captured Nov 17, 2026',
+          sourceUrl: 'https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool',
+          evidenceMeta: {
+            adFormat: 'Official Brand Product Page Lifestyle Asset (Not labeled as paid ad)',
+            openingHook: '“Your toddler wants to help. Your kitchen still needs its floor space.”',
+            visualSequence: 'Beat 1: Child at counter height with adult supervision in a daily family kitchen routine.',
+            onScreenText: '“Sell the shared moment, not just the wooden frame.”',
+            voiceoverMessage: 'Connects a supervised family moment at the counter to everyday kitchen participation.',
+            mainBenefit: 'Supervised counter-height participation for ages 18 months–7 years.',
+            offerAndCta: '$199.95 displayed (was $229.95 at research time) • CTA: “See the Classic Kitchen Helper.”',
+            landingPage: 'https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool',
+            verificationStatus: 'Verified Official Product Page Asset • Platform: Shopify PDP • Capture Date: Nov 17, 2026'
+          }
+        },
+        {
+          id: 'guidecraft-2',
+          title: 'GUIDECRAFT-2 — Fold-flat proof',
+          role: 'winner',
+          caption: '“Show the storage objection disappearing.”',
+          src: './images/guidecraft_2_fold_flat.jpg',
+          altText:
+            'GUIDECRAFT-2: Official Guidecraft fold-flat visual showing the Classic Kitchen Helper folding flat for compact storage',
+          detailedAnalysis:
+            'Observable (Official Brand Product Page Fold-Flat Visual, captured Nov 17, 2026): Side-by-side sequence with callout “Folds flat for storage!” demonstrating how the hinged wooden frame collapses into a slim profile.',
+          performanceImpact:
+            'Inference: A visible fold demonstration directly addresses the #1 small-kitchen objection—floor space and clutter—making practical value easier to grasp than a static hero shot.',
+          aspectRatio: '1:1',
+          sourcePath: 'Official Product Page (guidecraft.com) • Captured Nov 17, 2026',
+          sourceUrl: 'https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool',
+          evidenceMeta: {
+            adFormat: 'Official Brand Product Page Feature Visual (Not labeled as paid ad)',
+            openingHook: '“A tower that folds away.” / “Little kitchen helper, less kitchen clutter.”',
+            visualSequence: 'Beat 3: Fold tower flat and show compact storage profile.',
+            onScreenText: '“Folds flat for storage!” — “Show the storage objection disappearing.”',
+            voiceoverMessage: 'Demonstrates how the Classic Kitchen Helper folds flat when not in use.',
+            mainBenefit: 'Eliminates permanent kitchen floor-space clutter.',
+            offerAndCta: '$199.95 displayed (was $229.95) • CTA: “See the Classic Kitchen Helper.”',
+            landingPage: 'https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool',
+            verificationStatus: 'Verified Official Product Page Asset • Platform: Shopify PDP • Capture Date: Nov 17, 2026'
+          }
+        },
+        {
+          id: 'guidecraft-3',
+          title: 'GUIDECRAFT-3 — Feature proof',
+          role: 'winner',
+          caption: '“Make the practical details visible.”',
+          src: './images/guidecraft_3_feature_proof.jpg',
+          altText:
+            'GUIDECRAFT-3: Official Guidecraft feature diagram showing Back Keeper, Non-slip mat, Front Keeper, and Non-tip feet',
+          detailedAnalysis:
+            'Observable (Official Brand Product Page Feature Callout, captured Nov 17, 2026): Top-down annotated product image highlighting the included Back Keeper, Front Keeper, Non-slip mat on the adjustable platform (15" or 18"), and Non-tip feet.',
+          performanceImpact:
+            'Inference: Visually proving that the non-slip mat and two Kitchen Helper Keepers are included in the box reduces buyer uncertainty around accessories and setup.',
+          aspectRatio: '1:1',
+          sourcePath: 'Official Product Page (guidecraft.com) • Captured Nov 17, 2026',
+          sourceUrl: 'https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool',
+          evidenceMeta: {
+            adFormat: 'Official Brand Product Page Feature Proof (Not labeled as paid ad)',
+            openingHook: 'Included practical details: adjustable platform (15" or 18"), non-slip mat, and two Keepers.',
+            visualSequence: 'Beat 2: Close-up of platform, non-slip mat, Front/Back Keepers, and non-tip feet.',
+            onScreenText: 'Back Keeper • Non-slip mat • Front Keeper • Non-tip feet — “Make the practical details visible.”',
+            voiceoverMessage: 'Highlights solid hardwood + birch plywood build and included accessories.',
+            mainBenefit: 'Complete out-of-the-box setup with GREENGUARD Gold certification.',
+            offerAndCta: '$199.95 displayed (was $229.95) • CTA: “See the Classic Kitchen Helper.”',
+            landingPage: 'https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool',
+            verificationStatus: 'Verified Official Product Page Asset • Platform: Shopify PDP • Capture Date: Nov 17, 2026'
+          }
+        },
+        {
+          id: 'little-partners-1',
+          title: 'LITTLE PARTNERS-1 — Four-height adjustment',
+          role: 'loser',
+          caption: '“Growth is the product story.”',
+          src: './images/little_partners_1_four_heights.jpg',
+          altText:
+            'LITTLE PARTNERS-1: Official Little Partners diagram showing 4 adjustable platform heights (10.59", 13.19", 15.79", 18.39") for ages 2-6 years',
+          detailedAnalysis:
+            'Observable (Official Brand Product Page Adjustment Visual, captured Nov 17, 2026): Annotated diagram reading “GROWS WITH YOUR CHILD FROM 2 – 6 YEARS” and showing all four adjustable platform heights from floor to top of platform (10.59", 13.19", 15.79", 18.39").',
+          performanceImpact:
+            'Inference: Wins the adjustability proof angle by giving parents a concrete, four-stage longevity reason to view the $179.99 tower as a multi-year purchase.',
+          aspectRatio: '1:1',
+          sourcePath: 'Official Product Page (littlepartners.com) • Captured Nov 17, 2026',
+          sourceUrl: 'https://littlepartners.com/products/original-learning-tower',
+          evidenceMeta: {
+            adFormat: 'Official Brand Product Page Specification Visual (Not labeled as paid ad)',
+            openingHook: '“One tower. Four platform heights.” / “Four heights as they grow.”',
+            visualSequence: 'Beat 1: Show all four height positions (10.59", 13.19", 15.79", 18.39") and overall dimensions (38.07" H x 23.18" W x 33.14" D).',
+            onScreenText: 'GROWS WITH YOUR CHILD FROM 2 – 6 YEARS • Adjustable Platform Heights — “Growth is the product story.”',
+            voiceoverMessage: 'Demonstrates the four platform height slots that adapt as the toddler grows.',
+            mainBenefit: 'Four-stage platform adjustability for growing children (ages 2–6).',
+            offerAndCta: '$179.99 displayed at research time • CTA: “Explore the Original Learning Tower.”',
+            landingPage: 'https://littlepartners.com/products/original-learning-tower',
+            verificationStatus: 'Verified Official Product Page Asset • Platform: Shopify PDP • Capture Date: Nov 17, 2026'
+          }
+        },
+        {
+          id: 'little-partners-2',
+          title: 'LITTLE PARTNERS-2 — Four-sided railings and broad platform',
+          role: 'loser',
+          caption: '“Show the structure, don\'t just say sturdy.”',
+          src: './images/little_partners_2_structure.jpg',
+          altText:
+            'LITTLE PARTNERS-2: Official Little Partners studio product image showing four-sided railings, broad platform, and two steps',
+          detailedAnalysis:
+            'Observable (Official Brand Product Page Structural Image, captured Nov 17, 2026): Clean studio view of the Original Learning Tower showcasing its four-sided railings, broad standing platform, two steps, and flared base feet.',
+          performanceImpact:
+            'Inference: Clearly communicates spaciousness and structure, though the Original model is not fold-flat—requiring clear model labeling so buyers do not confuse it with Little Partners folding variants.',
+          aspectRatio: '1:1',
+          sourcePath: 'Official Product Page (littlepartners.com) • Captured Nov 17, 2026',
+          sourceUrl: 'https://littlepartners.com/products/original-learning-tower',
+          evidenceMeta: {
+            adFormat: 'Official Brand Product Page Studio Image (Not labeled as paid ad)',
+            openingHook: 'Classic, spacious four-sided tower structure with four height slots.',
+            visualSequence: 'Beat 2: Show four-sided railings, two steps, and large standing platform.',
+            onScreenText: '“Show the structure, don\'t just say sturdy.”',
+            voiceoverMessage: 'Highlights layered birch and poplar construction with child-safe finish.',
+            mainBenefit: 'Spacious enclosed standing platform with four height positions.',
+            offerAndCta: '$179.99 displayed at research time • CTA: “Explore the Original Learning Tower.”',
+            landingPage: 'https://littlepartners.com/products/original-learning-tower',
+            verificationStatus: 'Verified Official Product Page Asset • Platform: Shopify PDP • Capture Date: Nov 17, 2026'
+          }
+        },
+        {
+          id: 'little-partners-3',
+          title: 'LITTLE PARTNERS-3 — Brand use-case',
+          role: 'loser',
+          caption: '“Turn counter-height access into a daily routine.”',
+          src: './images/little_partners_3_daily_routine.jpg',
+          altText:
+            'LITTLE PARTNERS-3: Official Little Partners family-use image showing a child at counter height with a supervising parent doing crafts',
+          detailedAnalysis:
+            'Observable (Official Brand Product Page Family Use-Case Image, captured Nov 17, 2026): Child standing at counter height inside the Original Learning Tower while doing a supervised craft activity with a parent.',
+          performanceImpact:
+            'Inference: Grounds the four-height adjustability story in a relatable daily family routine (food prep, crafts, handwashing) under adult supervision.',
+          aspectRatio: '1:1',
+          sourcePath: 'Official Product Page (littlepartners.com) • Captured Nov 17, 2026',
+          sourceUrl: 'https://littlepartners.com/products/original-learning-tower',
+          evidenceMeta: {
+            adFormat: 'Official Brand Product Page Lifestyle Image (Not labeled as paid ad)',
+            openingHook: '“They want to help at the counter.”',
+            visualSequence: 'Beat 3: Show a supervised everyday family activity at the kitchen counter.',
+            onScreenText: '“Turn counter-height access into a daily routine.”',
+            voiceoverMessage: 'Shows supervised counter-height participation with a caregiver.',
+            mainBenefit: 'Everyday family participation in crafts, food prep, and handwashing.',
+            offerAndCta: '$179.99 displayed at research time • CTA: “Explore the Original Learning Tower.”',
+            landingPage: 'https://littlepartners.com/products/original-learning-tower',
+            verificationStatus: 'Verified Official Product Page Asset • Platform: Shopify PDP • Capture Date: Nov 17, 2026'
+          }
+        }
+      ],
+      scores: [
+        {
+          category: 'Fold / storage demonstration',
+          winnerScore: 9,
+          loserScore: 7,
+          explanation:
+            'Guidecraft Classic Kitchen Helper folds flat for compact storage; Little Partners Original Learning Tower is a fixed-frame classic tower (not fold-flat).'
+        },
+        {
+          category: 'Grow-with-me / adjustment proof',
+          winnerScore: 7,
+          loserScore: 9,
+          explanation:
+            'Little Partners Original Learning Tower visually proves 4 distinct platform heights (10.59" to 18.39"); Guidecraft Classic adjusts to 2 platform heights (15" or 18").'
+        },
+        {
+          category: 'Feature clarity',
+          winnerScore: 9,
+          loserScore: 8,
+          explanation:
+            'Guidecraft clearly calls out its included non-slip mat, Front/Back Keepers, fold-flat hinges, and GREENGUARD Gold certification.'
+        },
+        {
+          category: 'Price / value context',
+          winnerScore: 8,
+          loserScore: 8,
+          explanation:
+            'Guidecraft displays $199.95 (was $229.95) with folding frame + accessories; Little Partners displays $179.99 with 4-height adjustability.'
+        }
+      ],
+      sideBySideTable: [
+        {
+          element: 'Core promise',
+          winner: 'Counter-height participation + fold-flat storage',
+          loser: 'Counter-height participation + four platform heights'
+        },
+        {
+          element: 'Age range',
+          winner: '18 months–7 years (official listing)',
+          loser: '2–6 years (official listing)'
+        },
+        {
+          element: 'Platform',
+          winner: '15 or 18 inches',
+          loser: 'Four height positions'
+        },
+        {
+          element: 'Storage',
+          winner: 'Folds flat',
+          loser: 'Original model is not described as fold-flat; do not confuse with Little Partners folding models'
+        },
+        {
+          element: 'Included details',
+          winner: 'Non-slip mat + two Kitchen Helper Keepers',
+          loser: 'Four-sided railings, two steps, large platform'
+        },
+        {
+          element: 'Materials / proof',
+          winner: 'Solid hardwood + birch plywood; GREENGUARD Gold listed',
+          loser: 'Layered birch and poplar; child-safe finish and listed testing details'
+        },
+        {
+          element: 'Price reference',
+          winner: '$199.95 displayed; was $229.95 at research time',
+          loser: '$179.99 displayed at research time'
+        },
+        {
+          element: 'Best creative angle',
+          winner: 'Fold-flat demonstration + compact storage',
+          loser: 'Four-height adjustment + growing child'
+        },
+        {
+          element: 'Evidence note',
+          winner: 'Official product page',
+          loser: 'Official product page'
+        }
+      ],
+      fixPlan: {
+        title: '48h Fix / Creative Test Protocol (Guidecraft vs. Little Partners)',
+        points: [
+          'For Guidecraft: keep the family-participation hook, but open with the fold/unfold visual in the first two seconds. Then show the toddler at counter height with adult supervision, close-ups of the adjustable platform and included accessories, and a final fold-flat storage shot. CTA: “See the Classic Kitchen Helper.”',
+          'For Little Partners: keep the four-height differentiator and make it visible. Use a quick height-position sequence, then show the tower beside a counter and a supervised family activity. CTA: “Explore the Original Learning Tower.”',
+          '48-Hour Creative Angle (“Little kitchen helper, less kitchen clutter”): Create a 15-second demo with a clear fold/unfold sequence and an adult-supervised kitchen moment. Test against a “four heights as your toddler grows” version. (Proposed test, not a reported result.)',
+          'Test three hooks for each brand: (a) “They want to help at the counter.” (b) “A tower that folds away.” (c) “Four heights as they grow.” Test creative concepts without inventing predicted CTR or conversion lifts.',
+          'Safety note: always show adult supervision and follow each manufacturer\'s age, setup and usage instructions. Do not stage climbing, standing on rails, or unsafe kitchen activity.'
+        ],
+        hypothesis:
+          'Proposed 48-hour creative test (not a reported result): Testing a 2-second fold/unfold hook against a 4-height adjustment hook isolates whether cold traffic responds stronger to small-space storage relief or multi-year adjustability.'
+      },
+      loserAnalysis: {
+        hookObservable:
+          'LITTLE PARTNERS HOOK: “One tower. Four platform heights.” Demonstrates the four adjustment positions (10.59", 13.19", 15.79", 18.39") and shows the child at the counter with a caregiver.',
+        hookWhyLoses:
+          'Split Verdict (Not a universal loser): Little Partners wins the adjustability proof angle (9/10 vs 7/10), while Guidecraft wins the fold-and-store demonstration angle (9/10 vs 7/10) because the Little Partners Original model does not fold flat.',
+        copyCtaObservable:
+          'LITTLE PARTNERS OFFER + FUNNEL: Official listing shows $179.99, ages 2–6, four platform heights, four-sided railings, large platform and two steps. CTA routes to the official Original Learning Tower product page.',
+        copyCtaWhyLoses:
+          'Model-line clarity requirement: Because Little Partners sells multiple tower variants (Original, Explore \'N Store, Learn \'N Fold), creatives and landing pages must make the exact model clear so shoppers do not confuse the non-folding Original model with folding variants.',
+        frictionTakeaway:
+          'VERDICT: Guidecraft is the provisional creative winner for the fold-and-store demonstration angle; Little Partners wins the adjustability proof angle. Do not declare a universal brand winner.'
+      },
+      marketContext: {
+        niche: 'Toddler Products Worldwide',
+        category: 'Toddler Learning Towers / Kitchen Helpers',
+        overview:
+          'A toddler learning tower / kitchen helper is a child-sized standing platform that brings a toddler to counter height for supervised family activities such as food preparation, crafts, and handwashing. It is more distinctive than a generic toy or diaper comparison because it solves a specific everyday home problem: a small child wants to participate at adult counter height. Category angle: parents want participation and independence, while practical objections include floor space, storage, adjustability, assembly, stability, cleaning, and whether the tower will fit the home. Public ad signal: a third-party tracker (crossendor.com) reported a Guidecraft toddler-tower ad running for 116 days as of its Nov 17, 2026 update—treated here as a lead for creative verification, not proof of ROAS or campaign success.',
+        brandAProposition:
+          'BRAND A — Guidecraft Classic Kitchen Helper: Official listing shows $199.95 (was $229.95); ages 18 months–7 years; solid hardwood and birch plywood; platform adjusts to 15 or 18 inches; folds flat; includes non-slip mat and two Kitchen Helper Keepers; GREENGUARD Gold certification.',
+        brandBProposition:
+          'BRAND B — Little Partners Original Learning Tower: Official listing shows $179.99; adjustable platform with four heights; four-sided railings; designed for ages 2–6; large platform and two steps.'
+      },
+      finalVerdict: {
+        summary:
+          'Guidecraft is the provisional creative winner for the fold-and-store demonstration angle; Little Partners wins the adjustability proof angle. Do not declare a universal brand winner—the strongest creative depends on whether the buyer’s primary objection is kitchen floor space/storage or multi-stage height adjustability.',
+        honestLimitation:
+          'Qualitative creative assessment based on public product messaging and available creative evidence. Not CTR, ROAS, conversion or sales data. Only label an image as an ad if the source is a verifiable paid-ad library or advertiser creative; the six visuals above are verified official brand product page assets captured Nov 17, 2026. Prices, availability, product specs and offers can change. Compare exact models only.',
+        actionableTakeaway:
+          '48-Hour Creative Angle: “Little kitchen helper, less kitchen clutter.” Pair a 15-second demo showing a clear fold/unfold sequence and an adult-supervised kitchen moment against a “four heights as your toddler grows” version.'
+      },
+      sourcesAndReferences: [
+        {
+          label: 'Guidecraft Classic Kitchen Helper — Official Product Page',
+          url: 'https://guidecraft.com/products/guidecraft-classic-kitchen-helper-stool',
+          note: 'Verified official listing ($199.95 displayed, was $229.95; ages 18m–7y; 15" or 18" platform; folds flat; non-slip mat + 2 Keepers; GREENGUARD Gold).'
+        },
+        {
+          label: 'Little Partners Original Learning Tower — Official Product Page',
+          url: 'https://littlepartners.com/products/original-learning-tower',
+          note: 'Verified official listing ($179.99 displayed; ages 2–6; four adjustable platform heights; four-sided railings; two steps; large platform).'
+        },
+        {
+          label: 'Crossendor US Toddler Tower Ad Signal Tracker',
+          url: 'https://crossendor.com/winning-ads/us/toddler-tower',
+          note: 'Third-party tracker reporting a Guidecraft toddler-tower ad running 116 days as of Nov 17, 2026 (used as verification lead, not proof of ROAS).'
+        },
+        {
+          label: 'Guidecraft Toddler Tower & Kitchen Helper Collection Page',
+          url: 'https://guidecraft.com/pages/toddler-tower-kitchen-helper-step-stool',
+          note: 'Official Guidecraft category overview and model comparison page.'
+        }
+      ],
+      clientCta: {
+        pitch:
+          'I break down e-commerce creatives by the problem they solve, the proof they show and the journey after the click — not just the hook. If your toddler-product ads look good but fail to explain the value, let\'s audit the creative and landing page.',
+        email: 'AhamedAfif87@gmail.com',
+        contactUrl: 'https://frage3r.github.io/AfifAhamedLam/#contact',
+        nextBreakdown: 'Got a high-consideration home, family, or juvenile DTC product? Send the URL for an audit.'
+      }
+    }
+  },
+  {
     id: 'ab-09',
     slug: 'skincare-cerave-vs-lrp-2026',
     brandName: 'CeraVe vs La Roche-Posay',

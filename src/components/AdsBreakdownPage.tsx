@@ -10,13 +10,13 @@ interface AdsBreakdownPageProps {
 
 export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }) => {
   const [activeSection, setActiveSection] = useState<'featured-post' | 'archive'>('featured-post');
-  const [selectedTeardownId, setSelectedTeardownId] = useState<string>('ab-09');
+  const [selectedTeardownId, setSelectedTeardownId] = useState<string>('ab-10');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
 
   const currentTeardown =
     ADS_BREAKDOWN_ARTICLES.find((a) => a.id === selectedTeardownId) ||
-    ADS_BREAKDOWN_ARTICLES.find((a) => a.id === 'ab-09') ||
+    ADS_BREAKDOWN_ARTICLES.find((a) => a.id === 'ab-10') ||
     ADS_BREAKDOWN_ARTICLES[0];
 
   const industries = useMemo(() => {
@@ -66,7 +66,7 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
                   Daily Ads Breakdown Series
                 </span>
                 <span className="text-xs font-semibold text-slate-900 block truncate max-w-[240px] sm:max-w-none">
-                  Day 6: Barrier Wars (CeraVe vs La Roche-Posay)
+                  Day 7: Counter-Height Independence (Guidecraft vs Little Partners)
                 </span>
               </div>
             </div>
@@ -76,10 +76,10 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
               <button
                 onClick={() => {
                   setActiveSection('featured-post');
-                  setSelectedTeardownId('ab-09');
+                  setSelectedTeardownId('ab-10');
                 }}
                 className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer shadow-xs ${
-                  activeSection === 'featured-post' && selectedTeardownId === 'ab-09'
+                  activeSection === 'featured-post' && selectedTeardownId === 'ab-10'
                     ? 'bg-slate-950 text-white ring-2 ring-emerald-500/60'
                     : 'bg-emerald-600 hover:bg-emerald-500 text-white'
                 }`}
@@ -96,6 +96,20 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
                 <span className="text-[10px] font-mono text-slate-400 px-1 font-semibold uppercase hidden sm:inline">
                   Past:
                 </span>
+                <button
+                  onClick={() => {
+                    setActiveSection('featured-post');
+                    setSelectedTeardownId('ab-09');
+                  }}
+                  title="Day 6: Barrier Wars (CeraVe vs La Roche-Posay)"
+                  className={`px-2 py-1 rounded text-xs font-semibold transition-all cursor-pointer ${
+                    activeSection === 'featured-post' && selectedTeardownId === 'ab-09'
+                      ? 'bg-slate-950 text-white shadow-2xs'
+                      : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200'
+                  }`}
+                >
+                  Day 6
+                </button>
                 <button
                   onClick={() => {
                     setActiveSection('featured-post');
@@ -248,6 +262,10 @@ export const AdsBreakdownPage: React.FC<AdsBreakdownPageProps> = ({ onNavigate }
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredArticles.map((item) => {
                   const mediaMap: Record<string, { src: string; caption: string }> = {
+                    'ab-10': {
+                      src: './images/guidecraft_1_routine.jpg',
+                      caption: 'GUIDECRAFT-1: Sell the shared moment, not just the wooden frame (Guidecraft vs Little Partners)'
+                    },
                     'ab-09': {
                       src: './images/cerave_hook_120h.jpg',
                       caption: 'WIN-1 Hook: 120-hour hydration $15 (CeraVe vs La Roche-Posay)'
