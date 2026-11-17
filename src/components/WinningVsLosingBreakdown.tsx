@@ -91,14 +91,6 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="flex items-center gap-2">
               <div className="hidden sm:flex items-center gap-1 bg-slate-200/70 p-1 rounded-lg text-xs font-medium">
                 <button
-                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-11')}
-                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
-                    article.id === 'ab-11' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
-                  }`}
-                >
-                  Day 7 (Pampers vs Huggies)
-                </button>
-                <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-09')}
                   className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     article.id === 'ab-09' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
