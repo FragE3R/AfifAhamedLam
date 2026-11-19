@@ -91,6 +91,14 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
             <div className="flex items-center gap-2">
               <div className="hidden sm:flex items-center gap-1 bg-slate-200/70 p-1 rounded-lg text-xs font-medium">
                 <button
+                  onClick={() => onNavigate('ads-breakdown-detail', 'ab-11')}
+                  className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
+                    article.id === 'ab-11' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
+                  }`}
+                >
+                  Day 8 (Vaseline)
+                </button>
+                <button
                   onClick={() => onNavigate('ads-breakdown-detail', 'ab-10')}
                   className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                     article.id === 'ab-10' ? 'bg-slate-950 text-white font-bold' : 'text-slate-700 hover:text-slate-950'
@@ -218,6 +226,8 @@ export const WinningVsLosingBreakdown: React.FC<WinningVsLosingBreakdownProps> =
               </span>
               <p className="text-sm text-slate-200 leading-snug font-normal">
                 {{
+                  'ab-11':
+                    'Your 115 BDT tub has been in every Bangladeshi home for 25 years, so why is a 380 BDT lotion stealing Daraz 11.11 carts with Bangla winter-horror skits? Because in wedding season, girls buy cocoa glow and a giggle—not a flat JPEG of petroleum jelly.',
                   'ab-10':
                     'You built an heirloom-grade wooden toddler tower, so why is a 2-second fold-flat clip beating your studio photoshoot? Let’s see whether parents buy “grows with your kid” or “doesn’t eat my kitchen floor”—before Meta eats your ad budget.',
                   'ab-09':

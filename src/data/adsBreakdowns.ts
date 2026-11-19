@@ -2,6 +2,279 @@ import { AdsBreakdownArticle } from '../types';
 
 export const ADS_BREAKDOWN_ARTICLES: AdsBreakdownArticle[] = [
   {
+    id: 'ab-11',
+    slug: 'lotion-wars-vaseline-vs-meril-bd-winter-2026',
+    brandName: 'Vaseline vs Meril',
+    industry: 'BD Winter Lotion',
+    title: 'Lotion Wars: Vaseline vs Meril',
+    shortDescription:
+      'Same dry winter skin. Same Daraz shelf. One sells 48h cocoa glow, one sells 115 BDT trust. Deep Restore vs Lemon Fresh jelly. Nov 19, 2026 — BD Winter Lotion.',
+    date: 'November 19, 2026',
+    readingTime: '7 min read',
+    targetAudience:
+      'Bangladeshi FMCG & personal-care brand managers, Daraz 11.11 / winter campaign media buyers, beauty e-commerce operators, and creative strategists scaling winter skincare in Bangladesh.',
+    isWinningVsLosing: true,
+    dayNumber: 8,
+    theHook: {
+      observable:
+        "Split dry flaky elbow vs glowy arm, text 'Winter calls - which one are you picking?' + 5 winter horrors skits (flaky, out-of-lotion) in Bangla mix. Caption: 'Choice in 2s.'",
+      analysis:
+        'WHY: self-pick + relatable flaky pain + Bangla mix, native reel not catalog.',
+      hypothesis:
+        'Hypothesis: high shares/saves driven by self-pick comment prompt and relatable Bangla winter horror skits.'
+    },
+    theCreative: {
+      format:
+        'Winner (Vaseline): 3-beat native Reels — 1) horror (flaky, tight), 2) texture (creamy cocoa rub), 3) lineup (Deep Restore / Aloe / Brightening). Loser Pattern (Meril): White tub studio catalog shot + brand shelf grid.',
+      visualStyle:
+        'Relatable Bangla winter-horror skits, creamy cocoa-butter rub texture, and color-coded 3-variant lineup vs. flat white-background petroleum jelly tub and multi-SKU retailer grid.',
+      breakdown:
+        'WINNER CREATIVE: 3 beats - 1) horror (flaky, tight), 2) texture (creamy cocoa rub), 3) lineup (Deep Restore/Aloe/Brightening). 48h moisture + soft glowy skin. Inference: range lets every skin pick, raising AOV.'
+    },
+    theOffer:
+      'Vaseline Intensive Care Deep Restore 90ml BDT 380 + Aloe / Daily Brightening / Cocoa Glow lineup on Daraz vs. Meril Petroleum Jelly Lemon Fresh 100ml BDT 115 & Baby Lotion BDT 230 buried in brand grid',
+    theCopy: {
+      headline:
+        "Vaseline: 'Winter calls - which one are you picking?' (Deep Restore 48h, BDT 380) vs. Meril: 'Meril Petroleum Jelly Lemon Fresh 100ml — BDT 115'",
+      body:
+        'Vaseline: 90ml BDT 380 + Deep Restore / Aloe / Daily Brightening / Cocoa Glow lineup + Daraz variant PDP. Meril: BDT 115 + 100ml + lemon, Baby Lotion BDT 230 buried in grid.',
+      breakdown:
+        'WINNER OFFER: 90ml BDT 380 + lineup + Daraz. Psychology: treat + choice + glow. Funnel: Meta reels -> Daraz PDP variant. LOSER COPY: BDT 115 + 100ml + lemon, Baby Lotion BDT 230 buried in grid. WHY: price wins but no craving, petroleum vs lotion confusion, grid forces hunt. Funnel: post -> brand shelf, not routine PDP.'
+    },
+    theCta:
+      'Vaseline: Pick your winter favourite -> Daraz variant PDP vs. Meril: Static post -> Generic brand shelf grid (Shajgoj / Arogga)',
+    thePsychology: [
+      'Self-pick identity trigger: Asking "Which one are you picking?" turns a passive lotion ad into an interactive skin-type choice (Deep Restore vs. Cocoa Glow vs. Aloe vs. Daily Brightening).',
+      'Relatable winter horror comedy: Dramatizing the "5 winter horrors" (running out of lotion, flaky elbows in dark winter clothes) in a Bangla mix triggers instant friend-tagging and saves.',
+      'BD wedding & saree glow urgency: First shite (cold snap) + November/December wedding season creates immediate demand for 48h glowy skin over utility-only crack prevention.',
+      'Craving vs. commodity price: BDT 115 wins on pure affordability, but without a visible rub or overnight heel demo, a white tub on a white background fails to trigger impulse desire.'
+    ],
+    theFunnel:
+      'Winner Funnel: Meta Reels -> Daraz variant PDP (Deep Restore 90ml BDT 380 / lineup). Loser Funnel: Static catalog post -> Multi-product brand shelf (oil/lotion/soap grid), forcing shoppers to hunt instead of landing on a single routine PDP.',
+    whyIThinkItWorks:
+      'TL;DR: Same cracked heels. Vaseline sells cocoa glow + horror laughs. Meril sells cheap jelly. Girls buy glow + giggle in November.',
+    whatGrowingBusinessesCanLearn: [
+      'Turn product lineups into a "Pick Your Fighter" hook: Letting cold scrollers choose their variant in the first 2 seconds boosts comment velocity and raises multi-bottle AOV.',
+      'Sell the seasonal occasion, not just the tub: Tying 48h moisture to Bangladesh’s first cold snap and winter wedding season beats an all-year commodity product shot.',
+      'Never let a cheap price tag do all the creative work: Even at BDT 115, cold traffic needs a 6-second visual proof (e.g., an overnight cracked-heel test) to feel craving.',
+      'Route traffic to a single routine PDP, not a brand grid: Sending social clicks to a shelf mixed with soap, baby oil, and shampoo leaks conversion intent.'
+    ],
+    myVerdict:
+      'BD WINTER ANGLE: First shite + wedding season = glow urgency. Vaseline wins cold social traffic because it ties 48-hour cocoa glow and Bangla winter-horror skits to sleeveless/saree skin, while Meril relies on 25+ years of Square offline trust with static catalog tubs.',
+    comparisonData: {
+      winnerBrand: 'Vaseline',
+      winnerTagline:
+        'Vaseline Intensive Care Deep Restore (Unilever premium care: 48h moisture, cocoa butter glow + horror skits, 90ml BDT 380 on Daraz).',
+      loserBrand: 'Meril',
+      loserTagline:
+        'Meril Petroleum Jelly Lemon Fresh 100ml BDT 115 & Baby Lotion BDT 230 (Square local trust, 25+ years distribution, but catalog flat + no winter story).',
+      winnerLinks: {
+        store: 'https://www.daraz.com.bd/tag/meril-vaseline/',
+        adLibraryAll: 'https://www.facebook.com/VaselineBangladesh/videos/1581954786945863/',
+        adLibraryActive: 'https://www.facebook.com/VaselineBangladesh/videos/1684068116665956/',
+        igHookReel: 'https://www.facebook.com/VaselineBangladesh/videos/1629821231759987/',
+        brandData: 'https://www.facebook.com/groups/BrandPractitionersBD/posts/1566860823392025/'
+      },
+      loserLinks: {
+        findLoserUrl: 'https://www.arogga.com/product/33097/meril-petroleum-jelly-lemon-fresh-100ml',
+        selectionTip:
+          'Meril base (facebook.com/merilbd/) & Shajgoj range (shop.shajgoj.com/brand/meril — Baby Lotion BDT 230, Baby Oil BDT 280): Strong distribution + BDT 115 price trust, but catalog flat + no winter story. Note: observable creative only. No private CTR/ROAS.'
+      },
+      screenshots: [
+        {
+          id: 'win-1',
+          title: 'WIN-1 Hook',
+          role: 'winner',
+          caption: 'Choice in 2s.',
+          src: './images/vaseline_win1_hook.jpg',
+          altText: "WIN-1 Hook: Split dry flaky elbow vs glowy arm, text 'Which one are you picking?'",
+          detailedAnalysis:
+            "Split dry flaky elbow vs glowy arm, text 'Which one are you picking?' (Winter calls - which one are you picking?).",
+          performanceImpact:
+            'WHY: self-pick + relatable flaky pain + Bangla mix, native reel not catalog. Hypothesis: high shares/saves.',
+          aspectRatio: '9:16',
+          sourcePath: 'Vaseline video 1581954786945863',
+          sourceUrl: 'https://www.facebook.com/VaselineBangladesh/videos/1581954786945863/'
+        },
+        {
+          id: 'win-2',
+          title: 'WIN-2 Horror',
+          role: 'winner',
+          caption: 'Fear every girl knows.',
+          src: './images/vaseline_win2_horror.jpg',
+          altText: 'WIN-2 Horror: 5 winter horrors list (flaky, out-of-lotion) Bangla mix',
+          detailedAnalysis:
+            '5 winter horrors list (flaky, out-of-lotion) Bangla mix. 3 beats: 1) horror (flaky, tight), 2) texture (creamy cocoa rub), 3) lineup (Deep Restore/Aloe/Brightening).',
+          performanceImpact:
+            '48h moisture + soft glowy skin. Dramatizes relatable November dryness horrors in native vertical video.',
+          aspectRatio: '9:16',
+          sourcePath: 'Vaseline video 1629821231759987',
+          sourceUrl: 'https://www.facebook.com/VaselineBangladesh/videos/1629821231759987/'
+        },
+        {
+          id: 'win-3',
+          title: 'WIN-3 Offer',
+          role: 'winner',
+          caption: 'Pick your fighter.',
+          src: './images/vaseline_win3_offer.jpg',
+          altText: 'WIN-3 Offer: Deep Restore 90ml BDT 380 + Aloe/Daily Brightening lineup',
+          detailedAnalysis:
+            'Deep Restore 90ml BDT 380 + Aloe/Daily Brightening lineup (Pick your winter favourite + Daraz tag).',
+          performanceImpact:
+            'Inference: range lets every skin pick, raising AOV. Psychology: treat + choice + glow. Funnel: Meta reels -> Daraz PDP variant.',
+          aspectRatio: '1:1',
+          sourcePath: 'Vaseline win 2 + Daraz tag',
+          sourceUrl: 'https://www.facebook.com/VaselineBangladesh/videos/1684068116665956/'
+        },
+        {
+          id: 'lose-1',
+          title: 'LOSE-1 Catalog',
+          role: 'loser',
+          caption: 'No winter, no skin.',
+          src: './images/meril_lose1_catalog.jpg',
+          altText: "LOSE-1 Catalog: Meril jelly tub on white + 'Lemon Fresh'",
+          detailedAnalysis:
+            "Meril jelly tub on white + 'Lemon Fresh' (100ml petroleum jelly studio shot on blank white background).",
+          performanceImpact:
+            'WHY: no winter cue, no skin, scent only. Hypothesis: low cold stop.',
+          aspectRatio: '1:1',
+          sourcePath: 'Meril base / Arogga PDP',
+          sourceUrl: 'https://www.arogga.com/product/33097/meril-petroleum-jelly-lemon-fresh-100ml'
+        },
+        {
+          id: 'lose-2',
+          title: 'LOSE-2 Price only',
+          role: 'loser',
+          caption: 'Cheap without craving.',
+          src: './images/meril_lose2_price.jpg',
+          altText: 'LOSE-2 Price only: BDT 115 tag with no use demo',
+          detailedAnalysis:
+            'BDT 115 tag with no use demo (Meril Petroleum Jelly Lemon Fresh 100ml BDT 115 listing without skin texture or heel repair proof).',
+          performanceImpact:
+            'WHY: price wins but no craving, petroleum vs lotion confusion.',
+          aspectRatio: '1:1',
+          sourcePath: 'Arogga 33097',
+          sourceUrl: 'https://www.arogga.com/product/33097/meril-petroleum-jelly-lemon-fresh-100ml'
+        },
+        {
+          id: 'lose-3',
+          title: 'LOSE-3 Shelf',
+          role: 'loser',
+          caption: 'Grid, not routine.',
+          src: './images/meril_lose3_shelf.jpg',
+          altText: 'LOSE-3 Shelf: Shajgoj brand grid (oil/lotion/soap)',
+          detailedAnalysis:
+            'Shajgoj brand grid (oil/lotion/soap). Baby Lotion BDT 230 and Baby Oil BDT 280 buried in multi-category shelf.',
+          performanceImpact:
+            'WHY: grid forces hunt. Funnel: post -> brand shelf, not routine PDP.',
+          aspectRatio: '1:1',
+          sourcePath: 'Shajgoj Meril brand page',
+          sourceUrl: 'https://shop.shajgoj.com/brand/meril'
+        }
+      ],
+      scores: [
+        { category: 'Hook (first 3s)', winnerScore: 9, loserScore: 3 },
+        { category: 'Proof (48h / glow)', winnerScore: 8, loserScore: 3 },
+        { category: 'Offer + Range', winnerScore: 8, loserScore: 4 },
+        { category: 'CTA + Routine', winnerScore: 9, loserScore: 4 }
+      ],
+      sideBySideTable: [
+        { element: 'First 3s', winner: 'Pick your fighter', loser: 'Tub on white' },
+        { element: 'Trigger', winner: 'Flaky horror', loser: 'Lemon scent' },
+        { element: 'Claims', winner: '1: 48h glow', loser: '2: cheap+fresh' },
+        { element: 'Proof', winner: 'Rub + before/after', loser: 'None' },
+        { element: 'Specificity', winner: '48h, cocoa, 90ml', loser: '115 BDT, 100ml' },
+        { element: 'Offer', winner: '3-variant range', loser: 'Single tub' },
+        { element: 'CTA', winner: 'Daraz variant PDP', loser: 'Brand grid' },
+        { element: 'Live proof', winner: 'Horror series', loser: 'Static posts' },
+        { element: 'Price', winner: '380 premium', loser: '115 trust' }
+      ],
+      fixPlan: {
+        title: '48-hour fix for Meril',
+        points: [
+          "Keep 100ml jelly. Reshoot 15s hostel mirror: cracked foot + lemon jelly shine test. First text: '115 BDT-te glow?'",
+          'Kill grid. Show 1 proof: overnight heel patch (tonight vs morning). 6s beats scent.',
+          "Swap copy: 'Shite paye fata? Lemon jelly + socks overnight. 115 BDT.' + routine (wash-jelly-socks). CTA Daraz jelly PDP.",
+          "Add trust: 'Square 25yr + 1000 hostel girls' + real warden quote. Local = trust if proof.",
+          'Test 3 hooks: (a) Fata gorali? (b) 380 vs 115 blind rub (c) Wedding glow 7 days. Winner reveals price language.'
+        ],
+        hypothesis:
+          'Hypothesis: heel proof + routine lifts CTR 0.7%->1.5% + Daraz conversion.'
+      },
+      loserAnalysis: {
+        hookObservable:
+          'White tub + Lemon Fresh (Meril jelly tub on white background with scent label only).',
+        hookWhyLoses:
+          'no winter cue, no skin, scent only. Hypothesis low cold stop.',
+        copyCtaObservable:
+          'BDT 115 + 100ml + lemon, Baby Lotion BDT 230 buried in grid. Funnel: post -> brand shelf, not routine PDP.',
+        copyCtaWhyLoses:
+          'price wins but no craving, petroleum vs lotion confusion, grid forces hunt.',
+        frictionTakeaway:
+          'BD WINTER ANGLE: First shite + wedding season = glow urgency. Winner ties 48h to sleeveless/saree skin. Loser sells all-year jelly.'
+      },
+      marketContext: {
+        niche: 'BD Winter Lotion (November Cold Snap + 11.11)',
+        category: 'Winter Body Lotion & Petroleum Jelly',
+        overview:
+          'First cold snap + 11.11: body wash, moisturizing cream, lotion top Daraz carts with detergent, salt, milk powder. Winter lotion decision = dryness + price + scent. Vaseline = Unilever premium care (Deep Restore 48h, cocoa butter, 90ml BDT 380). Meril = Square local trust (Petroleum Jelly Lemon Fresh 100ml BDT 115, Baby Lotion BDT 230). Same need, different wallet. Note: observable creative only. No private CTR/ROAS.',
+        brandAProposition:
+          'WINNER: Vaseline Intensive Care Deep Restore (48h moisture + cocoa glow + horror skits, 90ml BDT 380 + Aloe/Daily Brightening lineup).',
+        brandBProposition:
+          'LOSER PATTERN: Meril (Square, 25+ years strong distribution + price — Petroleum Jelly Lemon Fresh 100ml BDT 115, Baby Lotion BDT 230 — but catalog flat + no winter story).'
+      },
+      sourcesAndReferences: [
+        {
+          label: 'Daraz Tag — Meril & Vaseline (Vaseline 90ml BDT 380)',
+          url: 'https://www.daraz.com.bd/tag/meril-vaseline/',
+          note: 'Daraz BD winter shelf tag listing Vaseline 90ml BDT 380 (5 sold).'
+        },
+        {
+          label: 'Meril Petroleum Jelly Lemon Fresh 100ml — Arogga (BDT 115)',
+          url: 'https://www.arogga.com/product/33097/meril-petroleum-jelly-lemon-fresh-100ml',
+          note: 'Arogga product listing 33097 showing Meril Petroleum Jelly Lemon Fresh 100ml at BDT 115.'
+        },
+        {
+          label: 'Meril Brand Range — Shajgoj (Baby Lotion BDT 230, Baby Oil BDT 280)',
+          url: 'https://shop.shajgoj.com/brand/meril',
+          note: 'Shajgoj Meril brand grid showing Baby Lotion, Baby Oil, and soap catalog.'
+        },
+        {
+          label: 'Vaseline Win 1 — Winter calls: which one are you picking?',
+          url: 'https://www.facebook.com/VaselineBangladesh/videos/1581954786945863/',
+          note: 'Vaseline Bangladesh video 1581954786945863 (Choice in 2s hook).'
+        },
+        {
+          label: 'Vaseline Win 2 — Pick your winter favourite',
+          url: 'https://www.facebook.com/VaselineBangladesh/videos/1684068116665956/',
+          note: 'Vaseline Bangladesh video 1684068116665956 showcasing Deep Restore, Daily Brightening, Aloe Fresh, and Cocoa Glow.'
+        },
+        {
+          label: 'Vaseline Horror — 5 Winter Horrors (Flaky, Out-of-Lotion)',
+          url: 'https://www.facebook.com/VaselineBangladesh/videos/1629821231759987/',
+          note: 'Vaseline Bangladesh video 1629821231759987 dramatizing 5 winter skin horrors in Bangla mix.'
+        },
+        {
+          label: 'Meril Official Facebook Page (Square, 25+ Years)',
+          url: 'https://www.facebook.com/merilbd/',
+          note: 'Official Meril Bangladesh Facebook page.'
+        },
+        {
+          label: 'Brand Practitioners BD — Meril vs Vaseline Debate Thread',
+          url: 'https://www.facebook.com/groups/BrandPractitionersBD/posts/1566860823392025/',
+          note: 'Community discussion comparing Meril and Vaseline positioning in Bangladesh.'
+        }
+      ],
+      clientCta: {
+        pitch:
+          'I audit BD winter creatives for Daraz conversion + returns, not just CTR. If lotion ad dies in 7 days, I tell why in one teardown.',
+        email: 'AhamedAfif87@gmail.com',
+        contactUrl: 'https://frage3r.github.io/AfifAhamedLam/#contact',
+        nextBreakdown: 'Tell me next niche.'
+      }
+    }
+  },
+  {
     id: 'ab-10',
     slug: 'counter-height-independence-guidecraft-vs-little-partners-2026',
     brandName: 'Guidecraft vs Little Partners',
